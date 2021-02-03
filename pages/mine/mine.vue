@@ -2,19 +2,19 @@
 	<view class="all">
 		
 		<view class="background">
-			<image src="../../static/bg2.jpg" mode="scaleToFill"></image>
+			<image src="../../static/picture/bg2.jpg" mode="scaleToFill"></image>
 		</view>
 		
 		<view class="setting">
-			<image src="../../static/templateHL.png" mode="aspectFit" @click="setting()"></image>
+			<image src="../../static/picture/templateHL.png" mode="aspectFit" @click="setting()"></image>
 		</view>
 		
 		<view class="personalInfo">
 			<view class="personalInfo_image">
-				<image src="../../static/uni.png" mode="center"></image>
+				<image src="../../static/picture/uni.png" mode="center" @click="avatar"></image>
 			</view>
 			<view class="personalInfo_nickname">
-				<input v-bind:disabled='!changingNickname' :style='!changingNickname?"":"border-bottom: #E6E6E6 1px solid;"' :value="info.newNickname" auto-focus="true" @input="input"></input>
+				<input v-bind:disabled='!changingNickname' :style='!changingNickname?"":"border-bottom: #E6E6E6 1px solid;"' :value="info.newNickname" @input="input"></input>
 				<button @click="edit()">{{!changingNickname?"编辑":"保存"}}</button>
 			</view>
 		</view>

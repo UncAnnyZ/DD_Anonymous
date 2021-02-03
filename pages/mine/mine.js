@@ -55,13 +55,16 @@ export default {
 		// 点击设置按钮
 		setting() {
 			console.log("点击设置")
-			uni.request({
-				url:"http://localhost:3000/",
-				success(res) {
-					console.log(res)
-					console.log(res.data.name)
-				}
+			uni.navigateTo({
+				url:"../login/login"
 			})
+			// uni.request({
+			// 	url:"http://localhost:3000/",
+			// 	success(res) {
+			// 		console.log(res)
+			// 		console.log(res.data.name)
+			// 	}
+			// })
 		},
 		
 		/*

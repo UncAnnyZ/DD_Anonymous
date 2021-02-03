@@ -6,11 +6,15 @@
 
 .background{
 	display: flex;
+	flex-direction: column;
 	justify-content:flex-start;
+	align-items: flex-start;
 	width: 100%;
-	height: auto;
+	/* 按照16:9进行计算 */
+	height: 422rpx;	
 }
 .background image{
+	align-self: baseline;
 	width: 100%;
 }
 
@@ -34,8 +38,15 @@
 	padding-bottom: 50rpx;
 }
 .personalInfo_image{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: relative;
-	top: -75rpx;
+	top: -85rpx;
+	width: 170rpx;
+	height: 170rpx;
+	border-radius: 50%;
+	background-color: #FFF;
 }
 .personalInfo_image image{
 	width: 150rpx;

@@ -17,7 +17,23 @@
 				"navigationBarTitleText": "我"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/setting/setting",
+            "style" : {
+                "navigationBarTitleText": "设置"
+                // "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" : {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "dddd",
@@ -34,20 +50,20 @@
 		"backgroundColor": "#007AFF",
 		"list": [{
 				"pagePath": "pages/index/index",
-				"iconPath": "static/c1.png",
-				"selectedIconPath": "static/c2.png",
+				"iconPath": "static/picture/c1.png",
+				"selectedIconPath": "static/picture/c2.png",
 				"text": "首页"
 			},
 			{
 				"pagePath": "pages/message/message",
-				"iconPath": "static/c3.png",
-				"selectedIconPath": "static/c4.png",
+				"iconPath": "static/picture/c3.png",
+				"selectedIconPath": "static/picture/c4.png",
 				"text": "消息"
 			},
 			{
 				"pagePath": "pages/mine/mine",
-				"iconPath": "static/c5.png",
-				"selectedIconPath": "static/c6.png",
+				"iconPath": "static/picture/c5.png",
+				"selectedIconPath": "static/picture/c6.png",
 				"text": "我的"
 			}
 		]
