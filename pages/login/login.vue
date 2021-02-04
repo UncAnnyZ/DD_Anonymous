@@ -21,7 +21,7 @@
 			<view class="login_validate">
 				<label>验证码</label>
 				<input type="number" id="code" placeholder="请输入验证码" maxlength="6" value=""  @input="input"/>
-				<button type="default" @click="getCode">获取验证码</button>
+				<button type="default" @click="getCode" v-bind:disabled='sec!="获取验证码"'>{{sec}}</button>
 			</view>
 			<view class="login_agree">
 				<label class="login_agree_checkbox" id="checkbox" @click="login_agree"> 

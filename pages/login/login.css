@@ -8,6 +8,11 @@
 	justify-content: center;
 	height: 100%;
 }
+/* 去除原生边框 */
+button::after{
+	border: none;
+	outline: none;
+}
 
 /* 关闭图标 */
 .close_icon{
@@ -84,7 +89,7 @@
 	height: 55rpx;
 	width: auto;
 	border-radius: 50rpx;
-	border: #1E1E1E 1rpx solid;
+	border: #C8C8C8 1rpx solid;
 	background-color: #FFF;
 }
 .login_agree,
@@ -111,7 +116,6 @@
 	width: 600rpx;
 }
 .login_btn button{
-	outline: none;
 	border-radius: 60rpx;
 }
 .login_btn text{
@@ -154,5 +158,5 @@
 .otherLogin_applogo image{
 	height: 80rpx;
 	width: 80rpx;
-	margin: 40rpx;
+	margin: 20rpx 40rpx;
 }
