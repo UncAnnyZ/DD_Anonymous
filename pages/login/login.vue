@@ -49,9 +49,9 @@
 				<view class="otherLogin_tips_line"></view>
 			</view>
 			<view class="otherLogin_applogo">
-				<image class="otherLogin_applogo_wx" id="wx" @click="otherLogin" src="../../static/icon/wechat.png" mode="aspectFit"></image>
-				<image class="otherLogin_applogo_qq" id="qq" @click="otherLogin" src="../../static/icon/qq.png" mode="aspectFit"></image>
-				<image class="otherLogin_applogo_wb" id="wb" @click="otherLogin" src="../../static/icon/weibo.png" mode="aspectFit"></image>
+				<image class="otherLogin_applogo_wx" id="wx" @click="otherLogin" src="../../static/icon/wx_logo.png" mode="aspectFit"></image>
+				<image class="otherLogin_applogo_qq" id="qq" @click="otherLogin" src="../../static/icon/qq_logo.png" mode="aspectFit"></image>
+				<image class="otherLogin_applogo_wb" id="wb" @click="otherLogin" src="../../static/icon/wb_logo.png" mode="aspectFit"></image>
 			</view>
 		</view>
 		

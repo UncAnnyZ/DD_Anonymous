@@ -1,47 +1,46 @@
 <template>
-	<view>
-		<view style="height: 50rpx;"></view>
-		<view class="uni-navbar">
-			<view :class="{ 'uni-navbar--fixed': fixed, 'uni-navbar--shadow': shadow, 'uni-navbar--border': border }" :style="{ 'background-color': backgroundColor }"
-			 class="uni-navbar__content">
-				<uni-status-bar v-if="statusBar" />
-				<view :style="{ color: color,backgroundColor: backgroundColor }" class="uni-navbar__header uni-navbar__content_view">
-					<view @tap="onClickLeft" class="uni-navbar__header-btns uni-navbar__header-btns-left uni-navbar__content_view">
-						<view class="uni-navbar__content_view" v-if="leftIcon.length">
-							<uni-icons :color="color" :type="leftIcon" size="24" />
-						</view>
-						<view :class="{ 'uni-navbar-btn-icon-left': !leftIcon.length }" class="uni-navbar-btn-text uni-navbar__content_view"
-						 v-if="leftText.length">
-							<text :style="{ color: color, fontSize: '14px' }">{{ leftText }}</text>
-						</view>
-						<slot name="left" />
+	<view style="">
+		
+	</view>
+	<view class="uni-navbar">
+		<view :class="{ 'uni-navbar--fixed': fixed, 'uni-navbar--shadow': shadow, 'uni-navbar--border': border }" :style="{ 'background-color': backgroundColor }"
+		 class="uni-navbar__content">
+			<uni-status-bar v-if="statusBar" />
+			<view :style="{ color: color,backgroundColor: backgroundColor }" class="uni-navbar__header uni-navbar__content_view">
+				<view @tap="onClickLeft" class="uni-navbar__header-btns uni-navbar__header-btns-left uni-navbar__content_view">
+					<view class="uni-navbar__content_view" v-if="leftIcon.length">
+						<uni-icons :color="color" :type="leftIcon" size="24" />
 					</view>
-					<view class="uni-navbar__header-container uni-navbar__content_view" @tap="onClickTitle">
-						<view class="uni-navbar__header-container-inner uni-navbar__content_view" v-if="title.length">
-							<text class="uni-nav-bar-text" :style="{color: color }">{{ title }}</text>
-						</view>
-						<!-- 标题插槽 -->
-						<slot />
+					<view :class="{ 'uni-navbar-btn-icon-left': !leftIcon.length }" class="uni-navbar-btn-text uni-navbar__content_view"
+					 v-if="leftText.length">
+						<text :style="{ color: color, fontSize: '14px' }">{{ leftText }}</text>
 					</view>
-					<view :class="title.length ? 'uni-navbar__header-btns-right' : ''" @tap="onClickRight" class="uni-navbar__header-btns uni-navbar__content_view">
-						<view class="uni-navbar__content_view" v-if="rightIcon.length">
-							<uni-icons :color="color" :type="rightIcon" size="24" />
-						</view>
-						<!-- 优先显示图标 -->
-						<view class="uni-navbar-btn-text uni-navbar__content_view" v-if="rightText.length && !rightIcon.length">
-							<text class="uni-nav-bar-right-text">{{ rightText }}</text>
-						</view>
-						<slot name="right" />
+					<slot name="left" />
+				</view>
+				<view class="uni-navbar__header-container uni-navbar__content_view" @tap="onClickTitle">
+					<view class="uni-navbar__header-container-inner uni-navbar__content_view" v-if="title.length">
+						<text class="uni-nav-bar-text" :style="{color: color }">{{ title }}</text>
 					</view>
+					<!-- 标题插槽 -->
+					<slot />
+				</view>
+				<view :class="title.length ? 'uni-navbar__header-btns-right' : ''" @tap="onClickRight" class="uni-navbar__header-btns uni-navbar__content_view">
+					<view class="uni-navbar__content_view" v-if="rightIcon.length">
+						<uni-icons :color="color" :type="rightIcon" size="24" />
+					</view>
+					<!-- 优先显示图标 -->
+					<view class="uni-navbar-btn-text uni-navbar__content_view" v-if="rightText.length && !rightIcon.length">
+						<text class="uni-nav-bar-right-text">{{ rightText }}</text>
+					</view>
+					<slot name="right" />
 				</view>
 			</view>
-			<view class="uni-navbar__placeholder" v-if="fixed">
-				<uni-status-bar v-if="statusBar" />
-				<view class="uni-navbar__placeholder-view" />
-			</view>
+		</view>
+		<view class="uni-navbar__placeholder" v-if="fixed">
+			<uni-status-bar v-if="statusBar" />
+			<view class="uni-navbar__placeholder-view" />
 		</view>
 	</view>
-
 </template>
 
 <script>

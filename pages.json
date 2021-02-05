@@ -2,69 +2,100 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "index"
-				// "enablePullDownRefresh": true
-			}
+				// "app-plus": {  
+				// 	"titleNView": {  
+				// 		"tags" : [{  
+				// 				"tag" : "img",  
+				// 				"src" : "/static/icon/css_icon_sun.png",  
+				// 				"position" : {  
+				// 					"left" : "25rpx",  
+				// 					"top" : "20rpx",
+				// 					"height": "55rpx",
+				// 					"width": "55rpx"
+				// 				}  
+				// 		}]  
+				// 		// "buttons": [{  
+				// 		// 	"text": "\ue534",  
+				// 		// 	"fontSrc": "/static/uni.ttf",  
+				// 		// 	"fontSize": "22px"  
+				// 		// }]  
+				// 	}  
+				// }  
+			}  
 		},{
-			"path": "pages/message/message",
-			"style": {
-				"navigationBarTitleText": "消息"
-				// "enablePullDownRefresh": true
-			}
+			"path": "pages/found/found"
 		},{
-			"path": "pages/mine/mine",
-			"style": {
-				"navigationBarTitleText": "我"
-			}
-		}
-	    ,{
+			"path": "pages/message/message"
+		},{
+			"path": "pages/mine/mine"
+		},{
             "path" : "pages/setting/setting",
             "style" : {
                 "navigationBarTitleText": "设置"
-                // "enablePullDownRefresh": false
             }
-            
-        }
-        ,{
+        },{
             "path" : "pages/login/login",
             "style" : {
                 "navigationBarTitleText": "登录",
                 "enablePullDownRefresh": false
             }
-            
+        },
+		
+		
+		{
+			"path":"pages/subNVue/popup"
+		},{
+			"path":"components/uni-popup-dialog/uni-popup-dialog"
+		},{
+            "path" : "pages/test/test",
+            "style" : {
+                "navigationBarTitleText": "test",
+                "enablePullDownRefresh": false
+            }
         }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "dddd",
+		"navigationBarTitleText": "DDDD",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
-			"background": "#efeff4"
+			"titleNView":true,
+			"background": "#efeff4",
+			"subNVues": [{
+				"id": "popup", // 唯一标识  
+				"path": "pages/subNVue/popup", // 页面路径  
+				"type":"popup",
+				"style": {
+					"type": "popup",
+					"mask": "rgba(0,0,0,0.5)",
+					"position": "absolute",
+					"background": "transparent"
+				}
+			}]
 		}
 	},
 
 	"tabBar": {
-		"color": "#666",
-		"selectedColor": "f07373",
-		"backgroundColor": "#007AFF",
 		"list": [{
 				"pagePath": "pages/index/index",
-				"iconPath": "static/picture/c1.png",
-				"selectedIconPath": "static/picture/c2.png",
-				"text": "首页"
+				"iconPath": "static/icon/tab_icon_index.png",
+				"selectedIconPath": "static/icon/tab_icon_indexed.png"
+			},
+			{
+				"pagePath": "pages/found/found",
+				"iconPath": "static/icon/tab_icon_found.png",
+				"selectedIconPath": "static/icon/tab_icon_founded.png"
 			},
 			{
 				"pagePath": "pages/message/message",
-				"iconPath": "static/picture/c3.png",
-				"selectedIconPath": "static/picture/c4.png",
-				"text": "消息"
+				"iconPath": "static/icon/tab_icon_msg.png",
+				"selectedIconPath": "static/icon/tab_icon_msged.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",
-				"iconPath": "static/picture/c5.png",
-				"selectedIconPath": "static/picture/c6.png",
-				"text": "我的"
+				"iconPath": "static/icon/tab_icon_mine.png",
+				"selectedIconPath": "static/icon/tab_icon_mined.png"
 			}
 		]
 	}
