@@ -1,0 +1,57 @@
+
+.status_bar{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 80rpx;
+	padding: 10rpx 0;
+	background-color: #FFFFFF;
+}
+.status_bar_left{
+	height: 100%;
+	padding-left: 15rpx;
+}
+.status_bar_center{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 60rpx;
+	flex-grow: 1;
+	margin: 50rpx;
+	border-radius: 80rpx;
+	background-color: #f4f4f4;
+}
+.status_bar_center image{
+	height: 40rpx;
+	width: 40rpx;
+	padding: 0 20rpx;
+}
+.status_bar_center input{
+	flex-grow: 1;
+	font-size: 15px;
+	color: #888;
+	letter-spacing: 2rpx;
+}
+
+.swiper_title{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-top: 30rpx;
+}
+.swiper_title_EDiary,
+.swiper_title_User{
+	/* padding: 50rpx; */
+	letter-spacing: 5rpx;
+	font-size: 18px;
+	color: #888;
+}
+
+.swiper_title_choose{
+	font-weight: 600;
+	color: #555;
+	border-bottom: 1px solid #555555;
+	padding: 5rpx 0;
+}
