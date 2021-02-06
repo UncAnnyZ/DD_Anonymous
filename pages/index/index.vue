@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="all">
 		<!-- <uni-nav-bar left-icon="back" left-text="返回" right-text="菜单" title="导航栏组件"></uni-nav-bar> -->
 		<view class="status_toppadding"></view>
 		<view class="status">
@@ -46,25 +46,25 @@
 					<view class="list_image">
 						<view class="list_image_left">
 							<view class="list_image_left_img" v-if="item.image.length >= 1">
-								<image src="../../static/picture/bg2.jpg" mode="center"></image>
+								<image :src="item.image[0]" mode="center" @click="previewImage({index,current:0})"></image>
 							</view>
 						</view>
 						<view class="list_image_right">
 							<view class="list_image_right_top" v-if="item.image.length >= 2">
-								<image src="../../static/picture/bg2.jpg" mode="aspectFill"></image>
+								<image :src="item.image[0]" mode="aspectFill" @click="previewImage({index,current:1})"></image>
 							</view>
 							<view class="list_image_right_bottom" v-if="item.image.length >= 3">
-								<image src="../../static/picture/bg2.jpg" mode="aspectFill"></image>
+								<image :src="item.image[0]" mode="aspectFill" @click="previewImage({index,current:2})"></image>
 							</view>
 						</view>
 					</view>
 					
 					<!-- 底部互动栏 -->
 					<view class="list_bottom">
-						<button type="default">评论</button>
+						<button type="default" @click="comment(index)">评论</button>
 						<view class="list_bottom_img">
-							<image src="../../static/icon/btn_icon_like.png" mode="aspectFit"></image>
-							<image src="../../static/icon/btn_icon_more.png" mode="aspectFit"></image>
+							<image :src="item.liked?(src.liked):(src.like)" mode="aspectFit" @click="like(index)"></image>
+							<image src="../../static/icon/btn_icon_more.png" mode="aspectFit" @click="more(index)"></image>
 						</view>
 					</view>
 					
