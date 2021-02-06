@@ -2,30 +2,45 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				// "app-plus": {  
-				// 	"titleNView": {  
-				// 		"tags" : [{  
-				// 				"tag" : "img",  
-				// 				"src" : "/static/icon/css_icon_sun.png",  
-				// 				"position" : {  
-				// 					"left" : "25rpx",  
-				// 					"top" : "20rpx",
-				// 					"height": "55rpx",
-				// 					"width": "55rpx"
-				// 				}  
-				// 		}]  
-				// 		// "buttons": [{  
-				// 		// 	"text": "\ue534",  
-				// 		// 	"fontSrc": "/static/uni.ttf",  
-				// 		// 	"fontSize": "22px"  
-				// 		// }]  
-				// 	}  
-				// }  
+				"app-plus": {  
+					"titleNView":false
+					// "titleNView": {  
+					// 	"tags" : [{  
+					// 		"tag" : "img",  
+					// 		"src" : "/static/icon/css_icon_night.png",  
+					// 		"position" : {  
+					// 			"left" : "25rpx",  
+					// 			"top" : "20rpx",
+					// 			"height": "55rpx",
+					// 			"width": "55rpx"
+					// 		}  
+					// 	},{  
+					// 		"tag" : "img",  
+					// 		"src" : "/static/icon/index_icon_search.png",  
+					// 		"position" : {  
+					// 			"right" : "25rpx",  
+					// 			"top" : "20rpx",
+					// 			"height": "55rpx",
+					// 			"width": "55rpx"
+					// 		}  
+					// 	}]
+					// }  
+				}  
 			}  
 		},{
-			"path": "pages/found/found"
+			"path": "pages/found/found",
+			"style": {
+				"app-plus": {
+					"titleNView": true //禁用原生导航栏
+				}
+			}
 		},{
-			"path": "pages/message/message"
+			"path": "pages/message/message",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
 		},{
 			"path": "pages/mine/mine"
 		},{

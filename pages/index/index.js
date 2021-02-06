@@ -2,38 +2,59 @@
 export default {
 	data() {
 		return {
-			href: 'https://uniapp.dcloud.io/component/README?id=uniui',
-			msg:"this is msg",
-			show:false
+			status_bar:{
+				left_img:"../../static/icon/css_icon_dark.png",
+				right_img:"../../static/icon/index_icon_search.png"
+			},
+			list:[{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					image:[
+						"",
+						"",
+						""
+					]
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称2"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					image:[
+						"",
+						"",
+						""
+					]
+				}
+			]
 		}
 	},
-	onNavigationBarButtonTap() {  
-			console.log("点击了自定义按钮");  
-	},  
+	
 	onLoad(){
-		uni.$on('from_popup',function(res){
-			console.log(res)
-		})
+		
 	},
 	
 	methods: {
-		aaa(){
-			this.show = !this.show
-			// const subNVue = uni.getSubNVueById('popup')
-			// subNVue.show()
-			uni.$emit('to_popup',{
-				data:{
-					title:"温馨提示222",
-					content:"账号密码错误222",
-					showcancel:true
-					// cancelColor:"#f00"
-				}
-			})
+		// 更改样式（白天模式/深夜模式）
+		change_css(){
+			let css = getApp().globalData.css
+			console.log(css)
+			if(css == 'light'){
+				getApp().globalData.css = 'dark'
+				this.status_bar.left_img = "../../static/icon/css_icon_light.png"
+			} else if(css == 'dark'){
+				getApp().globalData.css = 'light'
+				this.status_bar.left_img = "../../static/icon/css_icon_dark.png"
+			}
 		},
-		nat(){
-			uni.navigateTo({
-				url:"../test/test"
-			})
-		}
+		search(){
+			console.log("点击搜索按钮")
+		},
+		
 	}
 }
