@@ -19,6 +19,7 @@
 			"app-plus": {
 				"titleNView": false //禁用原生导航栏
 			}
+<<<<<<< HEAD
 		}
 	}, {
 		"path": "pages/mine/mine"
@@ -46,6 +47,47 @@
 		}
 
 	}],
+=======
+		},{
+			"path": "pages/mine/mine"
+		},{
+            "path" : "pages/setting/setting",
+            "style" : {
+                "navigationBarTitleText": "设置"
+            }
+        },{
+            "path" : "pages/login/login",
+            "style" : {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+        },
+		
+		
+		{
+			"path":"pages/subNVue/popup"
+		},{
+			"path":"components/uni-popup-dialog/uni-popup-dialog"
+		},{
+            "path" : "pages/test/test",
+            "style" : {
+                "navigationBarTitleText": "test",
+                "enablePullDownRefresh": false
+            }
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" : {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus":{
+					"titleNView":false
+				}
+            }
+            
+        }
+    ],
+>>>>>>> c7fde996b4f27db77a83943173be62358fe0ff33
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "DDDD",
