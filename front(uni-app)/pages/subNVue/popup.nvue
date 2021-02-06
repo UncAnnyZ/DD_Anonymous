@@ -1,0 +1,213 @@
+<template>
+
+	<view class="pop">
+		<!-- 弹出框内容 -->
+		<view class="model">
+			<!-- 标题 -->
+			<view class="model_title">
+				<text class="model_title_text">{{title}}</text>
+			</view>
+
+			<!-- 信息内容 -->
+			<view class="model_content">
+				<text class="model_content_text">{{content}}</text>
+			</view>
+
+			<!-- 按钮 -->
+			<view class="model_btn border_bottom_left_radius border_bottom_right_radius">
+				<!-- 取消按钮 -->
+				<button class="model_btn_cancel border_bottom_left_radius" id="cancel" type="default" @click="send('cancel')" v-if="showcancel">
+					<text class="model_btn_cancel_text" :style="'color:' + cancelColor">{{cancelText}}</text>
+				</button>
+				<!-- 确认按钮 -->
+				<button class="model_btn_confirm border_bottom_right_radius" id="confirm" type="default" @click="send('confirm')"
+				 :class="showcancel?'':'border_bottom_left_radius'" :style="showcancel?'':'width:600rpx;'">
+					<text class="model_btn_confirm_text" :style="'color:' + confirmColor">{{confirmText}}</text>
+				</button>
+			</view>
+		</view>
+
+		<!-- 蒙版 -->
+		<view class="mask"></view>
+
+	</view>
+
+</template>
+
+
+<script>
+	export default {
+		data() {
+			return {
+				title: "温馨提示",
+				content: "",
+				showcancel: true,
+				cancelColor: "#999999",
+				confirmColor: "#007aff",
+				cancelText:"取消",
+				confirmText:"确认"
+			}
+		},
+
+		onLoad() {
+			// subNVue 子窗体监听 vue 页面传递的消息
+			var that = this
+			uni.$on('to_popup', function(res) {
+				console.log(res);
+				that.title = res.data.title || "温馨提示"
+				that.content = res.data.content || ""
+				that.showcancel = res.data.showcancel && true
+				that.cancelColor = res.data.cancelColor || "#999999"
+				that.confirmColor = res.data.confirmColor || "#007aff"
+				that.cancelText  = res.data.cancelText || "取消"
+				that.confirmText = res.data.confirmText || "确认"
+				
+				const subNvue = uni.getCurrentSubNVue();
+				setTimeout(() => {
+					subNvue.show() // 展现
+				}, 200)
+			})
+		},
+
+		methods: {
+			send(e) {
+				let data = {
+					cancel: false,
+					confirm: false
+				}
+				if (e == 'cancel') {
+					data.cancel = true
+				} else if (e == 'confirm') {
+					data.confirm = true
+				}
+				// 将结果返回给vue层
+				uni.$emit('from_popup', data)
+				
+				const subNvue = uni.getCurrentSubNVue();
+				subNvue.hide() // 隐藏
+			}
+		}
+
+	}
+</script>
+
+<style>
+	/* 弹窗 */
+	.pop {
+		z-index: 9999;
+		overflow: hidden;
+		flex: 1;
+		opacity: 1;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* 蒙版 */
+	.mask {
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	/* 对话框 */
+	.model {
+		width: 600rpx;
+		height: 350rpx;
+		justify-content: space-between;
+		border-radius: 30rpx;
+		background-color: #fff;
+	}
+
+	/* 标题栏 */
+	.model_title {
+		/* #ifndef APP-NVUE
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		justify-content: center;
+		padding-top: 15px;
+		padding-bottom: 5px;
+	}
+
+	/* 标题栏中的文字 */
+	.model_title_text {
+		font-size: 16px;
+		font-weight: 500;
+		color: #333;
+	}
+
+	/* 提示信息栏 */
+	.model_content {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 5px 15px 15px 15px;
+		/* flex-wrap: wrap;  */
+	}
+
+	/* 提示信息的文字 */
+	.model_content_text {
+		font-size: 14px;
+		color: #6e6e6e;
+	}
+
+	/* 按钮栏 */
+	.model_btn {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		background-color: #fff;
+		border-top-color: #f5f5f5;
+		border-top-style: solid;
+		border-top-width: 1px;
+	}
+
+	/* 按钮 */
+	.model_btn_cancel,
+	.model_btn_confirm {
+		width: 300rpx;
+		border-color: #FFFFFF;
+		background-color: #fff;
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex: 1;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		height: 90rpx;
+	}
+
+	.model_btn_confirm {
+		border-left-color: #f5f5f5;
+		border-left-style: solid;
+		border-left-width: 1px;
+	}
+
+	/* 按钮中的文字 */
+	.model_btn_cancel_text,
+	.model_btn_confirm_text {
+		text-align: center;
+		font-weight: 500;
+		font-size: 14px;
+	}
+
+	.model_btn_cancel_text {
+		color: #999999;
+	}
+
+	.model_btn_confirm_text {
+		/* color: #276ccc; */
+		color: #007aff;
+	}
+
+	.border_bottom_left_radius {
+		border-bottom-left-radius: 30rpx;
+	}
+	.border_bottom_right_radius {
+		border-bottom-right-radius: 30rpx;
+	}
+</style>

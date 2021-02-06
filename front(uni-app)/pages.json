@@ -1,0 +1,128 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"app-plus": {  
+					"titleNView":false
+					// "titleNView": {  
+					// 	"tags" : [{  
+					// 		"tag" : "img",  
+					// 		"src" : "/static/icon/css_icon_night.png",  
+					// 		"position" : {  
+					// 			"left" : "25rpx",  
+					// 			"top" : "20rpx",
+					// 			"height": "55rpx",
+					// 			"width": "55rpx"
+					// 		}  
+					// 	},{  
+					// 		"tag" : "img",  
+					// 		"src" : "/static/icon/index_icon_search.png",  
+					// 		"position" : {  
+					// 			"right" : "25rpx",  
+					// 			"top" : "20rpx",
+					// 			"height": "55rpx",
+					// 			"width": "55rpx"
+					// 		}  
+					// 	}]
+					// }  
+				}  
+			}  
+		},{
+			"path": "pages/found/found",
+			"style": {
+				"app-plus": {
+					"titleNView": true //禁用原生导航栏
+				}
+			}
+		},{
+			"path": "pages/message/message",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
+		},{
+			"path": "pages/mine/mine"
+		},{
+            "path" : "pages/setting/setting",
+            "style" : {
+                "navigationBarTitleText": "设置"
+            }
+        },{
+            "path" : "pages/login/login",
+            "style" : {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+        },
+		
+		
+		{
+			"path":"pages/subNVue/popup"
+		},{
+			"path":"components/uni-popup-dialog/uni-popup-dialog"
+		},{
+            "path" : "pages/test/test",
+            "style" : {
+                "navigationBarTitleText": "test",
+                "enablePullDownRefresh": false
+            }
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" : {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus":{
+					"titleNView":false
+				}
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "DDDD",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"titleNView":true,
+			"background": "#efeff4",
+			"subNVues": [{
+				"id": "popup", // 唯一标识  
+				"path": "pages/subNVue/popup", // 页面路径  
+				"type":"popup",
+				"style": {
+					"type": "popup",
+					"mask": "rgba(0,0,0,0.5)",
+					"position": "absolute",
+					"background": "transparent"
+				}
+			}]
+		}
+	},
+
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/icon/tab_icon_index.png",
+				"selectedIconPath": "static/icon/tab_icon_indexed.png"
+			},
+			{
+				"pagePath": "pages/found/found",
+				"iconPath": "static/icon/tab_icon_found.png",
+				"selectedIconPath": "static/icon/tab_icon_founded.png"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"iconPath": "static/icon/tab_icon_msg.png",
+				"selectedIconPath": "static/icon/tab_icon_msged.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/icon/tab_icon_mine.png",
+				"selectedIconPath": "static/icon/tab_icon_mined.png"
+			}
+		]
+	}
+}
