@@ -6,17 +6,102 @@ export default {
 				{
 					id:"1",
 					img:"../../static/picture/bg2.jpg",
-					name:"记本名称1",
+					name:"记本名称1"
 				},
 				{
 					id:"2",
 					img:"../../static/picture/bg2.jpg",
-					name:"记本名称2",
+					name:"记本名称2"
 				},
 				{
 					id:"3",
 					img:"../../static/picture/bg2.jpg",
-					name:"记本名称3",
+					name:"记本名称3"
+				},
+				{
+					id:"4",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称4"
+				},
+				{
+					id:"1",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称1"
+				},
+				{
+					id:"2",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称2"
+				},
+				{
+					id:"3",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称3"
+				},
+				{
+					id:"4",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称4"
+				},
+				{
+					id:"1",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称1"
+				},
+				{
+					id:"2",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称2"
+				},
+				{
+					id:"3",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称3"
+				},
+				{
+					id:"4",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称4"
+				},
+				{
+					id:"1",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称1"
+				},
+				{
+					id:"2",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称2"
+				},
+				{
+					id:"3",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称3"
+				},
+				{
+					id:"4",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称4"
+				},
+				{
+					id:"1",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称1"
+				},
+				{
+					id:"2",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称2"
+				},
+				{
+					id:"3",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称3"
+				},
+				{
+					id:"4",
+					img:"../../static/picture/bg2.jpg",
+					name:"记本名称4"
 				}
 			],
 			User:[
@@ -44,13 +129,14 @@ export default {
 	methods: {
 		back() {
 			console.log("返回")
-			// uni.switchTab({
-			// 	url: "../index/index"
-			// })
+			uni.switchTab({
+				url: "../index/index"
+			})
 		},
 		search(e) {
 			console.log("搜索:" + e.detail.value)
 		},
+		
 		change(e){
 			this.current = e.detail.current
 		}
