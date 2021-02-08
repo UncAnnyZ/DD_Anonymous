@@ -30,7 +30,6 @@ func ParseToken(tokenString string, uid string) (jwt.MapClaims, error) {
 }
 func MiddleWare() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		print(111)
 		token, _ := c.GetPostForm("token")
 		uid, _ := c.GetPostForm("uid")
 		parse, _ := ParseToken(token, uid)

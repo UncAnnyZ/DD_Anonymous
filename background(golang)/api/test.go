@@ -6,8 +6,8 @@ import (
 )
 
 
-func verification(c *gin.Context) {
+func Verification(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "1",
+		"msg": "token验证通过",
 	})
 }
