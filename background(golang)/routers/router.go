@@ -30,6 +30,7 @@ func ParseToken(tokenString string, uid string) (jwt.MapClaims, error) {
 }
 func MiddleWare() gin.HandlerFunc {
 	return func(c *gin.Context) {
+		print(111)
 		token, _ := c.GetPostForm("token")
 		uid, _ := c.GetPostForm("uid")
 		parse, _ := ParseToken(token, uid)
@@ -46,6 +47,6 @@ func MiddleWare() gin.HandlerFunc {
 
 func SetupRouter() *gin.Engine {
 	r := gin.Default()
-	r.GET("/test", MiddleWare(), api.Test)
+	r.POST("/verification", MiddleWare(), api.Verification)
 	return r
 }

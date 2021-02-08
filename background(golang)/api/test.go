@@ -6,7 +6,7 @@ import (
 )
 
 
-func Test(c *gin.Context) {
+func verification(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "1",
 	})
