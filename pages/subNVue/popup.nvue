@@ -16,12 +16,12 @@
 			<!-- 按钮 -->
 			<view class="model_btn border_bottom_left_radius border_bottom_right_radius">
 				<!-- 取消按钮 -->
-				<button class="model_btn_cancel border_bottom_left_radius" id="cancel" type="default" @click="send('cancel')" v-if="showcancel">
+				<button class="model_btn_cancel border_bottom_left_radius" id="cancel" type="default" @click="send('cancel')" v-if="showCancel">
 					<text class="model_btn_cancel_text" :style="'color:' + cancelColor">{{cancelText}}</text>
 				</button>
 				<!-- 确认按钮 -->
 				<button class="model_btn_confirm border_bottom_right_radius" id="confirm" type="default" @click="send('confirm')"
-				 :class="showcancel?'':'border_bottom_left_radius'" :style="showcancel?'':'width:600rpx;'">
+				 :class="showCancel?'':'border_bottom_left_radius'" :style="showCancel?'':'width:600rpx;'">
 					<text class="model_btn_confirm_text" :style="'color:' + confirmColor">{{confirmText}}</text>
 				</button>
 			</view>
@@ -36,39 +36,44 @@
 
 
 <script>
+	const subNvue = uni.getCurrentSubNVue();
 	export default {
 		data() {
 			return {
 				title: "温馨提示",
 				content: "",
-				showcancel: true,
+				showCancel: true,
 				cancelColor: "#999999",
 				confirmColor: "#007aff",
 				cancelText:"取消",
 				confirmText:"确认"
 			}
 		},
-
-		onLoad() {
+		onShow() {
 			// subNVue 子窗体监听 vue 页面传递的消息
+			console.log("弹窗页面加载")
 			var that = this
 			uni.$on('to_popup', function(res) {
 				console.log(res);
 				that.title = res.data.title || "温馨提示"
 				that.content = res.data.content || ""
-				that.showcancel = res.data.showcancel && true
+				that.showCancel = res.data.showCancel && true
 				that.cancelColor = res.data.cancelColor || "#999999"
 				that.confirmColor = res.data.confirmColor || "#007aff"
 				that.cancelText  = res.data.cancelText || "取消"
 				that.confirmText = res.data.confirmText || "确认"
 				
-				const subNvue = uni.getCurrentSubNVue();
 				setTimeout(() => {
 					subNvue.show() // 展现
 				}, 200)
 			})
 		},
-
+		onHide() {
+			console.log("弹窗隐藏")
+		},
+		onUnload() {
+			console.log("弹窗卸载")
+		},
 		methods: {
 			send(e) {
 				let data = {
@@ -82,8 +87,6 @@
 				}
 				// 将结果返回给vue层
 				uni.$emit('from_popup', data)
-				
-				const subNvue = uni.getCurrentSubNVue();
 				subNvue.hide() // 隐藏
 			}
 		}
@@ -105,7 +108,8 @@
 	/* 蒙版 */
 	.mask {
 		position: fixed;
-		background-color: rgba(0, 0, 0, 0.1);
+		/* background-color: rgba(0, 0, 0, 0.5); */
+		z-index:90;
 	}
 
 	/* 对话框 */
@@ -115,6 +119,7 @@
 		justify-content: space-between;
 		border-radius: 30rpx;
 		background-color: #fff;
+		z-index:99;
 	}
 
 	/* 标题栏 */

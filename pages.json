@@ -31,7 +31,22 @@
 		"path": "pages/login/login",
 		"style": {
 			"navigationBarTitleText": "登录",
-			"enablePullDownRefresh": false
+			"enablePullDownRefresh": false,
+			"app-plus":{
+				"titleNView": true,
+				"background": "#efeff4",
+				"subNVues": [{
+					"id": "popup", // 唯一标识  
+					"path": "pages/subNVue/popup", // 页面路径  
+					"type": "popup",
+					"style": {
+						"type": "popup",
+						"mask": "rgba(0,0,0,0.5)",
+						"position": "absolute",
+						"background": "transparent"
+					}
+				}]
+			}
 		}
 	}, {
 		"path": "pages/subNVue/popup"
@@ -51,19 +66,19 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
-			"titleNView": true,
-			"background": "#efeff4",
-			"subNVues": [{
-				"id": "popup", // 唯一标识  
-				"path": "pages/subNVue/popup", // 页面路径  
-				"type": "popup",
-				"style": {
-					"type": "popup",
-					"mask": "rgba(0,0,0,0.5)",
-					"position": "absolute",
-					"background": "transparent"
-				}
-			}]
+			// "titleNView": true,
+			// "background": "#efeff4",
+			// "subNVues": [{
+			// 	"id": "popup", // 唯一标识  
+			// 	"path": "pages/subNVue/popup", // 页面路径  
+			// 	"type": "popup",
+			// 	"style": {
+			// 		"type": "popup",
+			// 		"mask": "rgba(0,0,0,0.5)",
+			// 		"position": "absolute",
+			// 		"background": "transparent"
+			// 	}
+			// }]
 		}
 	},
 
