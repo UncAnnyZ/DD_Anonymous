@@ -8,13 +8,6 @@ DDDD群的第一个项目~也希望能成功（匿名软件）名字暂时未取
 
 * TWhite-salt(tw1183381090@163.com) -- 鱼塘
 
-* riderda(1355429678@qq.com)
-
-  <<<<<<< 9734e4a94fb10533afa1cdfb5bd1a1190873ceb8
-
 * Anna（1012444092@qq.com）-- 高速 
-  =======
 
 * riderda(1355429678@qq.com) -- 家
-
->>>>>>> rreadme更新
