@@ -1,7 +1,6 @@
 HELP.md
-target/
 out/
-!target/background-0.0.1-SNAPSHOT.jar
+!target/background*
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
