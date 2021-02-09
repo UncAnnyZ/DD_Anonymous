@@ -7,7 +7,8 @@
 <script>
 	export default {
 		globalData: {  
-			css: 'light'
+			css: 'light',
+			host:"http://120.79.171.165"
 		},
 		onLaunch: function() {
 			console.log('App Launch')
