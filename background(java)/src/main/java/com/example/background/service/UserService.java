@@ -20,5 +20,5 @@ public class UserService {
         return userMapper.findUserById(userId);
     }
     public User findUserByUID(String UID){ return  userMapper.findUserByUid(UID);}
-
+    public int addUser(User user){ return userMapper.addUser(user.getUID(), user.getUsername());}
 }

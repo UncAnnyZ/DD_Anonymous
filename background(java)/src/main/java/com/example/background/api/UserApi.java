@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.soap.MimeHeaders;
+import java.util.UUID;
 
 /**
  * @author jinbin
@@ -31,6 +32,22 @@ public class UserApi {
         User userForBase=userService.findByUsername(user);
         String code =  user.getCode();//获取验证码
         if(userForBase==null){
+            if(code.equals("1234")){
+                User newUser = new User();
+                newUser.setUID(UUID.randomUUID().toString().replace("-",""));
+                newUser.setUsername(user.getUsername());
+                int flag = userService.addUser(newUser);
+                if(flag>0){
+                    jsonObject.put("username",newUser.getUsername());
+                    jsonObject.put("UID",newUser.getUID());
+                    jsonObject.put("level",'0');
+                    String token = tokenService.getToken(newUser);
+                    jsonObject.put("token",token);
+                    return jsonObject;
+                }else{
+                    jsonObject.put("message","添加用户失败");
+                }
+            }
             jsonObject.put("message","登录失败,用户不存在");
             return jsonObject;
         }else {
