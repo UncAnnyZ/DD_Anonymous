@@ -65,6 +65,13 @@ public class UserApi {
             }
         }
     }
+    @GetMapping("/getCode")
+    public Object getVerificationCode(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("verificationcode","1234");
+        return jsonObject;
+    }
+
     
     @UserLoginToken
     @GetMapping("/getMessage")
