@@ -1,3 +1,4 @@
+const host = getApp().globalData.host
 
 export default {
 	data() {
@@ -46,24 +47,28 @@ export default {
 			var that = this
 			console.log("获取验证码")
 			if(this.info.username == ""){
-				showModal("账号不能为空");
-			} 
-			else {
+				this.showModal("账号不能为空");
+			} else if( this.checkUsername(this.info.username) ){
+				// 验证码时长
 				this.sec = 60
+				// 验证码倒计时
 				this.settime()
+				// 服务端向该用户发送验证码
 				uni.request({
-					url:getApp().globalData.host + "getcode",
+					url: host + "/getCode",
 					method:"POST",
 					data:{
-						username: that.info.username
+						user: that.info.username
 					},
-					success() {
+					success(res) {
+						console.log(res)
 						uni.showToast({
 							title:"验证码已发送，注意查收",
 							icon:"none"
 						})
 					},
-					fail() {
+					fail(res) {
+						console.log(res)
 						uni.showToast({
 							title:"获取失败，请稍后重试",
 							icon:"none"
@@ -71,6 +76,8 @@ export default {
 						that.sec = 0
 					}
 				})
+			} else{
+				this.showModal("帐号格式不正确")
 			}
 		},
 		// 验证码倒计时
@@ -96,10 +103,18 @@ export default {
 				}
 				case "agreement":{
 					console.log("点击 用户协议")
+					uni.navigateTo({
+						url:"../agreement/agreement?show=agreement",
+						animationType:"slide-in-bottom"
+					})
 					break
 				}
 				case "clause":{
 					console.log("点击 隐私条款")
+					uni.navigateTo({
+						url:"../agreement/agreement?show=clause",
+						animationType:"slide-in-bottom"
+					})
 					break
 				}
 			}
@@ -107,6 +122,7 @@ export default {
 		
 		// 点击登录
 		login(){
+			var that = this
 			console.log("点击登录")
 			if(!this.agree){
 				this.showModal('暂未同意"用户协议"和"隐私条款"')
@@ -116,46 +132,46 @@ export default {
 				this.showModal("帐号格式不正确")
 			} else if(this.info.code == ""){
 				this.showModal("验证码不能为空");
-			} else if(this.info.code.length != 6){
+			} else if(this.info.code.length != 4){
 				this.showModal("验证码不正确");
 			} else {
 				uni.showLoading({
 					title:"登录中"
 				})
-				
-				// APP指定弹窗样式
-				// #ifdef APP-PLUS
-					uni.$once('from_popup',function(res){
-						// 接收到返回的信息
+				// 校验登录信息
+				uni.request({
+					url: host + "/login",
+					method: "POST",
+					data:{
+						user: that.info.username,
+						code: that.info.code
+					},
+					success(res) {
 						console.log(res)
-					})
-					uni.$emit('to_popup',{
-						data:{
-							title: "温馨提示",
-							content: "提示的信息",
-							showCancel: false
-						}
-					})
-				// #endif
-				
-				// #ifndef APP-PLUS
-					uni.showModal({
-						title:"温馨提示",
-						content:"点击登录",
-						showCancel:false,
-						success(res){
-							console.log(res)
-							uni.showToast({
-								title:"温馨提示",
-								icon:"none"
+						if(res.data.msg == 1){
+							// 登录成功跳转到主页
+							uni.switchTab({
+								url:"../index/index"
 							})
+						} else if(res.data.msg == 2){
+							// 验证码错误
+							that.showModal("验证码错误")
+							
+						} else if(res.data.msg == 3){
+							// 登录失败
+							that.showModal("登录失败，请稍后再试")
 						}
-					})
-				// #endif
+					},
+					fail(res) {
+						console.log(res)
+						console.error()
+						that.showModal("未知错误，登录失败")
+					},
+					complete() {
+						uni.hideLoading()
+					}
+				})
 				
-				setTimeout(()=>{
-					uni.hideLoading()
-				},3000)
 			}
 			
 		},
@@ -191,25 +207,10 @@ export default {
 		},
 		
 		showModal(msg){
-			const res = uni.getSystemInfoSync();
-			console.log(res)
-			
-			// #ifdef APP-PLUS
-			uni.$emit('to_popup',{
-				data:{
-					content: msg,
-					showCancel: false
-				}
+			const utils = require("../../utils/showModal.js")
+			utils.showModal({
+				content: msg
 			})
-			// #endif
-			
-			// #ifndef APP-APP-PLUS
-			uni.showModal({
-				title:"温馨提示",
-				content:msg,
-				showCancel:false
-			})
-			// #endif
 			
 		}
 	}

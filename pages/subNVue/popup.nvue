@@ -57,7 +57,7 @@
 				console.log(res);
 				that.title = res.data.title || "温馨提示"
 				that.content = res.data.content || ""
-				that.showCancel = res.data.showCancel && true
+				that.showCancel = res.data.showCancel == null?true:res.data.showCancel && true
 				that.cancelColor = res.data.cancelColor || "#999999"
 				that.confirmColor = res.data.confirmColor || "#007aff"
 				that.cancelText  = res.data.cancelText || "取消"

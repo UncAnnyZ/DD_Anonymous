@@ -44,7 +44,7 @@ export default {
 	},
 	
 	onLoad(){
-		
+		var token = uni.getStorageSync("token")
 	},
 	
 	methods: {
@@ -60,14 +60,12 @@ export default {
 				this.status_bar.left_img = "../../static/icon/css_icon_dark.png"
 			}
 		},
-		search(){
-			console.log("点击搜索按钮")
-			uni.navigateTo({
-				url:"../search/search",
-				animationType:"pop-in",
-				animationDuration:5000
-			})
-		},
+		// search(){
+		// 	console.log("点击搜索按钮")
+		// 	uni.navigateTo({
+		// 		url:"../search/search"
+		// 	})
+		// },
 		
 		// 预览图片
 		previewImage(e){
