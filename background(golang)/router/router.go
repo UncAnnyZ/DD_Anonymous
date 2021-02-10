@@ -1,4 +1,4 @@
-package routers
+package router
 
 import (
 	"background/api"
@@ -38,14 +38,16 @@ func MiddleWare() gin.HandlerFunc {
 				"code": 500,
 				"msg": "无token，请重新登录",
 			})
-			c.Abort()
-			return
+			//c.Abort()
+			//return
 		}
 	}
 }
 
 func SetupRouter() *gin.Engine {
-	r := gin.Default()
-	r.POST("/verification", MiddleWare(), api.Verification)
-	return r
+	router := gin.Default()
+	InitNotePadRouter(router)
+	router.POST("/verification", MiddleWare(), api.Verification)
+
+	return router
 }
