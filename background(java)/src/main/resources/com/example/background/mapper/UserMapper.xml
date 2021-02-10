@@ -14,13 +14,13 @@
     <select id="findUserByUId" resultType="com.example.background.entity.User">
         SELECT * FROM user
       where
-      UID=#{UID}
+      uid=#{UID}
     </select>
     <insert id="addUser" parameterType="com.example.background.entity.User" useGeneratedKeys="true" keyProperty="id">
         <!-- 回显，添加数据后，返回对象的id值 -->
         <selectKey resultType="int" keyColumn="id" keyProperty="id" order="AFTER">
             select last_insert_id()
         </selectKey>
-        insert into user(UID,username) values(#{UID},#{username})
+        insert into user(uid,username) values(#{UID},#{username})
     </insert>
 </mapper>

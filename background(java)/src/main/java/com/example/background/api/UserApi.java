@@ -68,7 +68,7 @@ public class UserApi {
     @GetMapping("/getCode")
     public Object getVerificationCode(){
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("verificationcode","1234");
+        jsonObject.put("message","发送成功");
         return jsonObject;
     }
 

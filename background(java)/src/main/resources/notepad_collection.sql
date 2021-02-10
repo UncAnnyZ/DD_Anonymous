@@ -11,22 +11,20 @@
  Target Server Version : 50724
  File Encoding         : 65001
 
- Date: 10/02/2021 16:43:34
+ Date: 10/02/2021 16:43:51
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for anonymous_box
+-- Table structure for notepad_collection
 -- ----------------------------
-DROP TABLE IF EXISTS `anonymous_box`;
-CREATE TABLE `anonymous_box`  (
+DROP TABLE IF EXISTS `notepad_collection`;
+CREATE TABLE `notepad_collection`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `uid` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `author_uid` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '发布者的uid',
-  `theme` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT ' 主题',
-  `release_date` datetime(0) NOT NULL COMMENT ' 发布时间',
+  `collectioner_uid` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '收藏者的uid',
+  `collection_notepad_uid` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '被收藏文章的uid',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
