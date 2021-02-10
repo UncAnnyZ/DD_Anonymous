@@ -2,7 +2,7 @@
 	<view class="all">
 		
 		<view class="background">
-			<image src="../../static/picture/bg2.jpg" mode="scaleToFill"></image>
+			<image src="../../static/picture/bg1.jpg" mode="scaleToFill"></image>
 		</view>
 		
 		<view class="setting">

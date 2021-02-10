@@ -1,4 +1,4 @@
-const host = getApp().globalData.host
+const host = getApp().globalData.host + '/api'
 
 export default {
 	data() {

@@ -13,14 +13,13 @@ export default {
 			list:[{
 					userinfo:{
 						avatar:"",
-						nickname:"昵称"
+						nickname:"昵称1"
 					},
 					time:"2021-2-4 18:00",
 					text:"《青春伤痛文学》",
+					book:"《记本名称》",
 					image:[
-						"../../static/picture/bg2.jpg",
-						"../../static/picture/bg2.jpg",
-						"../../static/picture/bg2.jpg"
+						"../../static/picture/bg1.jpg"
 					],
 					liked:false,
 					liked_status:true	// true 时可发送更新数据，防止连续触发
@@ -31,10 +30,136 @@ export default {
 					},
 					time:"2021-2-4 18:00",
 					text:"《青春伤痛文学》",
+					book:"《记本名称》",
 					image:[
-						"../../static/picture/bg2.jpg",
-						"../../static/picture/bg2.jpg",
-						"../../static/picture/bg2.jpg"
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
+					],
+					liked:false,
+					liked_status:true	// true 时可发送更新数据，防止连续触发
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称3"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					book:"《记本名称》",
+					image:[
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
+					],
+					liked:false,
+					liked_status:true	// true 时可发送更新数据，防止连续触发
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称4"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					book:"《记本名称》",
+					image:[
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
+					],
+					liked:false,
+					liked_status:true	// true 时可发送更新数据，防止连续触发
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称5"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					book:"《记本名称》",
+					image:[
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
+					],
+					liked:false,
+					liked_status:true	// true 时可发送更新数据，防止连续触发
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称6"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					book:"《记本名称》",
+					image:[
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
+					],
+					liked:false,
+					liked_status:true	// true 时可发送更新数据，防止连续触发
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称7"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					book:"《记本名称》",
+					image:[
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
+					],
+					liked:false,
+					liked_status:true	// true 时可发送更新数据，防止连续触发
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称8"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					book:"《记本名称》",
+					image:[
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
+					],
+					liked:false,
+					liked_status:true	// true 时可发送更新数据，防止连续触发
+				},{
+					userinfo:{
+						avatar:"",
+						nickname:"昵称9"
+					},
+					time:"2021-2-4 18:00",
+					text:"《青春伤痛文学》",
+					book:"《记本名称》",
+					image:[
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg",
+						"../../static/picture/bg1.jpg"
 					],
 					liked:false,
 					liked_status:true

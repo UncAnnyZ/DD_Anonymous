@@ -5,102 +5,102 @@ export default {
 			EDiary:[
 				{
 					id:"1",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称1"
 				},
 				{
 					id:"2",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称2"
 				},
 				{
 					id:"3",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称3"
 				},
 				{
 					id:"4",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称4"
 				},
 				{
 					id:"1",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称1"
 				},
 				{
 					id:"2",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称2"
 				},
 				{
 					id:"3",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称3"
 				},
 				{
 					id:"4",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称4"
 				},
 				{
 					id:"1",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称1"
 				},
 				{
 					id:"2",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称2"
 				},
 				{
 					id:"3",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称3"
 				},
 				{
 					id:"4",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称4"
 				},
 				{
 					id:"1",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称1"
 				},
 				{
 					id:"2",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称2"
 				},
 				{
 					id:"3",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称3"
 				},
 				{
 					id:"4",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称4"
 				},
 				{
 					id:"1",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称1"
 				},
 				{
 					id:"2",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称2"
 				},
 				{
 					id:"3",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称3"
 				},
 				{
 					id:"4",
-					img:"../../static/picture/bg2.jpg",
+					img:"../../static/picture/bg1.jpg",
 					name:"记本名称4"
 				}
 			],
