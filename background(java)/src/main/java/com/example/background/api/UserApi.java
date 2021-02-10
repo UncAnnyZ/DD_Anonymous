@@ -32,7 +32,7 @@ public class UserApi {
         User userForBase=userService.findByUsername(user);
         String code =  user.getCode();//获取验证码
         if(userForBase==null){
-            if(code.equals("1234")){
+            if(code != null && code.equals("1234")){
                 User newUser = new User();
                 newUser.setUID(UUID.randomUUID().toString().replace("-",""));
                 newUser.setUsername(user.getUsername());
