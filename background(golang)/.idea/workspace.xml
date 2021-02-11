@@ -20,30 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="421ea743-919a-47b2-a69f-9bd9c610c440" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/notePad.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/gorm.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/system.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global/global.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/initialize/gorm.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/initialize/internal/logger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/initialize/redis.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/notePad.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/request/common.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/request/notePad.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/response/common.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/response/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router/notePad.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/notePad.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/notePad.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/notePad.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/initialize/gorm.go" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/gorm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/notePad.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/notePad.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,10 +128,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612717244107" />
-    <state x="702" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612717140564">
+    <state x="702" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613022226751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="702" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612717140564" />
+    <state x="702" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1613022226751" />
     <state x="668" y="163" key="#go_build_background" timestamp="1612716863371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -167,25 +148,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612972386285" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1612975705617">
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom" timestamp="1613022150896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612975705617" />
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1613022150896" />
     <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1612772284923" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1612975705617">
+    <state width="1877" height="238" key="GridCell.Tab.0.center" timestamp="1613022150896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612975705617" />
+    <state width="1877" height="238" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1613022150896" />
     <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1612772284923" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1612975705616">
+    <state width="1877" height="238" key="GridCell.Tab.0.left" timestamp="1613022150896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612975705616" />
+    <state width="1877" height="238" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1613022150896" />
     <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1612772284923" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1612975705617">
+    <state width="1877" height="238" key="GridCell.Tab.0.right" timestamp="1613022150896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612975705617" />
+    <state width="1877" height="238" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1613022150896" />
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1612772284923" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1612716812857">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -195,10 +176,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="606" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612974716087" />
-    <state x="636" y="119" width="647" height="801" key="find.popup" timestamp="1612974657199">
+    <state x="636" y="119" width="647" height="801" key="find.popup" timestamp="1612981334580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="119" width="647" height="801" key="find.popup/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612974657199" />
+    <state x="636" y="119" width="647" height="801" key="find.popup/0.0.1920.1040/1920.0.1600.860@0.0.1920.1040" timestamp="1612981334580" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612718998521">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

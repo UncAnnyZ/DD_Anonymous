@@ -47,7 +47,7 @@ func MysqlTables(db *gorm.DB) {
 
 func GormMysql() *gorm.DB {
 	m := global.GVA_CONFIG.Mysql
-	dsn := "root" + ":" + "1122qq" + "@tcp(" + "127.0.0.1:3306" + ")/" + "base" + "?" + "charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root" + ":" + "123456" + "@tcp(" + "127.0.0.1:3306" + ")/" + "dd_anonymous" + "?" + "charset=utf8mb4&parseTime=True&loc=Local"
 
 	mysqlConfig := mysql.Config{
 		DSN:                       dsn,   // DSN data source name

@@ -8,6 +8,7 @@ import (
 	"background/service"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"time"
 )
 
 // @Tags NotePad
@@ -21,6 +22,8 @@ import (
 func CreateNotePad(c *gin.Context) {
 	var notePad model.NotePad
 	_ = c.ShouldBindJSON(&notePad)
+	notePad.CreateDate = time.Now()
+	notePad.ModifyDate = time.Now()
 	err := service.CreateNotePad(notePad)
 	if err != nil {
 		response.FailWithMessage(fmt.Sprintf("创建失败，%v", err), c)
