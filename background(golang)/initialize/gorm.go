@@ -48,7 +48,6 @@ func MysqlTables(db *gorm.DB) {
 func GormMysql() *gorm.DB {
 	m := global.GVA_CONFIG.Mysql
 	dsn := "root" + ":" + "123456" + "@tcp(" + "127.0.0.1:3306" + ")/" + "dd_anonymous" + "?" + "charset=utf8mb4&parseTime=True&loc=Local"
-
 	mysqlConfig := mysql.Config{
 		DSN:                       dsn,   // DSN data source name
 		DefaultStringSize:         191,   // string 类型字段的默认长度
@@ -60,7 +59,6 @@ func GormMysql() *gorm.DB {
 	if db, err := gorm.Open(mysql.New(mysqlConfig), gormConfig(true)); err != nil {
 
 		//global.GVA_LOG.Error("MySQL启动异常", zap.Any("err", err))
-		print(111)
 		os.Exit(0)
 
 		return nil

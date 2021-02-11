@@ -38,8 +38,8 @@ func MiddleWare() gin.HandlerFunc {
 				"code": 500,
 				"msg": "无token，请重新登录",
 			})
-			//c.Abort()
-			//return
+			c.Abort()
+			return
 		}
 	}
 }
