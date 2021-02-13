@@ -1,93 +1,99 @@
 {
-	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"app-plus": {
-				"titleNView": false
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
 			}
-		}
-	}, {
-		"path": "pages/found/found",
-		"style": {
-			"app-plus": {
-				"titleNView": true //禁用原生导航栏
+		},
+		{
+			"path": "pages/found/found",
+			"style": {
+				"app-plus": {
+					"titleNView": true //禁用原生导航栏
+				}
 			}
-		}
-	}, {
-		"path": "pages/message/message",
-		"style": {
-			"app-plus": {
-				"titleNView": false //禁用原生导航栏
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
 			}
-		}
-	}, {
-		"path": "pages/mine/mine",
-		"style": {
-			"navigationBarTitleText": "我的",
-			"enablePullDownRefresh": false,
-			"app-plus": {
-				"titleNView": true,
-				"background": "#efeff4",
-				"subNVues": [{
-					"id": "popup", // 唯一标识  
-					"path": "pages/subNVue/popup", // 页面路径  
-					"type": "popup",
-					"style": {
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": true
+				}
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": true,
+					"background": "#efeff4",
+					"subNVues": [{
+						"id": "popup", // 唯一标识  
+						"path": "pages/subNVue/popup", // 页面路径  
 						"type": "popup",
-						"mask": "rgba(0,0,0,0.5)",
-						"position": "absolute",
-						"background": "transparent"
-					}
-				}]
+						"style": {
+							"type": "popup",
+							"mask": "rgba(0,0,0,0.5)",
+							"position": "absolute",
+							"background": "transparent"
+						}
+					}]
+				}
 			}
-		}
-	}, {
-		"path": "pages/login/login",
-		"style": {
-			"navigationBarTitleText": "登录",
-			"enablePullDownRefresh": false,
-			"app-plus": {
-				"titleNView": true,
-				"background": "#efeff4",
-				"subNVues": [{
-					"id": "popup", // 唯一标识  
-					"path": "pages/subNVue/popup", // 页面路径  
-					"type": "popup",
-					"style": {
-						"type": "popup",
-						"mask": "rgba(0,0,0,0.5)",
-						"position": "absolute",
-						"background": "transparent"
-					}
-				}]
+		}, 
+		{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"app-plus": {
+					"titleNView": true
+				}
 			}
-		}
-	}, {
-		"path": "pages/setting/setting",
-		"style": {
-			"navigationBarTitleText": "设置",
-			"app-plus": {
-				"titleNView": true
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
 			}
-		}
-	}, {
-		"path": "pages/search/search",
-		"style": {
-			"app-plus": {
-				"titleNView": false
+		},
+		{
+			"path": "pages/agreement/agreement",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/test/test"
+		},
+		{
+			"path": "pages/subNVue/popup"
+		},
+		{
+			"path": "pages/subNVue/Npopup"
 		}
-	}, {
-		"path": "pages/agreement/agreement",
-		"style": {
-			"navigationBarTitleText": "",
-			"enablePullDownRefresh": false
-		}
-	}, {
-		"path": "pages/subNVue/popup"
-	}, {
-		"path": "components/uni-popup-dialog/uni-popup-dialog"
-	}],
+	    ,{
+            "path" : "components/popup/popup"
+        }
+    ],
+	
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "DDDD",
