@@ -8,6 +8,11 @@
 				}
 			}
 		},
+		{ "path": "pages/test/test" },
+		{ "path": "pages/subNVue/popup" },
+		{ "path": "pages/subNVue/Npopup" },
+		{ "path": "components/popup/popup" },
+		
 		{
 			"path": "pages/found/found",
 			"style": {
@@ -81,16 +86,10 @@
 			}
 		},
 		{
-			"path": "pages/test/test"
-		},
-		{
-			"path": "pages/subNVue/popup"
-		},
-		{
-			"path": "pages/subNVue/Npopup"
-		}
-	    ,{
-            "path" : "components/popup/popup"
+            "path" : "pages/index/save",
+            "style" : {
+                "navigationBarTitleText": "图片保存"
+            }
         }
     ],
 	

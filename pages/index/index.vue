@@ -136,7 +136,7 @@
 					
 					<!-- 底部互动栏 -->
 					<view class="list_bottom">
-						<view class="list_bottom_comment">
+						<view class="list_bottom_comment" @click="comment(index)">
 							<image src="../../static/icon/btn_icon_comment.png" mode="scaleToFill"></image>
 							<text>66546</text>
 						</view>
@@ -144,7 +144,7 @@
 							<image :src="item.liked?(src.liked):(src.like)" mode="aspectFit" @click="like(index)"></image>
 							<text>64242</text>
 						</view>
-						<view class="list_bottom_save">
+						<view class="list_bottom_save" @click="save(index)">
 							<image src="../../static/icon/btn_icon_save.png" mode="aspectFit"></image>
 						</view>
 					</view>

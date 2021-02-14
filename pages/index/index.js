@@ -1,4 +1,4 @@
-
+const api = getApp().globalData.api
 export default {
 	data() {
 		return {
@@ -16,8 +16,8 @@ export default {
 						nickname:"昵称1"
 					},
 					time:"2021-2-4 18:00",
-					text:"《青春伤痛文学》",
-					book:"《记本名称》",
+					text:"时间在追追赶赶，那我祝你，生活依旧碎碎念，念着平安，念着喜乐！",
+					book:"《记本名称第三方》",
 					image:[
 						"../../static/picture/bg1.jpg"
 					],
@@ -170,6 +170,7 @@ export default {
 	
 	onLoad(){
 		var token = uni.getStorageSync("token")
+		console.log("onLoad")
 	},
 	
 	methods: {
@@ -256,9 +257,38 @@ export default {
 			},2000)
 		},
 		
-		// 点击更多
-		more(e){
+		// 点击保存
+		save(e){
 			console.log(e + "点击更多")
+			var that = this
+			let data = {
+				nickname: "—— " + this.list[e].userinfo.nickname,
+				time: this.list[e].time,
+				text: this.list[e].text,
+				book: this.list[e].book
+			}
+			
+			// 图片信息
+			uni.getImageInfo({
+				src: that.list[e].image[0],
+				success(res) {
+					console.log(res)
+					data.img = {
+						height: res.height,
+						width: 	res.width,
+						path: 	res.path,
+						Wmul: 	710 / (res.width * 2),
+						Hmul: 	(res.height / res.width) / 2
+					}
+					console.log(data)
+					uni.setStorageSync("save_bookmark",data)
+				}
+			})
+			
+			uni.navigateTo({
+				url:"./save",
+				animationType:"slide-in-top"
+			})
 		}
 	}
 }

@@ -83,7 +83,7 @@
 .list_image_2{
 	flex-direction: row;
 	width: 640rpx;
-	height: 315rpx
+	height: 318rpx
 }
 .list_image_second{
 	display: flex;
@@ -91,11 +91,11 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 640rpx;
-	height: 315rpx
+	height: 319rpx
 }
 .list_image_second image{
-	width: 315rpx;
-	height: 315rpx;
+	width: 319rpx;
+	height: 319rpx;
 }
 
 /* 三张图 */
@@ -108,29 +108,29 @@
 	flex-direction: row;
 	justify-content: space-between;
 	width: 640rpx;
-	height: 420rpx;
+	height: 425rpx;
 }
 	/* 左大图 */
 .list_image_third_left,
 .list_image_third_left_img,
 .list_image_third_left_img image{
-	width: 420rpx;
-	height: 420rpx;
+	width: 426rpx;
+	height: 425rpx;
 }
 	/* 右两小图 */
 .list_image_third_right{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 200rpx;
-	height: 420rpx;
+	width: 212rpx;
+	height: 425rpx;
 }
 .list_image_third_right_top,
 .list_image_third_right_top image,
 .list_image_third_right_bottom,
 .list_image_third_right_bottom image{
-	width: 200rpx;
-	height: 200rpx;
+	width: 212rpx;
+	height: 211rpx;
 }
 
 /* 四张图 */
@@ -151,11 +151,11 @@
 	flex-direction: row;
 	justify-content: space-between;
 	width: 500rpx;
-	height: 240rpx;
+	height: 249rpx;
 }
 .list_image_forth_item image{
-	width: 240rpx;
-	height: 240rpx;
+	width: 249rpx;
+	height: 249rpx;
 }
 
 /* 五张图 */
@@ -177,7 +177,7 @@
 .list_image_seventh,
 .list_image_seventh image{
 	width: 640rpx;
-	height: 200rpx;
+	height: 212rpx;
 }
 
 /* 八张图 */
@@ -190,11 +190,11 @@
 	flex-direction: row;
 	justify-content: space-between;
 	width: 640rpx;
-	height: 200rpx;
+	height: 212rpx;
 }
 .list_image_eighth image{
-	width: 315rpx;
-	height: 200rpx;
+	width: 319rpx;
+	height: 212rpx;
 }
 
 /* 九张图 */
@@ -213,15 +213,15 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	width: 100%;
-	height: 200rpx;
+	height: 212rpx;
 }
 .list_image_ninth image,
 .list_image_center image,
 .list_image_bottom image{
-	width: 200rpx;
-	height: 200rpx;
+	width: 212rpx;
+	height: 212rpx;
 }
 
 /* 来源 */

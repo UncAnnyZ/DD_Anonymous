@@ -1,4 +1,4 @@
-const host = getApp().globalData.host + '/api'
+const api = getApp().globalData.api
 
 export default {
 	data() {
@@ -55,8 +55,8 @@ export default {
 				this.settime()
 				// 服务端向该用户发送验证码
 				uni.request({
-					url: host + "/getCode",
-					method:"POST",
+					url: api + "/getCode",
+					method:"GET",
 					data:{
 						user: that.info.username
 					},
@@ -128,8 +128,8 @@ export default {
 				this.showModal('暂未同意"用户协议"和"隐私条款"')
 			} else if(this.info.username == ""){
 				this.showModal("帐号不能为空");
-			} else if( !this.checkUsername(this.info.username) ){
-				this.showModal("帐号格式不正确")
+			// } else if( !this.checkUsername(this.info.username) ){
+			// 	this.showModal("帐号格式不正确")
 			} else if(this.info.code == ""){
 				this.showModal("验证码不能为空");
 			} else if(this.info.code.length != 4){
@@ -140,7 +140,7 @@ export default {
 				})
 				// 校验登录信息
 				uni.request({
-					url: host + "/login",
+					url: api + "/loginfgh",
 					method: "POST",
 					data:{
 						user: that.info.username,
@@ -160,6 +160,8 @@ export default {
 						} else if(res.data.msg == 3){
 							// 登录失败
 							that.showModal("登录失败，请稍后再试")
+						} else if(res.data.status == 404){
+							that.showModal("服务器错误，请与工作人员联系")
 						}
 					},
 					fail(res) {

@@ -25,7 +25,7 @@
 						</button>
 						<!-- 确认按钮 -->
 						<button class="model_btn_confirm border_bottom_right_radius" id="confirm" type="default" @click="send('confirm')"
-						 :class="showCancel?'':'border_bottom_left_radius'" :style="showCancel?'':'width:600rpx;'">
+						 :class="showCancel?'model_btn_confirm_left':'border_bottom_left_radius'" :style="showCancel?'':'width:600rpx;'">
 							<text class="model_btn_confirm_text" :style="'color:' + confirmColor">{{confirmText}}</text>
 						</button>
 					</view>
@@ -191,8 +191,9 @@
 		display: flex;
 		/* #endif */
 		flex-direction: row;
-		background-color: #fff;
-		border: 1rpx solid #F5F5F5;
+		/* background-color: #fff; */
+		width: 600rpx;
+		border-top: 1rpx #F5F5F5 solid;
 	}
 
 	/* 按钮 */
@@ -210,13 +211,16 @@
 		flex: 1;
 		height: 90rpx;
 	}
+		
+	.model_btn:after,
 	.model_btn_cancel:after,
-	.model_btn_confirm::after{
+	.model_btn_confirm:after{
 		border: none;
 		outline: none;
+		overflow:hidden;
 	}
 
-	.model_btn_confirm {
+	.model_btn_confirm_left {
 		border-left: 1rpx solid #F5F5F5;
 		border-radius: 0;
 	}
@@ -232,7 +236,6 @@
 	.model_btn_cancel_text {
 		color: #999999;
 	}
-
 	.model_btn_confirm_text {
 		/* color: #276ccc; */
 		color: #007aff;
@@ -241,7 +244,6 @@
 	.border_bottom_left_radius {
 		border-bottom-left-radius: 30rpx;
 	}
-
 	.border_bottom_right_radius {
 		border-bottom-right-radius: 30rpx;
 	}
