@@ -1,10 +1,6 @@
 <template>
 	<view class="all">
 		
-		<uni-popup ref="popup" type="dialog">
-		    <uni-popup-dialog type="input" message="成功消息" :duration="2000" :before-close="true" @close="close" @confirm="confirm"></uni-popup-dialog>
-		</uni-popup>
-		
 		<!-- <uni-nav-bar left-icon="back" left-text="返回" right-text="菜单" title="导航栏组件"></uni-nav-bar> -->
 		<view class="status_toppadding"></view>
 		<view class="status">

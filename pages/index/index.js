@@ -280,13 +280,14 @@ export default {
 					}
 					console.log(data)
 					uni.setStorageSync("save_bookmark",data)
+					uni.navigateTo({
+						url:"./save",
+						animationType:"slide-in-top"
+					})
 				}
 			})
 			
-			uni.navigateTo({
-				url:"./save",
-				animationType:"slide-in-top"
-			})
+			
 		}
 	}
 }

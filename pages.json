@@ -88,7 +88,22 @@
 		{
             "path" : "pages/index/save",
             "style" : {
-                "navigationBarTitleText": "图片保存"
+                "navigationBarTitleText": "图片保存",
+				"app-plus": {
+					"titleNView": true,
+					"background": "#efeff4",
+					"subNVues": [{
+						"id": "popup", // 唯一标识  
+						"path": "pages/subNVue/popup", // 页面路径  
+						"type": "popup",
+						"style": {
+							"type": "popup",
+							"mask": "rgba(0,0,0,0.5)",
+							"position": "absolute",
+							"background": "transparent"
+						}
+					}]
+				}
             }
         }
     ],

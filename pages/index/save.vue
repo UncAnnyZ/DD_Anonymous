@@ -1,7 +1,10 @@
 <template>
 	<view class="all">
-		<canvas :style="'width:' + canvasWidth + '; height:' + canvasHight + ';'" canvas-id="myCanvas" id="myCanvas"></canvas>
-		<image class="save_img" src="../../static/icon/btn_icon_save.png" mode="aspectFit" @click="save"></image>
+		<!-- #ifndef APP-PLUS -->
+			<popup ref="dialog" :showCancel="true" content="是否保存到相册" confirmText="保存" @hide='pop'></popup>
+		<!-- #endif -->
+		<canvas :style="'width:' + canvasWidth + '; height:' + canvasHight + ';'" canvas-id="myCanvas" id="myCanvas" @longpress="save"></canvas>
+		<!-- <image class="save_img" src="../../static/icon/btn_icon_save.png" mode="aspectFit" @click="save"></image> -->
 	</view>
 </template>
 
@@ -13,19 +16,27 @@
 	export default {
 		data() {
 			return {
-				canvasHight: "100vh",
+				canvasHight: device.windowHeight + "px",
 				canvasWidth: "750rpx"
 			}
 		},
-		onShow() {
+		onLoad() {
 			const info = uni.getStorageSync("save_bookmark")
 			console.log(info)
 			this.produce(info)
 		},
+		onHide() {
+			uni.removeStorageSync("save_bookmark")
+			uni.hideLoading()
+		},
 		methods: {
+			
+			// 画图
 			produce(info) {
-				
-				console.log(device)
+				uni.showLoading({
+					title: "生成中"
+				})
+				// console.log(device)
 				
 				var Wmul = (screenWidth - padding * 2) / (info.img.width)
 				var Hmul = ( info.img.height / info.img.width ) /2
@@ -34,13 +45,13 @@
 				const ctx = uni.createCanvasContext('myCanvas')
 				
 				var t = new Date(info.time).toDateString()
-				console.log(t)
+				// console.log(t)
 				var tArray = t.split(" ")
-				console.log(tArray)
-				console.log(tArray[0])	// Mon/Tues/Wed/Thur/Fri/Sat/Sun
-				console.log(tArray[1])	// Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sept/Oct/Nov/Dec
-				console.log(tArray[2])	// 01-31
-				console.log(tArray[3])	// 2021
+				// console.log(tArray)
+				// console.log(tArray[0])	// Mon/Tues/Wed/Thur/Fri/Sat/Sun
+				// console.log(tArray[1])	// Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sept/Oct/Nov/Dec
+				// console.log(tArray[2])	// 01-31
+				// console.log(tArray[3])	// 2021
 				
 				// 记录高度
 				let height = padding
@@ -83,39 +94,89 @@
 				
 				// 落尾
 				ctx.setFontSize(15)
-				ctx.fillText("D/D/D/D", screenWidth / 2 - 15 * 2 , height)
+				ctx.fillText("D/D/D/D", screenWidth / 2 - 15 * 2 , device.windowHeight >= height ? device.windowHeight - 20 : height)
 				
 				// 加底边距
 				height += 20
-				this.canvasHight = height + "px"
+				this.canvasHight = device.windowHeight >= height ? (device.windowHeight + "px"):(height + "px")
 				this.canvasWidth = device.screenWidth + "px"
 				
 				setTimeout(()=>{
 					ctx.draw()
+					uni.hideLoading({
+						success: uni.showToast({
+							title: " 长按保存 ",
+							icon: "none"
+						})
+					})
 				},2000)
 			},
 			
 			getTextArray(text){
 				var arr = text.split(/[,.!，。！]/)
-				console.log(arr)
+				// console.log(arr)
 				return arr
 			},
 			
-			save(){
+			preview(){
 				uni.canvasToTempFilePath({
 					canvasId: "myCanvas",
 					fileType: "jpg",
 					success(res) {
-						console.log(res)
-						
-						uni.saveImageToPhotosAlbum({
-							filePath:res.tempFilePath,
-							success(ress) {
-								console.log(ress)
+						uni.previewImage({
+							current:0,
+							urls: [res.tempFilePath],
+							longPressActions: {
+								itemList: ['保存图片'],
+								success: function(data) {
+									console.log('选中了第' + (data.tapIndex + 1) + '个按钮,第' + (data.index + 1) + '张图片');
+								},
+								fail: function(err) {
+									console.log(err.errMsg);
+								}
 							}
 						})
 					}
 				})
+				
+			},
+			save(){
+				var that = this
+				// #ifndef APP-PLUS
+					this.$refs.dialog.show()
+				// #endif
+				
+				// #ifdef APP-PLUS
+					uni.$emit('to_popup',{
+						data:{
+							content: "是否保存到相册"
+						}
+					})
+					uni.$once('from_popup',function(res){
+						that.pop(res)
+					})
+				// #endif
+			},
+			pop(res){
+				if(res.confirm){
+					uni.canvasToTempFilePath({
+						canvasId: "myCanvas",
+						fileType: "jpg",
+						success(res) {
+							// console.log(res.tempFilePath)
+							uni.saveImageToPhotosAlbum({
+								filePath:res.tempFilePath,
+								success(ress) {
+									// console.log(ress.path)
+									uni.showToast({
+										title: "已成功保存至相册",
+										icon: "none"
+									})
+								}
+							})
+						}
+					})
+				}
 			}
 		}
 	}
