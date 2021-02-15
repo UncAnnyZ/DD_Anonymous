@@ -1,15 +1,20 @@
 <template>
 	<view class="all">
-		<canvas :style="'width: 750rpx; height:' + canvasHight + ';'" canvas-id="myCanvas" id="myCanvas"></canvas>
+		<canvas :style="'width:' + canvasWidth + '; height:' + canvasHight + ';'" canvas-id="myCanvas" id="myCanvas"></canvas>
 		<image class="save_img" src="../../static/icon/btn_icon_save.png" mode="aspectFit" @click="save"></image>
 	</view>
 </template>
 
 <script>
+	const device = uni.getSystemInfoSync()
+	const screenWidth = device.screenWidth	// 屏幕宽度 px
+	const padding = 20	// 白边边距 px
+	
 	export default {
 		data() {
 			return {
-				canvasHight: "100vh"
+				canvasHight: "100vh",
+				canvasWidth: "750rpx"
 			}
 		},
 		onShow() {
@@ -19,6 +24,12 @@
 		},
 		methods: {
 			produce(info) {
+				
+				console.log(device)
+				
+				var Wmul = (screenWidth - padding * 2) / (info.img.width)
+				var Hmul = ( info.img.height / info.img.width ) /2
+				
 				console.log("开始绘画")
 				const ctx = uni.createCanvasContext('myCanvas')
 				
@@ -32,26 +43,26 @@
 				console.log(tArray[3])	// 2021
 				
 				// 记录高度
-				let height = 20
+				let height = padding
 				
 				// 日
 				ctx.setFontSize(50)
-				ctx.fillText(tArray[2], 10, height + 40)
+				ctx.fillText(tArray[2], padding , height + 40)
 				// 月·年份
 				ctx.setFontSize(18)
-				ctx.fillText(tArray[1] + " · " + tArray[3], 100, height + 40)
+				ctx.fillText(tArray[1] + " · " + tArray[3], padding + 80, height + 40)
 				
 				height += 50
 				// 画图
 				// 按比例缩放
-				ctx.drawImage(info.img.path, 10, height, info.img.width * info.img.Wmul , info.img.height * info.img.Hmul)	// drawImage(dx, dy, dWidth, dHeight)
+				ctx.drawImage(info.img.path, padding, height, info.img.width * Wmul , info.img.height * Hmul)	// drawImage(dx, dy, dWidth, dHeight)
 				
-				height += info.img.height * info.img.Hmul	// 图高 + 自身处高度
+				height += info.img.height * Hmul	// 图高 + 自身处高度
 				
 				// 记本
 				let length = info.book.length + 1	// 加的数为 = 20为中轴 ± 1
 				ctx.setFontSize(15)		// 右边距 = 375(px) - 串长 * 字的大小
-				ctx.fillText(info.book, 385 - length * 15, height + 20 + 2)	// 图高 + 字高 + 空行高度
+				ctx.fillText(info.book, screenWidth - length * 15, height + 20 + 2)	// 图高 + 字高 + 空行高度
 				
 				height += 35	// 35 = 15↑ + 20↓ (字高)
 				
@@ -59,24 +70,25 @@
 				let arr = this.getTextArray(info.text)
 				ctx.setFontSize(18)
 				for(let i = 0; i < arr.length; i++){
-					ctx.fillText(arr[i], 10, height + (18 + 20) * (i + 1))	// 35=20+15(字高) 20+5(字高 + 行间距)
+					ctx.fillText(arr[i], padding, height + (18 + 20) * (i + 1))	// 35=20+15(字高) 20+5(字高 + 行间距)
 				}
 				
 				height = height + (20 + 20) * arr.length
-				length = info.nickname.length + 1
+				length = info.nickname.length
 				
 				// 署名
-				ctx.fillText(info.nickname, 385 - length * 18, height)	// 35=20+15(字高) 20+5(字高 + 行间距)
+				ctx.fillText(info.nickname, screenWidth - length * 18, height)	// 35=20+15(字高) 20+5(字高 + 行间距)
 				
 				height = height + 15 + 20 + 20
 				
 				// 落尾
 				ctx.setFontSize(15)
-				ctx.fillText("D/D/D/D", 160, height)
+				ctx.fillText("D/D/D/D", screenWidth / 2 - 15 * 2 , height)
 				
 				// 加底边距
 				height += 20
 				this.canvasHight = height + "px"
+				this.canvasWidth = device.screenWidth + "px"
 				
 				setTimeout(()=>{
 					ctx.draw()
@@ -92,6 +104,7 @@
 			save(){
 				uni.canvasToTempFilePath({
 					canvasId: "myCanvas",
+					fileType: "jpg",
 					success(res) {
 						console.log(res)
 						

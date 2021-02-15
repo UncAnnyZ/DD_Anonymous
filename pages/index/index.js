@@ -276,9 +276,7 @@ export default {
 					data.img = {
 						height: res.height,
 						width: 	res.width,
-						path: 	res.path,
-						Wmul: 	710 / (res.width * 2),
-						Hmul: 	(res.height / res.width) / 2
+						path: 	res.path
 					}
 					console.log(data)
 					uni.setStorageSync("save_bookmark",data)
