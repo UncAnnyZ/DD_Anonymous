@@ -140,10 +140,10 @@ export default {
 				})
 				// 校验登录信息
 				uni.request({
-					url: api + "/loginfgh",
+					url: api + "/login",
 					method: "POST",
 					data:{
-						user: that.info.username,
+						username: that.info.username,
 						code: that.info.code
 					},
 					success(res) {
@@ -162,6 +162,8 @@ export default {
 							that.showModal("登录失败，请稍后再试")
 						} else if(res.data.status == 404){
 							that.showModal("服务器错误，请与工作人员联系")
+						} else {
+							that.showModal("未知错误")
 						}
 					},
 					fail(res) {

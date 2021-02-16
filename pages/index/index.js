@@ -272,13 +272,13 @@ export default {
 			uni.getImageInfo({
 				src: that.list[e].image[0],
 				success(res) {
-					console.log(res)
+					// console.log(res)
 					data.img = {
 						height: res.height,
 						width: 	res.width,
 						path: 	res.path
 					}
-					console.log(data)
+					// console.log(data)
 					uni.setStorageSync("save_bookmark",data)
 					uni.navigateTo({
 						url:"./save",
@@ -288,6 +288,13 @@ export default {
 			})
 			
 			
+		},
+		
+		test(){
+			console.log("index test")
+			uni.navigateTo({
+				url: "../test/test"
+			})
 		}
 	}
 }

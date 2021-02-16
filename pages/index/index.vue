@@ -148,6 +148,9 @@
 				</view>
 			</view>
 		</view>
+	
+		<button type="default" @click="test">test</button>
+	
 	</view>
 </template>
 

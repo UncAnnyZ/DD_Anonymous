@@ -23,6 +23,7 @@
 		onLoad() {
 			const info = uni.getStorageSync("save_bookmark")
 			console.log(info)
+			console.log(device)
 			this.produce(info)
 		},
 		onHide() {
@@ -81,14 +82,14 @@
 				let arr = this.getTextArray(info.text)
 				ctx.setFontSize(18)
 				for(let i = 0; i < arr.length; i++){
-					ctx.fillText(arr[i], padding, height + (18 + 20) * (i + 1))	// 35=20+15(字高) 20+5(字高 + 行间距)
+					ctx.fillText(arr[i], padding, height + (18 + 20) * (i + 1))	// 20+5(字高 + 行间距)
 				}
 				
-				height = height + (20 + 20) * arr.length
+				height += arr.length > 1 ? (20 + 20) * arr.length : (20 + 20) * (arr.length + 1)
 				length = info.nickname.length
 				
 				// 署名
-				ctx.fillText(info.nickname, screenWidth - length * 18, height)	// 35=20+15(字高) 20+5(字高 + 行间距)
+				ctx.fillText(info.nickname, screenWidth - length * 18, height)	// 20+5(字高 + 行间距)
 				
 				height = height + 15 + 20 + 20
 				
@@ -170,6 +171,12 @@
 									// console.log(ress.path)
 									uni.showToast({
 										title: "已成功保存至相册",
+										icon: "none"
+									})
+								},
+								fail() {
+									uni.showToast({
+										title: "保存失败",
 										icon: "none"
 									})
 								}
