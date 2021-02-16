@@ -19,7 +19,7 @@
     <insert id="addUser" parameterType="com.example.background.entity.User" useGeneratedKeys="true" keyProperty="id">
         <!-- 回显，添加数据后，返回对象的id值 -->
         <selectKey resultType="int" keyColumn="id" keyProperty="id" order="AFTER">
-            select last_insert_id()
+            SELECT @@IDENTITY
         </selectKey>
         insert into user(uid,username) values(#{UID},#{username})
     </insert>

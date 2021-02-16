@@ -46,10 +46,13 @@ public class UserApi {
                     return jsonObject;
                 }else{
                     jsonObject.put("message","添加用户失败");
+                    return jsonObject;
                 }
+            }else{
+                jsonObject.put("message","验证码错误");
+                return jsonObject;
             }
-            jsonObject.put("message","登录失败,用户不存在");
-            return jsonObject;
+
         }else {
             if (!code.equals("1234")){
                 jsonObject.put("message","验证码错误");//暂时没有次数限制
