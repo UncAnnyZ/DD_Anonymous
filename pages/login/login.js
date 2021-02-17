@@ -128,8 +128,8 @@ export default {
 				this.showModal('暂未同意"用户协议"和"隐私条款"')
 			} else if(this.info.username == ""){
 				this.showModal("帐号不能为空");
-			// } else if( !this.checkUsername(this.info.username) ){
-			// 	this.showModal("帐号格式不正确")
+			} else if( !this.checkUsername(this.info.username) ){
+				this.showModal("帐号格式不正确")
 			} else if(this.info.code == ""){
 				this.showModal("验证码不能为空");
 			} else if(this.info.code.length != 4){
@@ -148,11 +148,23 @@ export default {
 					},
 					success(res) {
 						console.log(res)
-						if(res.data.msg == 1){
-							// 登录成功跳转到主页
-							uni.switchTab({
-								url:"../index/index"
+						if(res.data.token){
+							uni.setStorageSync("userInfo",{
+								uid: res.data.UID,
+								level: res.data.level,
+								token: res.data.token,
+								username: res.data.username
 							})
+							// 登录成功跳转到主页
+							uni.showToast({
+								title: "登录成功"
+							})
+							setTimeout(()=>{
+								uni.switchTab({
+									url:"../index/index"
+								})
+							},600)
+							
 						} else if(res.data.msg == 2){
 							// 验证码错误
 							that.showModal("验证码错误")

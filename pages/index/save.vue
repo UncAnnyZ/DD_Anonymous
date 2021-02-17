@@ -1,205 +1,315 @@
 <template>
-	<view class="all">
-		<!-- #ifndef APP-PLUS -->
-			<popup ref="dialog" :showCancel="true" content="是否保存到相册" confirmText="保存" @hide='pop'></popup>
-		<!-- #endif -->
-		<canvas :style="'width:' + canvasWidth + '; height:' + canvasHight + ';'" canvas-id="myCanvas" id="myCanvas" @longpress="save"></canvas>
-		<!-- <image class="save_img" src="../../static/icon/btn_icon_save.png" mode="aspectFit" @click="save"></image> -->
+	<view>
+		<!-- 用于与 renderjs 通信 -->
+		<view style="position: fixed;" hidden :status="status" :change:status="ttt.save">
+		</view>
+
+		<view class="sq" @longpress="toTop" id="sq">
+
+			<view class="sq_date">
+				<view class="sq_date_dd">
+					<text>{{info.timeArr[2]}}</text>
+				</view>
+				<view class="sq_date_mmyy">
+					<text>{{info.timeArr[1]}}·{{info.timeArr[3]}}</text>
+				</view>
+			</view>
+
+			<view class="sq_picture" :style="'height:' + imgHeight + 'rpx;'">
+				<image :src="info.img.path" mode="aspectFit" :style="'height:' + imgHeight + 'rpx;'"></image>
+			</view>
+
+			<view class="sq_from">
+				<text>{{info.book}}</text>
+			</view>
+
+			<view class="sq_text">
+				<view class="sq_text_line" v-for="(item,index) in info.text" :key="index">
+					<text>{{item}}</text>
+				</view>
+			</view>
+
+			<view class="sq_who">
+				<text>—— {{info.nickname}}</text>
+			</view>
+
+			<view class="sq_bottom">
+				<view class="sq_bottom_dddd">
+					<text>d/d/d/d</text>
+				</view>
+
+				<view class="sq_bottom_QR">
+					<image src="../../static/picture/logo.png" mode="aspectFill"></image>
+				</view>
+			</view>
+
+		</view>
+
 	</view>
 </template>
 
 <script>
-	const device = uni.getSystemInfoSync()
-	const screenWidth = device.screenWidth	// 屏幕宽度 px
-	const padding = 20	// 白边边距 px
-	
+
 	export default {
 		data() {
 			return {
-				canvasHight: device.windowHeight + "px",
-				canvasWidth: "750rpx"
+				imgHeight: "400",
+				info: {
+					"book": "《记本名称》",
+					"img": {
+						"height": 400,
+						"path": "../../static/picture/bg3.jpg",
+						"width": 710
+					},
+					"nickname": "你的名字",
+					"text": "怎么摸鱼怎么来",
+					"time": "2021-2-12 18:00"
+				},
+				status: false
 			}
 		},
+		
 		onLoad() {
 			const info = uni.getStorageSync("save_bookmark")
-			console.log(info)
-			console.log(device)
+			this.info = info
 			this.produce(info)
 		},
 		onHide() {
-			uni.removeStorageSync("save_bookmark")
 			uni.hideLoading()
 		},
 		methods: {
-			
-			// 画图
+			// 图片数据初始化
 			produce(info) {
-				uni.showLoading({
-					title: "生成中"
-				})
-				// console.log(device)
-				
-				var Wmul = (screenWidth - padding * 2) / (info.img.width)
-				var Hmul = ( info.img.height / info.img.width ) /2
-				
-				console.log("开始绘画")
-				const ctx = uni.createCanvasContext('myCanvas')
-				
-				var t = new Date(info.time).toDateString()
-				// console.log(t)
-				var tArray = t.split(" ")
-				// console.log(tArray)
-				// console.log(tArray[0])	// Mon/Tues/Wed/Thur/Fri/Sat/Sun
-				// console.log(tArray[1])	// Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sept/Oct/Nov/Dec
-				// console.log(tArray[2])	// 01-31
-				// console.log(tArray[3])	// 2021
-				
-				// 记录高度
-				let height = padding
-				
-				// 日
-				ctx.setFontSize(50)
-				ctx.fillText(tArray[2], padding , height + 40)
-				// 月·年份
-				ctx.setFontSize(18)
-				ctx.fillText(tArray[1] + " · " + tArray[3], padding + 80, height + 40)
-				
-				height += 50
-				// 画图
-				// 按比例缩放
-				ctx.drawImage(info.img.path, padding, height, info.img.width * Wmul , info.img.height * Hmul)	// drawImage(dx, dy, dWidth, dHeight)
-				
-				height += info.img.height * Hmul	// 图高 + 自身处高度
-				
-				// 记本
-				let length = info.book.length + 1	// 加的数为 = 20为中轴 ± 1
-				ctx.setFontSize(15)		// 右边距 = 375(px) - 串长 * 字的大小
-				ctx.fillText(info.book, screenWidth - length * 15, height + 20 + 2)	// 图高 + 字高 + 空行高度
-				
-				height += 35	// 35 = 15↑ + 20↓ (字高)
-				
-				// 文案
-				let arr = this.getTextArray(info.text)
-				ctx.setFontSize(18)
-				for(let i = 0; i < arr.length; i++){
-					ctx.fillText(arr[i], padding, height + (18 + 20) * (i + 1))	// 20+5(字高 + 行间距)
-				}
-				
-				height += arr.length > 1 ? (20 + 20) * arr.length : (20 + 20) * (arr.length + 1)
-				length = info.nickname.length
-				
-				// 署名
-				ctx.fillText(info.nickname, screenWidth - length * 18, height)	// 20+5(字高 + 行间距)
-				
-				height = height + 15 + 20 + 20
-				
-				// 落尾
-				ctx.setFontSize(15)
-				ctx.fillText("D/D/D/D", screenWidth / 2 - 15 * 2 , device.windowHeight >= height ? device.windowHeight - 20 : height)
-				
-				// 加底边距
-				height += 20
-				this.canvasHight = device.windowHeight >= height ? (device.windowHeight + "px"):(height + "px")
-				this.canvasWidth = device.screenWidth + "px"
-				
-				setTimeout(()=>{
-					ctx.draw()
-					uni.hideLoading({
-						success: uni.showToast({
-							title: " 长按保存 ",
-							icon: "none"
-						})
-					})
-				},2000)
-			},
-			
-			getTextArray(text){
-				var arr = text.split(/[,.!，。！]/)
-				// console.log(arr)
-				return arr
-			},
-			
-			preview(){
-				uni.canvasToTempFilePath({
-					canvasId: "myCanvas",
-					fileType: "jpg",
+				var that = this
+				// 获取图片信息 进行缩放
+				uni.getImageInfo({
+					src: info.img.path,
 					success(res) {
-						uni.previewImage({
-							current:0,
-							urls: [res.tempFilePath],
-							longPressActions: {
-								itemList: ['保存图片'],
-								success: function(data) {
-									console.log('选中了第' + (data.tapIndex + 1) + '个按钮,第' + (data.index + 1) + '张图片');
-								},
-								fail: function(err) {
-									console.log(err.errMsg);
-								}
-							}
-						})
+						console.log(res)
+						let wh = res.width / res.height
+
+						that.imgHeight = 710 / wh
+						that.info.img.height = res.height
+						that.info.img.width = res.width
 					}
 				})
+				// 时间切片后显示
+				var t = new Date(info.time).toDateString()
+				var tArray = t.split(" ")
+				this.info.timeArr = tArray
+				// 文案
+				let text = info.text
+				let arr = text.split(/[,.!，。！]/)
+				this.info.text = arr
 				
+				uni.showToast({
+					title: "加载完成，长按生成书签",
+					icon: "none"
+				})
 			},
-			save(){
+
+			// 询问并置顶
+			toTop() {
 				var that = this
-				// #ifndef APP-PLUS
-					this.$refs.dialog.show()
-				// #endif
 				
 				// #ifdef APP-PLUS
-					uni.$emit('to_popup',{
-						data:{
-							content: "是否保存到相册"
-						}
-					})
-					uni.$once('from_popup',function(res){
-						that.pop(res)
+				// 召唤弹窗
+				uni.$emit('to_popup', {
+					data: {
+						content: "是否生成书签并保存至相册"
+					}
+				})
+				// 弹窗回调
+				uni.$once('from_popup', function(res) {
+					if (res.confirm) {
+						uni.showLoading({
+							title: "生成书签中"
+						})
+						uni.pageScrollTo({
+							scrollTop: 0,
+							duration: 0
+						})
+						// 改变值，触发 renderjs.click 生成图片
+						that.status = !that.status
+					}
+				})
+				// #endif
+				
+				// #ifndef APP-PLUS
+					uni.showModal({
+						title: "温馨提示",
+						content: "当前终端不支持该功能",
+						showCancel: false
 					})
 				// #endif
 			},
-			pop(res){
-				if(res.confirm){
-					uni.canvasToTempFilePath({
-						canvasId: "myCanvas",
-						fileType: "jpg",
-						success(res) {
-							// console.log(res.tempFilePath)
-							uni.saveImageToPhotosAlbum({
-								filePath:res.tempFilePath,
-								success(ress) {
-									// console.log(ress.path)
-									uni.showToast({
-										title: "已成功保存至相册",
-										icon: "none"
-									})
-								},
-								fail() {
-									uni.showToast({
-										title: "保存失败",
-										icon: "none"
-									})
-								}
-							})
-						}
+			
+			// 保存图片
+			saveBase64(imageStr) {
+				uni.showLoading({
+					title: "正在保存"
+				})
+				var that = this
+				let bitmap = new plus.nativeObj.Bitmap();
+				var photoName = "_img/" + "bookmark_" + that.info.nickname + "_" + Date.parse(new Date()) + ".jpg"
+				bitmap.loadBase64Data(imageStr, function() {
+					console.log("加载Base64图片数据成功")
+					bitmap.save(photoName, {
+						quality: 100
+					}, function(i) {
+						// 保存至相册
+						uni.saveImageToPhotosAlbum({
+							filePath: i.target,
+							success: function() {
+								uni.showToast({
+									title: "书签保存成功"
+								})
+							},
+							fail: function(e) {
+								console.log("失败")
+							},
+							complete: function() {
+								uni.hideLoading()
+								bitmap.clear()
+							}
+						})
+						console.log('保存书签成功：' + JSON.stringify(i))
+
+					}, function(e) {
+						console.log('保存书签失败：' + JSON.stringify(e))
+						bitmap.clear()
 					})
-				}
+
+				}, function() {
+					uni.hideLoading()
+					console.log('加载Base64图片数据失败：' + JSON.stringify(e))
+					bitmap.clear()
+				})
+			}
+		}
+	}
+</script>
+
+<script module='ttt' lang="renderjs">
+	import html2canvas from '@/utils/node_modules/html2canvas/dist/html2canvas.min.js'
+	export default {		
+		methods: {
+			save(newValue, oldValue, ownerVm, vm) {
+				
+				console.log('newValue', newValue)
+				console.log('oldValue', oldValue)
+				console.log('ownerVm', ownerVm)
+				console.log('vm', vm)
+				
+				// #ifdef APP-PLUS
+				console.log("开始制作生成base图片")
+				html2canvas(document.getElementById('sq'), {
+					backgroundColor: 'white',
+					useCORS: true,
+					taintTest: true,
+					timeout: 2000
+				}).then(canvas => {
+					var imgUrl = canvas.toDataURL("image/jpg")
+					ownerVm.callMethod('saveBase64', imgUrl)
+				})
+				// #endif
+				
 			}
 		}
 	}
 </script>
 
 <style>
-.all{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	/* padding: 20rpx; */
-}
-.save_img{
-	padding-top: 20rpx;
-	width: 120rpx;
-	height: 120rpx;
-}
+	.sq {
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		/* align-items: center; */
+		width: 710rpx;
+		min-height: calc(100vh - var(--status-bar-height) - var(--window-top) - 40rpx);
+		padding: 20rpx;
+		position: absolute;
+	}
+
+	.sq_date {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: baseline;
+		padding-bottom: 10rpx;
+	}
+
+	.sq_date_dd {
+		font-size: 30px;
+		padding-right: 30rpx;
+	}
+
+	.sq_date_mmyy {
+		font-size: 20px;
+	}
+
+	.sq_picture {
+		width: 100%;
+	}
+
+	.sq_picture image {
+		width: 100%;
+	}
+
+	.sq_from {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+		padding: 10rpx 0;
+	}
+
+	.sq_text {
+		padding: 10rpx 0;
+	}
+
+	.sq_text_line {
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 18px;
+		padding: 5rpx 0;
+		line-height: 30px;
+	}
+
+	.sq_who {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+	}
+
+	.sq_bottom {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		width: 100%;
+		height: 40rpx;
+		padding-top: 80rpx;
+		flex-grow: 1;
+	}
+
+	.sq_bottom_dddd {
+		color: #888;
+	}
+
+	.sq_bottom_QR {
+		display: flex;
+		justify-content: flex-end;
+		position: absolute;
+		right: 20rpx;
+		bottom: 20rpx;
+	}
+
+	.sq_bottom_QR image {
+		height: 80rpx;
+		width: 80rpx;
+	}
 </style>

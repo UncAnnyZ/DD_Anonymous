@@ -19,7 +19,7 @@ export default {
 					text:"时间在追追赶赶，那我祝你，生活依旧碎碎念，念着平安，念着喜乐！",
 					book:"《记本名称第三方》",
 					image:[
-						"../../static/picture/bg1.jpg"
+						"../../static/picture/bg3.jpg"
 					],
 					liked:false,
 					liked_status:true	// true 时可发送更新数据，防止连续触发
@@ -162,14 +162,14 @@ export default {
 						"../../static/picture/bg1.jpg"
 					],
 					liked:false,
-					liked_status:true
+					liked_status:true	// true 时可发送更新数据，防止连续触发
 				}
 			]
 		}
 	},
 	
 	onLoad(){
-		var token = uni.getStorageSync("token")
+		var userInfo = uni.getStorageSync("userInfo")
 		console.log("onLoad")
 	},
 	
@@ -186,12 +186,6 @@ export default {
 				this.status_bar.left_img = "../../static/icon/css_icon_dark.png"
 			}
 		},
-		// search(){
-		// 	console.log("点击搜索按钮")
-		// 	uni.navigateTo({
-		// 		url:"../search/search"
-		// 	})
-		// },
 		
 		// 预览图片
 		previewImage(e){
@@ -207,13 +201,13 @@ export default {
 						if(res.tapIndex == 1){
 							// 保存图片到本地相册
 							console.log(that.list[e.index].image[e.current])
-							// uni.saveImageToPhotosAlbum({
-							// 	filePath:that.list[e.index].image[e.current],
-							// 	success(res) {
-							// 		console.log(res.path)
-							// 	},
-							// 	fail:console.error()
-							// })
+							uni.saveImageToPhotosAlbum({
+								filePath:that.list[e.index].image[e.current],
+								success(res) {
+									console.log(res.path)
+								},
+								fail:console.error()
+							})
 						}
 					},
 					fail: function(err) {
@@ -231,12 +225,14 @@ export default {
 		// 点赞
 		like(e){
 			var that = this
+			// 更改当前的点赞状态
 			this.list[e].liked = !this.list[e].liked
-			console.log(this.list[e].liked_status)
+			console.log(this.list[e].liked_status)	
+			// 点击后，2s后统计发送一次当前状态
 			setTimeout(() => {
-				if(that.list[e].liked_status){
+				if(that.list[e].liked_status){		// true 时可发送更新数据，防止连续触发
 					console.log(e + "发送数据")
-					that.list[e].liked_status = false
+					that.list[e].liked_status = false	// 伪“同步信号量” hhhhh
 					uni.request({
 						url:"",
 						data:"",
@@ -245,9 +241,11 @@ export default {
 						},
 						fail(res){
 							console.log(res)
+							// 失败时，统一视为点赞失败/未点赞
 							that.list[e].liked = false
 						},
 						complete() {
+							// 请求完成1s后才可以重新触发请求
 							setTimeout(()=>{
 								that.list[e].liked_status = true
 							},1000)
@@ -262,7 +260,7 @@ export default {
 			console.log(e + "点击更多")
 			var that = this
 			let data = {
-				nickname: "—— " + this.list[e].userinfo.nickname,
+				nickname: this.list[e].userinfo.nickname,
 				time: this.list[e].time,
 				text: this.list[e].text,
 				book: this.list[e].book
@@ -288,13 +286,7 @@ export default {
 			})
 			
 			
-		},
-		
-		test(){
-			console.log("index test")
-			uni.navigateTo({
-				url: "../test/test"
-			})
 		}
+		
 	}
 }

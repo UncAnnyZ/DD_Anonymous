@@ -1,7 +1,6 @@
 <template>
 	<view class="all">
 		
-		<!-- <uni-nav-bar left-icon="back" left-text="返回" right-text="菜单" title="导航栏组件"></uni-nav-bar> -->
 		<view class="status_toppadding"></view>
 		<view class="status">
 			<view class="status_bar_top"></view>
@@ -148,9 +147,8 @@
 				</view>
 			</view>
 		</view>
-	
-		<button type="default" @click="test">test</button>
-	
+		
+		<!-- <navigator url="../test/test">go to test</navigator> -->
 	</view>
 </template>
 

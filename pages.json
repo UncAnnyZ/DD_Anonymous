@@ -88,7 +88,7 @@
 		{
             "path" : "pages/index/save",
             "style" : {
-                "navigationBarTitleText": "图片保存",
+                "navigationBarTitleText": "书签",
 				"app-plus": {
 					"titleNView": true,
 					"background": "#efeff4",
