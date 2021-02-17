@@ -1,0 +1,94 @@
+.all{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.background{
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-start;
+	align-items: flex-start;
+	width: 100%;
+	/* 按照16:9进行计算 */
+	height: 422rpx;	
+}
+.background image{
+	align-self: baseline;
+	width: 100%;
+}
+
+.setting{
+	position: absolute;
+	top: 5rpx;
+	right: 5rpx;
+}
+.setting image{
+	width: 50rpx;
+	height: 50rpx;
+}
+
+.personalInfo{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 80rpx;
+	padding-bottom: 50rpx;
+}
+.personalInfo_image{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	top: -85rpx;
+	width: 170rpx;
+	height: 170rpx;
+	border-radius: 50%;
+	background-color: #FFF;
+}
+.personalInfo_image image{
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 50%;
+}
+.personalInfo_nickname{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	margin: 0 5rpx;
+	flex-grow: 0.8;
+}
+.personalInfo_nickname input{
+	display: flex;
+	align-items: center;
+	width: 250rpx;
+	padding-left: 5rpx;
+	height: 100%;
+	flex-grow: 0.8;
+}
+.personalInfo_nickname button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 120rpx;
+	height: 70rpx;
+	font-size: 16px;
+}
+
+.situation{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.situation_dynamic,.situation_fans,.situation_follow,.situation_likes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 200rpx;
+}

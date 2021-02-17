@@ -1,0 +1,149 @@
+
+/* 顶部导航栏 */
+.status_toppadding{
+	height: calc(var(--status-bar-height) + 100rpx);
+}
+.status_bar{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 80rpx;
+	padding: 10rpx 0;
+	background-color: #FFFFFF;
+}
+.status_bar_left{
+	height: 100%;
+	padding-left: 15rpx;
+}
+.status_bar_center{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 60rpx;
+	flex-grow: 1;
+	margin: 50rpx;
+	border-radius: 80rpx;
+	background-color: #f4f4f4;
+}
+.status_bar_center image{
+	height: 40rpx;
+	width: 40rpx;
+	padding: 0 20rpx;
+}
+.status_bar_center input{
+	flex-grow: 1;
+	font-size: 15px;
+	color: #888;
+	letter-spacing: 2rpx;
+}
+
+/* 滑块导航栏 */
+.swiper_title{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	background-color: #FFFFFF;
+	padding-bottom: 10rpx;
+}
+.swiper_title_EDiary,
+.swiper_title_User{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	letter-spacing: 5rpx;
+	font-size: 18px;
+	color: #888;
+}
+.swiper_title_choose{
+	font-weight: 600;
+	color: #555;
+	padding: 5rpx 0;
+}
+.swiper_title_choose_border{
+	width: 70%;
+	border-bottom: 1px solid #555555;
+}
+
+/* 滑块内容 */
+.swiper{
+	height: calc(100vh - var(--status-bar-height) - 170rpx);
+}
+.swiper scroll-view{
+	height: calc(100vh - var(--status-bar-height) - 170rpx);
+}
+
+/* 记本 */
+.swiper_item_EDiary{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	height: 95%;
+	padding: 5rpx 15rpx;
+}
+.swiper_item_EDiary_block{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 250rpx;
+	max-width: 240rpx;
+	margin: 15rpx 0;
+	flex-grow: 1;
+}
+.swiper_item_EDiary_block image{
+	height: 200rpx;
+	width: 200rpx;
+	border-radius: 20rpx;
+}
+.swiper_item_EDiarym_block text{
+	font-size: 15px;
+	color: #666;
+	padding-top: 5rpx;
+}
+
+/* 用户 */
+.swiper_item_User{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5rpx 15rpx;
+}
+.swiper_item_User_block{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 90%;
+	height: 120rpx;
+	padding: 15rpx;
+	margin: 0 15rpx;
+}
+.User_block_left{
+	display: flex;
+	align-items: center;
+	margin-right: 20rpx;
+}
+.User_block_left image{
+	height: 100rpx;
+	width: 100rpx;
+	border-radius: 50rpx;
+}
+.User_block_right{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	height: 100rpx;
+}
+.User_block_right_nickname{
+	height: 60%;
+}
+.User_block_right_sign{
+	font-size: 14px;
+	flex-grow: 1;
+}
