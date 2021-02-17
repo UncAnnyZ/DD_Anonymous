@@ -21,6 +21,6 @@
         <selectKey resultType="int" keyColumn="id" keyProperty="id" order="AFTER">
             SELECT @@IDENTITY
         </selectKey>
-        insert into user(uid,username) values(#{UID},#{username})
+        insert into user(uid,username) values(#{uid},#{username})
     </insert>
 </mapper>
