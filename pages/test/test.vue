@@ -62,7 +62,7 @@
 						"width": 800
 					},
 					"nickname": "—— 昵称1",
-					"text": "时间在追追赶赶那我祝你 生活依旧碎碎念 念着平安 念着喜乐时间在追追赶赶，那我祝你，生活依旧碎碎念，念着平安，念着喜乐！",
+					"text": "时间在追追赶赶那我祝你，生活依旧碎碎念，念着平安，念着喜乐时间在追追赶赶，那我祝你，生活依旧碎碎念，念着平安，念着喜乐！",
 					"time": "2021-2-4 18:00"
 				}
 			}
@@ -76,12 +76,12 @@
 			this.produce()
 		},
 		methods: {
-
+			// 图片数据初始化
 			produce() {
+				var that = this
 				var info = this.info
 				console.log(info)
 				
-				var that = this
 				uni.getImageInfo({
 					src: that.info.img.path,
 					success(res) {
@@ -94,7 +94,6 @@
 					}
 				})
 				
-				
 				var t = new Date(this.info.time).toDateString()
 				var tArray = t.split(" ")
 				this.info.timeArr = tArray
@@ -105,9 +104,20 @@
 				this.info.text = arr
 			},
 			
+			// 置顶
+			toTop(){
+				uni.showLoading({
+					title: "生成书签中"
+				})
+				uni.pageScrollTo({
+					scrollTop: 0,
+					duration: 0
+				})
+			},
 			
-			
+			// 保存图片
 			saveBase64(imageStr) {
+				
 				uni.showLoading({
 					title: "正在保存"
 				})
@@ -117,6 +127,7 @@
 					bitmap.save("_img/" + Date.parse(new Date()) + ".jpg",{
 						quality: 100
 					}, function(i){
+						// 保存至相册
 						uni.saveImageToPhotosAlbum({
 							filePath: i.target,
 							success:function(){
@@ -133,47 +144,19 @@
 							}
 						})
 						console.log('保存图片成功：' + JSON.stringify(i))
+						
 					}, function(e){
 						console.log('保存图片失败：' + JSON.stringify(e))
 						bitmap.clear()
 					})
+					
 				}, function(){
 					uni.hideLoading()
 					console.log('加载Base64图片数据失败：'+ JSON.stringify(e))
 					bitmap.clear()
 				})
-			},
-		
-			test(){
-				console.log("test")
-				var pages = getCurrentPages();
-				var page = pages[pages.length - 1];
-				var bitmap = null;
-				
-				var currentWebview = page.$getAppWebview();
-				
-				bitmap = new plus.nativeObj.Bitmap('amway_img');
-				// 将webview内容绘制到Bitmap对象中  
-				currentWebview.draw(bitmap, function() {
-					bitmap.save("_doc/a.jpg", {}, function(i) {
-						uni.saveImageToPhotosAlbum({
-							filePath: i.target,
-							success: function() {
-								bitmap.clear(); //销毁Bitmap图片  
-								uni.showToast({
-									title: '截图已保存到相册',
-									mask: false,
-									duration: 1500
-								});
-							}
-						});
-					}, function(e) {
-						console.log('保存图片失败：' + JSON.stringify(e));
-					});
-				}, function(e) {
-					console.log('截屏绘制图片失败：' + JSON.stringify(e));
-				});
 			}
+		
 		}
 	}
 </script>
@@ -187,18 +170,31 @@
 		},
 		methods: {
 			click(event, ownerInstance) {
+					ownerInstance.callMethod('toTop')
 					console.log("触发成功")
+					
 					var that = this
-					html2canvas(document.getElementById('sq'),{
-						backgroundColor: 'white',
-						useCORS: true,
-						taintTest: true,
-						timeout: 2000
-					}).then(canvas => {
-						var imgUrl = canvas.toDataURL("image/jpg")
-						ownerInstance.callMethod('saveBase64', imgUrl)
-						// that.saveBase64(imgUrl)
-					})
+					setTimeout(()=>{
+						
+						html2canvas(document.body,{
+							onrendered: function(canvas) {
+								document.body.appendChild(canvas);
+								window.scrollTo(0,scrollPos);
+							}
+						});
+							
+						html2canvas(document.getElementById('sq'),{
+							backgroundColor: 'white',
+							useCORS: true,
+							taintTest: true,
+							timeout: 2000
+						}).then(canvas => {
+							var imgUrl = canvas.toDataURL("image/jpg")
+							ownerInstance.callMethod('saveBase64', imgUrl)
+							// that.saveBase64(imgUrl)
+						})
+					},200)
+					
 				}
 		}
 	}
