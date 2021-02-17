@@ -5,6 +5,9 @@ import com.example.background.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author jinbin
  * @date 2018-07-08 20:52
@@ -13,7 +16,10 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     UserMapper userMapper;
+
+
     public User findByUsername(User user){
+
         return userMapper.findByUsername(user.getUsername());
     }
     public User findUserById(String userId) {

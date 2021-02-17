@@ -8,7 +8,8 @@
 	export default {
 		globalData: {  
 			css: 'light',
-			host:"http://120.79.171.165"
+			host:"http://120.79.171.165",
+			api:"http://120.79.171.165:8888/api"
 		},
 		onLaunch: function() {
 			console.log('App Launch')

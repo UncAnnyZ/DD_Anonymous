@@ -12,11 +12,22 @@ export default {
 				fans:0,		// 粉丝
 				likes:0		// 点赞
 			},
-			changingNickname:false
+			changingNickname:false,
+			dialog:{
+				content:""
+			}
 		}
 	},
+	onHide(){
+		console.log("mine 页面隐藏")
+		// uni.$off("to_popup",function(){})
+	},
+	onUnload(){
+		console.log("mine 页面卸载")
+		// uni.$off("to_popup")
+	},
 	methods: {
-		
+				
 		// 点击设置按钮
 		setting() {
 			console.log("点击设置")
@@ -42,42 +53,56 @@ export default {
 			if(!this.changingNickname && this.info.newNickname != this.info.nickname ){
 				// 点击保存时，且新昵称与原来的不同
 				
+				this.dialog = {
+					content:"确认将昵称修改为 " + this.info.newNickname + " 吗？",
+					confirmText:"确认修改",
+					cancelText:"暂不修改"
+				}
+				this.$refs.dialog.show()
+				
 				// #ifdef APP-PLUS
-					uni.$emit('to_popup',{
-						data:{
-							content:"确认将昵称修改为 " + this.info.newNickname + " 吗？",
-							confirmText:"确认修改",
-							cancelText:"暂不修改"
-						}
-					})
-					uni.$once('from_popup',function(res){
-						console.log(res)
-						if(res.confirm){
-							// (检查重名并)更新昵称
-							that.check(that.info.newNickname)
-						} else{
-							that.info.newNickname = that.info.nickname
-						}
-					})
+					// uni.$emit('to_popup',{
+					// 	data:{
+					// 		content:"确认将昵称修改为 " + this.info.newNickname + " 吗？",
+					// 		confirmText:"确认修改",
+					// 		cancelText:"暂不修改"
+					// 	}
+					// })
+					// uni.$once('from_popup',function(res){
+					// 	console.log(res)
+					// 	if(res.confirm){
+					// 		// (检查重名并)更新昵称
+					// 		that.check(that.info.newNickname)
+					// 	} else{
+					// 		that.info.newNickname = that.info.nickname
+					// 	}
+					// })
 				// #endif
 				
 				// #ifndef APP-PLUS
-					uni.showModal({
-						title:"温馨提示",
-						content:"确认将昵称修改为 " + this.info.newNickname + " 吗？",
-						confirmText:"确认修改",
-						cancelText:"暂不修改",
-						success(res) {
-							console.log(res)
-							if(res.confirm){
-								that.check(that.info.newNickname)
-							} else{
-								that.info.newNickname = that.info.nickname
-							}
-						}
-					})
+					// uni.showModal({
+					// 	title:"温馨提示",
+					// 	content:"确认将昵称修改为 " + this.info.newNickname + " 吗？",
+					// 	confirmText:"确认修改",
+					// 	cancelText:"暂不修改",
+					// 	success(res) {
+					// 		console.log(res)
+					// 		if(res.confirm){
+					// 			that.check(that.info.newNickname)
+					// 		} else{
+					// 			that.info.newNickname = that.info.nickname
+					// 		}
+					// 	}
+					// })
 				// #endif
 
+			}
+		},
+		pop(res){
+			if(res.confirm){
+				this.check(this.info.newNickname)
+			} else{
+				this.info.newNickname = this.info.nickname
 			}
 		},
 		// 输入用户名
@@ -92,7 +117,6 @@ export default {
 		 * 
 		 */
 		check(nickname) {
-			const utils = require("../../utils/showModal.js")
 			var that = this
 			uni.request({
 				url:"",
@@ -104,21 +128,28 @@ export default {
 					console.log(res)
 					if(res.data == 1) {
 						that.info.nickname = that.info.newNickname
-						utils.showModal({ content:"修改成功" })
+						that.showModal("修改成功")
 					} else if(res.data == 2){
 						that.info.newNickname = that.info.nickname
-						utils.showModal({ content:"用户名已存在" })
+						that.showModal("用户名已存在")
 					} else {
 						that.info.newNickname = that.info.nickname
-						utils.showModal({ content:"修改失败，请稍后重试" })
+						that.showModal("修改失败，请稍后重试")
 					}
 				},
 				fail(res){
 					console.log(res)
 					that.info.newNickname = that.info.nickname
-					utils.showModal({ content:"修改失败，请稍后重试" })
+					that.showModal("修改失败，请稍后重试")
 				}
 			})
+		},
+		showModal(e){
+			this.dialog = {
+				content: e,
+				showCancel:false
+			}
+			this.$refs.dialog.show()
 		}
 	}
 }

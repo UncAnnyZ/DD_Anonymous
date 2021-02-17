@@ -1,8 +1,10 @@
 <template>
 	<view class="all">
+				
+		<popup ref="dialog" :showCancel="dialog.showCancel" :content="dialog.content" :cancelText="dialog.cancelText" :confirmText="dialog.confirmText" @hide='pop'></popup>
 		
 		<view class="background">
-			<image src="../../static/picture/bg2.jpg" mode="scaleToFill"></image>
+			<image src="../../static/picture/bg1.jpg" mode="scaleToFill"></image>
 		</view>
 		
 		<view class="setting">

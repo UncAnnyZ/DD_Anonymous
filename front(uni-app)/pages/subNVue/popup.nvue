@@ -49,7 +49,8 @@
 				confirmText:"确认"
 			}
 		},
-		onShow() {
+		onLoad() {
+			// uni.$off('to_popup')
 			// subNVue 子窗体监听 vue 页面传递的消息
 			console.log("弹窗页面加载")
 			var that = this

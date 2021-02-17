@@ -3,6 +3,9 @@ package com.example.background.mapper;
 import com.example.background.entity.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.Map;
 
 /**
  * @author jinbin
@@ -12,6 +15,8 @@ import org.springframework.stereotype.Component;
 public interface UserMapper {
     User findByUsername(@Param("username") String username);
     User findUserById(@Param("Id") String Id);
-    User findUserByUid(@Param("UID") String UID);
-    int addUser(@Param("UID") String UID, @Param("username") String username);
+    User findUserByUid(@Param("uid") String UID);
+    int addUser(@Param("uid") String UID, @Param("username") String username);
+
+
 }

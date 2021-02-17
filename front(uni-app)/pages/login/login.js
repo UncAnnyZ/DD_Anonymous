@@ -1,4 +1,4 @@
-const host = getApp().globalData.host
+const api = getApp().globalData.api
 
 export default {
 	data() {
@@ -55,8 +55,8 @@ export default {
 				this.settime()
 				// 服务端向该用户发送验证码
 				uni.request({
-					url: host + "/getCode",
-					method:"POST",
+					url: api + "/getCode",
+					method:"GET",
 					data:{
 						user: that.info.username
 					},
@@ -140,19 +140,31 @@ export default {
 				})
 				// 校验登录信息
 				uni.request({
-					url: host + "/login",
+					url: api + "/login",
 					method: "POST",
 					data:{
-						user: that.info.username,
+						username: that.info.username,
 						code: that.info.code
 					},
 					success(res) {
 						console.log(res)
-						if(res.data.msg == 1){
-							// 登录成功跳转到主页
-							uni.switchTab({
-								url:"../index/index"
+						if(res.data.token){
+							uni.setStorageSync("userInfo",{
+								uid: res.data.UID,
+								level: res.data.level,
+								token: res.data.token,
+								username: res.data.username
 							})
+							// 登录成功跳转到主页
+							uni.showToast({
+								title: "登录成功"
+							})
+							setTimeout(()=>{
+								uni.switchTab({
+									url:"../index/index"
+								})
+							},600)
+							
 						} else if(res.data.msg == 2){
 							// 验证码错误
 							that.showModal("验证码错误")
@@ -160,6 +172,10 @@ export default {
 						} else if(res.data.msg == 3){
 							// 登录失败
 							that.showModal("登录失败，请稍后再试")
+						} else if(res.data.status == 404){
+							that.showModal("服务器错误，请与工作人员联系")
+						} else {
+							that.showModal("未知错误")
 						}
 					},
 					fail(res) {

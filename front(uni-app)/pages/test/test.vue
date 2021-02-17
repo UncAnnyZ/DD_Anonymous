@@ -1,41 +1,62 @@
 <template>
-	<view>
-		<button @click="open">打开弹窗</button>
-		<uni-popup ref="popup" type="dialog">
-		    <uni-popup-dialog type="input" message="成功消息" :duration="0" :before-close="true" @close="close" @confirm="confirm"></uni-popup-dialog>
-		</uni-popup>
-	</view>
+  <view>
+    <text>renderjs区域</text>
+        <view @click="renderScript.emitData" :msg="msg" :change:msg="renderScript.receiveMsg" >
+			ttttt
+        </view>
+        <button @click="changeMsg" class="app-view">app-view</button>
+  </view>
 </template>
 
 <script>
-	export default {
-		methods:{
-			open(){
-			         // 通过组件定义的ref调用uni-popup方法
-			         this.$refs.popup.open()
-			},
-			/**
-			 * 点击取消按钮触发
-			 * @param {Object} done
-			 */
-			close(done){
-				// TODO 做一些其他的事情，before-close 为true的情况下，手动执行 done 才会关闭对话框
-				// ...
-				done()
-			},
-			/**
-			 * 点击确认按钮触发
-			 * @param {Object} done
-			 * @param {Object} value
-			 */
-			confirm(done,value){
-				// 输入框的值
-				console.log(value)
-				// TODO 做一些其他的事情，手动执行 done 才会关闭对话框
-				// ...
-				done()
-			}
-		}
-	}
+  export default {
+    data() {
+      return {
+        msg: ''
+      };
+    },
+    methods: {
+      // 触发逻辑层出入renderjs数据改变
+      changeMsg() {
+        this.msg = 'hello renderjs' + Math.random() * 10;
+      },
+      // 接收renderjs发回的数据
+      receiveRenderData(val) {
+        console.log('receiveRenderData-->', val);
+      },
+	  test(text){
+		  console.log(text)
+	  }
+    }
+  };
 </script>
 
+<script module="renderScript" lang="renderjs">
+    export default {
+      data() {
+        return {
+          name: 'render-vm'
+        }
+      },
+      mounted() {
+        // const view = document.getElementById('renderjs-view')
+        // const button = document.createElement('button')
+        // button.innerText = '一个按钮'
+        // view.appendChild(button)
+      },
+      methods: {
+        // 接收逻辑层发送的数据
+        receiveMsg(newValue, oldValue, ownerVm, vm) {
+          console.log('newValue', newValue)
+          console.log('oldValue', oldValue)
+          console.log('ownerVm', ownerVm)
+          console.log('vm', vm)
+		  ownerVm.callMethod('test',"success")
+        },
+        // 发送数据到逻辑层
+        emitData(e, ownerVm) {
+          ownerVm.callMethod('receiveRenderData', this.name)
+        }
+      }
+    };
+</script>
