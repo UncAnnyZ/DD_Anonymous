@@ -201,9 +201,9 @@ export default {
 						console.log('选中了第' + (res.index + 1) + '张图片,第' + (res.tapIndex + 1) + '个按钮');
 						if(res.tapIndex == 1){
 							// 保存图片到本地相册
-							console.log(that.list[e.index].image[res.index])
+							console.log(that.list[e.index].image[e.current])
 							uni.saveImageToPhotosAlbum({
-								filePath:that.list[e.index].image[res.index],
+								filePath:that.list[e.index].image[e.current],
 								success(res) {
 									console.log(res.path)
 								},
