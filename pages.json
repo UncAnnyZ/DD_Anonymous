@@ -32,10 +32,9 @@
 		{
 			"path": "pages/mine/mine",
 			"style": {
-				"navigationBarTitleText": "我的",
 				"enablePullDownRefresh": false,
 				"app-plus": {
-					"titleNView": true
+					"titleNView": false
 				}
 			}
 		},
@@ -88,7 +87,7 @@
 		{
             "path" : "pages/index/save",
             "style" : {
-                "navigationBarTitleText": "图片保存",
+                "navigationBarTitleText": "书签",
 				"app-plus": {
 					"titleNView": true,
 					"background": "#efeff4",
