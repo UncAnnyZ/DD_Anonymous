@@ -1,6 +1,7 @@
 
 # 
  + 调用自定义nvue弹窗
+ 	```
 		// 打开本次事件监听
 		uni.$once('from_popup',function(res){
 			// 接收到返回的信息
@@ -22,5 +23,5 @@
 				confirmText = "确认"
 			}
 		})
-		
+	```
 	
