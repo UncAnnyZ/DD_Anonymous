@@ -49,7 +49,7 @@
 				<label>记本</label>
 				<view v-bind:class="current==0?'swiper_title_choose_border':''"></view>
 			</view>
-			<view class="swiper_title_User" v-bind:class="current==1?'swiper_title_choose':''" @click="change({detail:{current:1}})">
+			<view class="swiper_title_Record" @click="change({detail:{current:1}})">
 				<label>记录</label>
 				<view v-bind:class="current==1?'swiper_title_choose_border':''"></view>
 			</view>
@@ -66,13 +66,13 @@
 						</view>
 					</view>
 				</scroll-view>
+				
 			</swiper-item>
 		
 			<!-- 记录 -->
 			<swiper-item>
 				<scroll-view :scroll-y="scrollY" scroll-with-animation="true" scroll-anchoring="true">
-					
-					<view class="container">
+					<view class="record">
 						<view v-for="(item,index) in list" :key="index" class="list">
 							<!-- 不知名的填充物 -->
 							<view class="list_padding">
@@ -204,6 +204,10 @@
 		
 		</swiper>
 		
+		<!-- 添加按钮 -->
+		<view class="add_EDiary" @click="add">
+			<image src="../../static/icon/mine_icon_add.png" mode="aspectFit"></image>
+		</view>
 		
 	</view>
 </template>

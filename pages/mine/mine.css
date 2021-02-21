@@ -139,7 +139,7 @@
 	height: 60rpx;
 }
 .swiper_title_EDiary,
-.swiper_title_User{
+.swiper_title_Record{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -156,7 +156,6 @@
 	width: 70%;
 	border-bottom: 1px solid #555555;
 }
-
 
 /* 滑块内容 */
 .swiper{
@@ -200,7 +199,7 @@
 }
 
 /* 记录 */
-.container {
+.record {
 	padding: 20rpx 0rpx;
 	background-color: rgba(240, 240, 240, 0.7);
 }
@@ -216,9 +215,7 @@
 	padding: 35rpx;
 	padding-bottom: 20rpx;
 }
-.list_image{
-	
-}
+
 
 
 /* 两张图 */
@@ -365,4 +362,13 @@
 .list_image_bottom image{
 	width: 225rpx;
 	height: 225rpx;
+}
+
+.add_EDiary,
+.add_EDiary image{
+	position: fixed;
+	width: 120rpx;
+	height: 120rpx;
+	bottom: 20rpx;
+	right: 20rpx;
 }

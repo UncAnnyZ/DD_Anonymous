@@ -294,6 +294,7 @@ export default {
 	},
 
 	onPageScroll(e) {
+		// 是否显示statusBar栏
 		if (e.scrollTop >= statusBarHeight) {
 			this.showStatus = true
 			// (e.scrollTop - (211 - statusBarHeight)) / statusBarHeight;
@@ -301,8 +302,10 @@ export default {
 		} else {
 			this.showStatus = false
 		}
+		// 是否允许滚动
 		if (e.scrollTop >= 338) {
 			this.scrollY = true
+			
 		} else {
 			this.scrollY = false
 		}
@@ -342,6 +345,7 @@ export default {
 
 		change(e) {
 			this.current = e.detail.current
+			
 		},
 		
 		
@@ -445,7 +449,12 @@ export default {
 			})
 			
 			
-		}
+		},
 		
+		// 点击添加
+		add(e){
+			let page = this.current == 0 ? "记本":"记录"
+			console.log("添加" + page)
+		}
 	}
 }
