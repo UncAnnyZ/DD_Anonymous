@@ -3,18 +3,19 @@
 				
 <!-- 		<popup ref="dialog" :showCancel="dialog.showCancel" :content="dialog.content" :cancelText="dialog.cancelText" :confirmText="dialog.confirmText" @hide='pop'></popup> -->
 		
+		<!-- 顶部状态栏 -->
 		<view class="status" v-if="showStatus">
 			<view class="status_bar_top" :style="'opacity:' + percent + ';'"></view>
 		</view>
-		
+		<!-- 背景图片 -->
 		<view class="background" id="background" >
 			<image :src="info.background" mode="scaleToFill"></image>
 		</view>
-		
+		<!-- 设置按钮 -->
 		<view class="setting">
 			<image src="../../static/icon/mine_icon_setting.png" mode="aspectFit" @click="setting()"></image>
 		</view>
-		
+		<!-- 个人简介 -->
 		<view class="personalInfo" id="personalInfo">
 			<view class="personalInfo_avatar">
 				<image :src="info.avatar" mode="aspectFit" @click="avatar"></image>
@@ -27,7 +28,7 @@
 				<button @click="edit()">编 辑</button>
 			</view>
 		</view>
-		
+		<!-- 个人状态 -->
 		<view class="situation">
 			<view class="situation_follow">
 				<text>{{situation.follow}}</text>
@@ -43,7 +44,7 @@
 			</view>
 			
 		</view>
-		
+		<!-- 导航栏 -->
 		<view class="swiper_title">
 			<view class="swiper_title_EDiary" v-bind:class="current==0?'swiper_title_choose':''" @click="change({detail:{current:0}})">
 				<label>记本</label>
@@ -54,7 +55,7 @@
 				<view v-bind:class="current==1?'swiper_title_choose_border':''"></view>
 			</view>
 		</view>
-				
+		
 		<swiper class="swiper" @change="change" :current="current">
 			<!-- 记本 -->
 			<swiper-item>
@@ -204,9 +205,11 @@
 		
 		</swiper>
 		
+<!-- 		<view :style="touchstart?'z-index: 9999;overflow: hidden;flex: 1;opacity: 1;':''" style="position: fixed;z-index:90;" v-if="touchstart">
+		</view> -->
 		<!-- 添加按钮 -->
-		<view class="add_EDiary" @click="add">
-			<image src="../../static/icon/mine_icon_add.png" mode="aspectFit"></image>
+		<view class="add_EDiary" @click="add" @touchmove.prevent.stop="touchmove" :style="'left:'+(addBtn_position.x)+'px;top:'+(addBtn_position.y)+'px;z-inde:99;'">
+			<image src="../../static/icon/mine_icon_add.png" mode="aspectFit" :style="'left:'+addBtn_position.x+'px;top:'+addBtn_position.y+'px;'"></image>
 		</view>
 		
 	</view>

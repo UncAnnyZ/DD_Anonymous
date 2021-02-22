@@ -289,6 +289,10 @@ export default {
 			],
 			dialog: {
 				content: ""
+			},
+			addBtn_position: {
+				x:"",
+				y:""
 			}
 		}
 	},
@@ -345,7 +349,6 @@ export default {
 
 		change(e) {
 			this.current = e.detail.current
-			
 		},
 		
 		
@@ -455,6 +458,11 @@ export default {
 		add(e){
 			let page = this.current == 0 ? "记本":"记录"
 			console.log("添加" + page)
+		},
+		
+		touchmove(e){
+			this.addBtn_position.x = e.touches[0].clientX - 30
+			this.addBtn_position.y = e.touches[0].clientY - 30
 		}
 	}
 }

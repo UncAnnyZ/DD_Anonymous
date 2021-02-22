@@ -217,7 +217,6 @@
 }
 
 
-
 /* 两张图 */
 .list_image_2{
 	flex-direction: row;
@@ -236,7 +235,6 @@
 	width: 339rpx;
 	height: 339rpx;
 }
-
 /* 三张图 */
 .list_image_3{
 	width: 680rpx;
@@ -271,7 +269,6 @@
 	width: 225rpx;
 	height: 224rpx;
 }
-
 /* 四张图 */
 .list_image_4{
 	justify-content: flex-start;
@@ -296,19 +293,16 @@
 	width: 269rpx;
 	height: 269rpx;
 }
-
 /* 五张图 */
 .list_image_5{
 	height: 565rpx;
 	width: 680rpx;
 }
-
 /* 六张图 */
 .list_image_6{
 	width: 680rpx;
 	height: 680rpx;
 }
-
 /* 七张图 */
 .list_image_7{
 	width: 680rpx;
@@ -319,7 +313,6 @@
 	width: 680rpx;
 	height: 232rpx;
 }
-
 /* 八张图 */
 .list_image_8{
 	width: 680rpx;
@@ -336,16 +329,13 @@
 	width: 339rpx;
 	height: 225rpx;
 }
-
 /* 九张图 */
 .list_image_9{
 	width: 680rpx;
 	height: 680rpx;
 }
 .list_image_ninth,
-
 /* 横三并列 */
-
 	/* 中间三张图 */
 .list_image_center,
 	/* 最后三张图 */
