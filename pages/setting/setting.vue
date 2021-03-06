@@ -34,7 +34,7 @@
 		
 		<view class="line"></view>
 		
-		<view class="block">
+		<view class="block" @click="doubleClick">
 			<text>关于DDDD</text>
 			<image src="../../static/icon/setting_icon_navigator.png" mode="aspectFit"></image>
 		</view>
@@ -58,11 +58,17 @@
 	export default {
 		data() {
 			return {
-				
+				touchStartTime: 0
 			}
 		},
 		methods: {
-			
+			doubleClick(e){
+				if(e.timeStamp - this.touchStartTime <= 300){
+					console.log('这是双击')
+				} else {
+					this.touchStartTime = e.timeStamp
+				}
+			}
 		}
 	}
 </script>

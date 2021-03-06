@@ -129,9 +129,12 @@ export default {
 	methods: {
 		back() {
 			console.log("返回")
-			uni.switchTab({
-				url: "../index/index"
+			uni.navigateBack({
+				delta:1
 			})
+			// uni.switchTab({
+			// 	url: "../index/index"
+			// })
 		},
 		search(e) {
 			console.log("搜索:" + e.detail.value)

@@ -1,36 +1,37 @@
 {
 	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/index/index",		// 主页
 			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
 		},
-		{ "path": "pages/test/test" },
-		{ "path": "pages/subNVue/popup" },
-		{ "path": "pages/subNVue/Npopup" },
-		{ "path": "components/popup/popup" },
+		{ "path": "pages/test/test" },			// 测试页面
+		{ "path": "pages/subNVue/popup" },		// 自定义弹窗
+		{ "path": "pages/subNVue/Npopup" },		// 自定义弹窗
+		{ "path": "components/popup/popup" },	// 自定义弹窗
 		
 		{
-			"path": "pages/found/found",
+			"path": "pages/found/found",		// 发现页（广场页）
 			"style": {
 				"app-plus": {
-					"titleNView": true //禁用原生导航栏
+					"titleNView": false	 //禁用原生导航栏
 				}
 			}
 		},
 		{
-			"path": "pages/message/message",
+			"path": "pages/message/message",	// 消息页
 			"style": {
+				"navigationBarTitleText":"消息",
 				"app-plus": {
-					"titleNView": false //禁用原生导航栏
+					"titleNView": true //采用原生导航栏
 				}
 			}
 		},
 		{
-			"path": "pages/mine/mine",
+			"path": "pages/mine/mine",			// 个人页
 			"style": {
 				"enablePullDownRefresh": false,
 				"app-plus": {
@@ -39,7 +40,7 @@
 			}
 		},
 		{
-			"path": "pages/login/login",
+			"path": "pages/login/login",		// 登录页
 			"style": {
 				"navigationBarTitleText": "登录",
 				"enablePullDownRefresh": false,
@@ -61,7 +62,7 @@
 			}
 		}, 
 		{
-			"path": "pages/setting/setting",
+			"path": "pages/setting/setting",	// 设置页
 			"style": {
 				"navigationBarTitleText": "设置",
 				"app-plus": {
@@ -70,7 +71,7 @@
 			}
 		},
 		{
-			"path": "pages/search/search",
+			"path": "pages/search/search",		// 搜索页
 			"style": {
 				"app-plus": {
 					"titleNView": false
@@ -78,14 +79,14 @@
 			}
 		},
 		{
-			"path": "pages/agreement/agreement",
+			"path": "pages/agreement/agreement",// 授权页
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
-            "path" : "pages/index/save",
+            "path" : "pages/index/save",		// 书签页
             "style" : {
                 "navigationBarTitleText": "书签",
 				"app-plus": {

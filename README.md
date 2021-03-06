@@ -25,3 +25,17 @@
 		})
 	```
 	
+ + 字段解释
+   - 记本： EDiary {
+	   - 记本名称： name
+	   - 记本封面： img
+	   - 记本简介： introduce
+   }
+   - 记录： record
+   - 点赞： liked
+   - 关注： follow
+   - 粉丝： fans
+   - 积分： integral
+   - 回复： reply
+   - 评论： comment
+

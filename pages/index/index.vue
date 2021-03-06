@@ -13,7 +13,7 @@
 				</view>
 				<view class="status_bar_right">
 					<!-- <image :src="status_bar.right_img" @click="search" mode="aspectFit"></image> -->
-					<navigator url="../search/search"  hover-class="none">
+					<navigator open-type="navigate" url="../search/search"  hover-class="none">
 						<image :src="status_bar.right_img" mode="aspectFit"></image>
 					</navigator>
 				</view>

@@ -129,7 +129,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {}
+module.exports = {
+  "@VERSION": 2
+}
 
 /***/ }),
 /* 4 */
@@ -197,14 +199,26 @@ var render = function() {
       _c("view", { staticClass: ["pop"] }, [
         _c("view", { staticClass: ["model"] }, [
           _c("view", { staticClass: ["model_title"] }, [
-            _c("u-text", { staticClass: ["model_title_text"] }, [
-              _vm._v(_vm._s(_vm.title))
-            ])
+            _c(
+              "u-text",
+              {
+                staticClass: ["model_title_text"],
+                appendAsTree: true,
+                attrs: { append: "tree" }
+              },
+              [_vm._v(_vm._s(_vm.title))]
+            )
           ]),
           _c("view", { staticClass: ["model_content"] }, [
-            _c("u-text", { staticClass: ["model_content_text"] }, [
-              _vm._v(_vm._s(_vm.content))
-            ])
+            _c(
+              "u-text",
+              {
+                staticClass: ["model_content_text"],
+                appendAsTree: true,
+                attrs: { append: "tree" }
+              },
+              [_vm._v(_vm._s(_vm.content))]
+            )
           ]),
           _c(
             "view",
@@ -236,7 +250,9 @@ var render = function() {
                         "u-text",
                         {
                           staticClass: ["model_btn_cancel_text"],
-                          style: "color:" + _vm.cancelColor
+                          style: "color:" + _vm.cancelColor,
+                          appendAsTree: true,
+                          attrs: { append: "tree" }
                         },
                         [_vm._v(_vm._s(_vm.cancelText))]
                       )
@@ -264,7 +280,9 @@ var render = function() {
                     "u-text",
                     {
                       staticClass: ["model_btn_confirm_text"],
-                      style: "color:" + _vm.confirmColor
+                      style: "color:" + _vm.confirmColor,
+                      appendAsTree: true,
+                      attrs: { append: "tree" }
                     },
                     [_vm._v(_vm._s(_vm.confirmText))]
                   )
@@ -525,7 +543,8 @@ module.exports = {
   },
   "border_bottom_right_radius": {
     "borderBottomRightRadius": "30rpx"
-  }
+  },
+  "@VERSION": 2
 }
 
 /***/ }),
