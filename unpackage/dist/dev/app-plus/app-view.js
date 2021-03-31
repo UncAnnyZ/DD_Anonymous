@@ -235,10 +235,18 @@ var render = function() {
     "v-uni-view",
     { staticClass: _vm._$g(0, "sc"), attrs: { _i: 0 } },
     [
-      _c("v-uni-view", { staticClass: _vm._$g(1, "sc"), attrs: { _i: 1 } }),
+      _c("v-uni-view", {
+        staticClass: _vm._$g(1, "sc"),
+        class: _vm._$g(1, "c"),
+        attrs: { _i: 1 }
+      }),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
+        {
+          staticClass: _vm._$g(2, "sc"),
+          class: _vm._$g(2, "c"),
+          attrs: { _i: 2 }
+        },
         [
           _c("v-uni-view", { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } }),
           _c(
@@ -306,19 +314,20 @@ var render = function() {
       ),
       _c(
         "v-uni-view",
-        { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
-        _vm._l(_vm._$g(13, "f"), function(item, index, $20, $30) {
-          return _c(
+        {
+          staticClass: _vm._$g(12, "sc"),
+          class: _vm._$g(12, "c"),
+          attrs: { _i: 12 }
+        },
+        [
+          _c(
             "v-uni-view",
-            {
-              key: item,
-              staticClass: _vm._$g("13-" + $30, "sc"),
-              attrs: { _i: "13-" + $30 }
-            },
-            [
-              _c(
+            { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
+            _vm._l(_vm._$g(14, "f"), function(item, index, $20, $30) {
+              return _c(
                 "v-uni-view",
                 {
+                  key: item,
                   staticClass: _vm._$g("14-" + $30, "sc"),
                   attrs: { _i: "14-" + $30 }
                 },
@@ -337,23 +346,24 @@ var render = function() {
                           attrs: { _i: "16-" + $30 }
                         },
                         [
-                          _c("v-uni-image", {
-                            attrs: {
-                              src: _vm._$g("17-" + $30, "a-src"),
-                              mode: "center",
-                              _i: "17-" + $30
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _c(
-                        "v-uni-view",
-                        {
-                          staticClass: _vm._$g("18-" + $30, "sc"),
-                          attrs: { _i: "18-" + $30 }
-                        },
-                        [
+                          _c(
+                            "v-uni-view",
+                            {
+                              staticClass: _vm._$g("17-" + $30, "sc"),
+                              class: _vm._$g("17-" + $30, "c"),
+                              attrs: { _i: "17-" + $30 }
+                            },
+                            [
+                              _c("v-uni-image", {
+                                attrs: {
+                                  src: _vm._$g("18-" + $30, "a-src"),
+                                  mode: "center",
+                                  _i: "18-" + $30
+                                }
+                              })
+                            ],
+                            1
+                          ),
                           _c(
                             "v-uni-view",
                             {
@@ -361,121 +371,125 @@ var render = function() {
                               attrs: { _i: "19-" + $30 }
                             },
                             [
-                              _c("v-uni-text", { attrs: { _i: "20-" + $30 } }, [
-                                _vm._v(_vm._$g("20-" + $30, "t0-0"))
-                              ])
-                            ],
-                            1
-                          ),
-                          _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("21-" + $30, "sc"),
-                              attrs: { _i: "21-" + $30 }
-                            },
-                            [
-                              _c("v-uni-text", { attrs: { _i: "22-" + $30 } }, [
-                                _vm._v(_vm._$g("22-" + $30, "t0-0"))
-                              ])
+                              _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("20-" + $30, "sc"),
+                                  attrs: { _i: "20-" + $30 }
+                                },
+                                [
+                                  _c(
+                                    "v-uni-text",
+                                    { attrs: { _i: "21-" + $30 } },
+                                    [_vm._v(_vm._$g("21-" + $30, "t0-0"))]
+                                  )
+                                ],
+                                1
+                              ),
+                              _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("22-" + $30, "sc"),
+                                  attrs: { _i: "22-" + $30 }
+                                },
+                                [
+                                  _c(
+                                    "v-uni-text",
+                                    { attrs: { _i: "23-" + $30 } },
+                                    [_vm._v(_vm._$g("23-" + $30, "t0-0"))]
+                                  )
+                                ],
+                                1
+                              )
                             ],
                             1
                           )
                         ],
                         1
-                      )
-                    ],
-                    1
-                  ),
-                  _c(
-                    "v-uni-view",
-                    {
-                      staticClass: _vm._$g("23-" + $30, "sc"),
-                      attrs: { _i: "23-" + $30 }
-                    },
-                    [
-                      _c("v-uni-text", { attrs: { _i: "24-" + $30 } }, [
-                        _vm._v(_vm._$g("24-" + $30, "t0-0"))
-                      ])
-                    ],
-                    1
-                  ),
-                  _c(
-                    "v-uni-view",
-                    {
-                      staticClass: _vm._$g("25-" + $30, "sc"),
-                      class: _vm._$g("25-" + $30, "c"),
-                      attrs: { _i: "25-" + $30 }
-                    },
-                    [
-                      _vm._$g("26-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("26-" + $30, "sc"),
-                              attrs: { _i: "26-" + $30 }
-                            },
-                            [
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("27-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "27-" + $30
+                      ),
+                      _c(
+                        "v-uni-view",
+                        {
+                          staticClass: _vm._$g("24-" + $30, "sc"),
+                          attrs: { _i: "24-" + $30 }
+                        },
+                        [
+                          _c("v-uni-text", { attrs: { _i: "25-" + $30 } }, [
+                            _vm._v(_vm._$g("25-" + $30, "t0-0"))
+                          ])
+                        ],
+                        1
+                      ),
+                      _c(
+                        "v-uni-view",
+                        {
+                          staticClass: _vm._$g("26-" + $30, "sc"),
+                          class: _vm._$g("26-" + $30, "c"),
+                          attrs: { _i: "26-" + $30 }
+                        },
+                        [
+                          _vm._$g("27-" + $30, "i")
+                            ? _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("27-" + $30, "sc"),
+                                  attrs: { _i: "27-" + $30 }
                                 },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("28-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("28-" + $30, "sc"),
-                              attrs: { _i: "28-" + $30 }
-                            },
-                            [
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("29-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "29-" + $30
+                                [
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("28-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "28-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._$g("29-" + $30, "i")
+                            ? _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("29-" + $30, "sc"),
+                                  attrs: { _i: "29-" + $30 }
                                 },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              }),
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("30-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "30-" + $30
-                                },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("31-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("31-" + $30, "sc"),
-                              attrs: { _i: "31-" + $30 }
-                            },
-                            [
-                              _c(
+                                [
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("30-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "30-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  }),
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("31-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "31-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._$g("32-" + $30, "i")
+                            ? _c(
                                 "v-uni-view",
                                 {
                                   staticClass: _vm._$g("32-" + $30, "sc"),
@@ -489,31 +503,39 @@ var render = function() {
                                       attrs: { _i: "33-" + $30 }
                                     },
                                     [
-                                      _c("v-uni-image", {
-                                        attrs: {
-                                          src: _vm._$g("34-" + $30, "a-src"),
-                                          mode: "center",
-                                          _i: "34-" + $30
+                                      _c(
+                                        "v-uni-view",
+                                        {
+                                          staticClass: _vm._$g(
+                                            "34-" + $30,
+                                            "sc"
+                                          ),
+                                          attrs: { _i: "34-" + $30 }
                                         },
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.$handleViewEvent($event)
-                                          }
-                                        }
-                                      })
+                                        [
+                                          _c("v-uni-image", {
+                                            attrs: {
+                                              src: _vm._$g(
+                                                "35-" + $30,
+                                                "a-src"
+                                              ),
+                                              mode: "center",
+                                              _i: "35-" + $30
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.$handleViewEvent(
+                                                  $event
+                                                )
+                                              }
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
                                     ],
                                     1
-                                  )
-                                ],
-                                1
-                              ),
-                              _c(
-                                "v-uni-view",
-                                {
-                                  staticClass: _vm._$g("35-" + $30, "sc"),
-                                  attrs: { _i: "35-" + $30 }
-                                },
-                                [
+                                  ),
                                   _c(
                                     "v-uni-view",
                                     {
@@ -521,11 +543,105 @@ var render = function() {
                                       attrs: { _i: "36-" + $30 }
                                     },
                                     [
+                                      _c(
+                                        "v-uni-view",
+                                        {
+                                          staticClass: _vm._$g(
+                                            "37-" + $30,
+                                            "sc"
+                                          ),
+                                          attrs: { _i: "37-" + $30 }
+                                        },
+                                        [
+                                          _c("v-uni-image", {
+                                            attrs: {
+                                              src: _vm._$g(
+                                                "38-" + $30,
+                                                "a-src"
+                                              ),
+                                              mode: "center",
+                                              _i: "38-" + $30
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.$handleViewEvent(
+                                                  $event
+                                                )
+                                              }
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _c(
+                                        "v-uni-view",
+                                        {
+                                          staticClass: _vm._$g(
+                                            "39-" + $30,
+                                            "sc"
+                                          ),
+                                          attrs: { _i: "39-" + $30 }
+                                        },
+                                        [
+                                          _c("v-uni-image", {
+                                            attrs: {
+                                              src: _vm._$g(
+                                                "40-" + $30,
+                                                "a-src"
+                                              ),
+                                              mode: "center",
+                                              _i: "40-" + $30
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.$handleViewEvent(
+                                                  $event
+                                                )
+                                              }
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._$g("41-" + $30, "i")
+                            ? _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("41-" + $30, "sc"),
+                                  attrs: { _i: "41-" + $30 }
+                                },
+                                [
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("42-" + $30, "sc"),
+                                      attrs: { _i: "42-" + $30 }
+                                    },
+                                    [
                                       _c("v-uni-image", {
                                         attrs: {
-                                          src: _vm._$g("37-" + $30, "a-src"),
+                                          src: _vm._$g("43-" + $30, "a-src"),
                                           mode: "center",
-                                          _i: "37-" + $30
+                                          _i: "43-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      }),
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("44-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "44-" + $30
                                         },
                                         on: {
                                           click: function($event) {
@@ -539,15 +655,27 @@ var render = function() {
                                   _c(
                                     "v-uni-view",
                                     {
-                                      staticClass: _vm._$g("38-" + $30, "sc"),
-                                      attrs: { _i: "38-" + $30 }
+                                      staticClass: _vm._$g("45-" + $30, "sc"),
+                                      attrs: { _i: "45-" + $30 }
                                     },
                                     [
                                       _c("v-uni-image", {
                                         attrs: {
-                                          src: _vm._$g("39-" + $30, "a-src"),
+                                          src: _vm._$g("46-" + $30, "a-src"),
                                           mode: "center",
-                                          _i: "39-" + $30
+                                          _i: "46-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      }),
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("47-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "47-" + $30
                                         },
                                         on: {
                                           click: function($event) {
@@ -561,76 +689,20 @@ var render = function() {
                                 ],
                                 1
                               )
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("40-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("40-" + $30, "sc"),
-                              attrs: { _i: "40-" + $30 }
-                            },
-                            [
-                              _c(
+                            : _vm._e(),
+                          _vm._$g("48-" + $30, "i")
+                            ? _c(
                                 "v-uni-view",
                                 {
-                                  staticClass: _vm._$g("41-" + $30, "sc"),
-                                  attrs: { _i: "41-" + $30 }
+                                  staticClass: _vm._$g("48-" + $30, "sc"),
+                                  attrs: { _i: "48-" + $30 }
                                 },
                                 [
                                   _c("v-uni-image", {
                                     attrs: {
-                                      src: _vm._$g("42-" + $30, "a-src"),
+                                      src: _vm._$g("49-" + $30, "a-src"),
                                       mode: "center",
-                                      _i: "42-" + $30
-                                    },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  }),
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("43-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "43-" + $30
-                                    },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _c(
-                                "v-uni-view",
-                                {
-                                  staticClass: _vm._$g("44-" + $30, "sc"),
-                                  attrs: { _i: "44-" + $30 }
-                                },
-                                [
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("45-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "45-" + $30
-                                    },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  }),
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("46-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "46-" + $30
+                                      _i: "49-" + $30
                                     },
                                     on: {
                                       click: function($event) {
@@ -641,366 +713,342 @@ var render = function() {
                                 ],
                                 1
                               )
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("47-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("47-" + $30, "sc"),
-                              attrs: { _i: "47-" + $30 }
-                            },
-                            [
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("48-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "48-" + $30
+                            : _vm._e(),
+                          _vm._$g("50-" + $30, "i")
+                            ? _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("50-" + $30, "sc"),
+                                  attrs: { _i: "50-" + $30 }
                                 },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("49-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("49-" + $30, "sc"),
-                              attrs: { _i: "49-" + $30 }
-                            },
-                            [
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("50-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "50-" + $30
+                                [
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("51-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "51-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  }),
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("52-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "52-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._$g("53-" + $30, "i")
+                            ? _c(
+                                "v-uni-view",
+                                {
+                                  staticClass: _vm._$g("53-" + $30, "sc"),
+                                  attrs: { _i: "53-" + $30 }
                                 },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              }),
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("51-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "51-" + $30
-                                },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("52-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("52-" + $30, "sc"),
-                              attrs: { _i: "52-" + $30 }
-                            },
-                            [
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("53-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "53-" + $30
-                                },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              }),
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("54-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "54-" + $30
-                                },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              }),
-                              _c("v-uni-image", {
-                                attrs: {
-                                  src: _vm._$g("55-" + $30, "a-src"),
-                                  mode: "center",
-                                  _i: "55-" + $30
-                                },
-                                on: {
-                                  click: function($event) {
-                                    return _vm.$handleViewEvent($event)
-                                  }
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("56-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("56-" + $30, "sc"),
-                              attrs: { _i: "56-" + $30 }
-                            },
-                            [
-                              _c(
+                                [
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("54-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "54-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  }),
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("55-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "55-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  }),
+                                  _c("v-uni-image", {
+                                    attrs: {
+                                      src: _vm._$g("56-" + $30, "a-src"),
+                                      mode: "center",
+                                      _i: "56-" + $30
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.$handleViewEvent($event)
+                                      }
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._$g("57-" + $30, "i")
+                            ? _c(
                                 "v-uni-view",
                                 {
                                   staticClass: _vm._$g("57-" + $30, "sc"),
                                   attrs: { _i: "57-" + $30 }
                                 },
                                 [
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("58-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "58-" + $30
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("58-" + $30, "sc"),
+                                      attrs: { _i: "58-" + $30 }
                                     },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _c(
-                                "v-uni-view",
-                                {
-                                  staticClass: _vm._$g("59-" + $30, "sc"),
-                                  attrs: { _i: "59-" + $30 }
-                                },
-                                [
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("60-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "60-" + $30
+                                    [
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("59-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "59-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("60-" + $30, "sc"),
+                                      attrs: { _i: "60-" + $30 }
                                     },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _c(
-                                "v-uni-view",
-                                {
-                                  staticClass: _vm._$g("61-" + $30, "sc"),
-                                  attrs: { _i: "61-" + $30 }
-                                },
-                                [
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("62-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "62-" + $30
+                                    [
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("61-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "61-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("62-" + $30, "sc"),
+                                      attrs: { _i: "62-" + $30 }
                                     },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  })
+                                    [
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("63-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "63-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._$g("63-" + $30, "i")
-                        ? _c(
-                            "v-uni-view",
-                            {
-                              staticClass: _vm._$g("63-" + $30, "sc"),
-                              attrs: { _i: "63-" + $30 }
-                            },
-                            [
-                              _c(
+                            : _vm._e(),
+                          _vm._$g("64-" + $30, "i")
+                            ? _c(
                                 "v-uni-view",
                                 {
                                   staticClass: _vm._$g("64-" + $30, "sc"),
                                   attrs: { _i: "64-" + $30 }
                                 },
                                 [
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("65-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "65-" + $30
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("65-" + $30, "sc"),
+                                      attrs: { _i: "65-" + $30 }
                                     },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _c(
-                                "v-uni-view",
-                                {
-                                  staticClass: _vm._$g("66-" + $30, "sc"),
-                                  attrs: { _i: "66-" + $30 }
-                                },
-                                [
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("67-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "67-" + $30
+                                    [
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("66-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "66-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("67-" + $30, "sc"),
+                                      attrs: { _i: "67-" + $30 }
                                     },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _c(
-                                "v-uni-view",
-                                {
-                                  staticClass: _vm._$g("68-" + $30, "sc"),
-                                  attrs: { _i: "68-" + $30 }
-                                },
-                                [
-                                  _c("v-uni-image", {
-                                    attrs: {
-                                      src: _vm._$g("69-" + $30, "a-src"),
-                                      mode: "center",
-                                      _i: "69-" + $30
+                                    [
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("68-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "68-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _c(
+                                    "v-uni-view",
+                                    {
+                                      staticClass: _vm._$g("69-" + $30, "sc"),
+                                      attrs: { _i: "69-" + $30 }
                                     },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.$handleViewEvent($event)
-                                      }
-                                    }
-                                  })
+                                    [
+                                      _c("v-uni-image", {
+                                        attrs: {
+                                          src: _vm._$g("70-" + $30, "a-src"),
+                                          mode: "center",
+                                          _i: "70-" + $30
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.$handleViewEvent($event)
+                                          }
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
-                            ],
-                            1
-                          )
-                        : _vm._e()
-                    ],
-                    1
-                  ),
-                  _c(
-                    "v-uni-view",
-                    {
-                      staticClass: _vm._$g("70-" + $30, "sc"),
-                      attrs: { _i: "70-" + $30 }
-                    },
-                    [
-                      _c("v-uni-text", { attrs: { _i: "71-" + $30 } }, [
-                        _vm._v("来自 " + _vm._$g("71-" + $30, "t0-0"))
-                      ])
-                    ],
-                    1
-                  ),
-                  _c(
-                    "v-uni-view",
-                    {
-                      staticClass: _vm._$g("72-" + $30, "sc"),
-                      attrs: { _i: "72-" + $30 }
-                    },
-                    [
+                            : _vm._e()
+                        ],
+                        1
+                      ),
+                      _c(
+                        "v-uni-view",
+                        {
+                          staticClass: _vm._$g("71-" + $30, "sc"),
+                          attrs: { _i: "71-" + $30 }
+                        },
+                        [
+                          _c("v-uni-text", { attrs: { _i: "72-" + $30 } }, [
+                            _vm._v("来自 " + _vm._$g("72-" + $30, "t0-0"))
+                          ])
+                        ],
+                        1
+                      ),
                       _c(
                         "v-uni-view",
                         {
                           staticClass: _vm._$g("73-" + $30, "sc"),
-                          attrs: { _i: "73-" + $30 },
-                          on: {
-                            click: function($event) {
-                              return _vm.$handleViewEvent($event)
-                            }
-                          }
+                          attrs: { _i: "73-" + $30 }
                         },
                         [
-                          _c("v-uni-image", {
-                            attrs: {
-                              src: _vm._$g("74-" + $30, "a-src"),
-                              mode: "scaleToFill",
-                              _i: "74-" + $30
-                            }
-                          }),
-                          _c("v-uni-text", { attrs: { _i: "75-" + $30 } }, [
-                            _vm._v("66546")
-                          ])
-                        ],
-                        1
-                      ),
-                      _c(
-                        "v-uni-view",
-                        {
-                          staticClass: _vm._$g("76-" + $30, "sc"),
-                          attrs: { _i: "76-" + $30 }
-                        },
-                        [
-                          _c("v-uni-image", {
-                            attrs: {
-                              src: _vm._$g("77-" + $30, "a-src"),
-                              mode: "aspectFit",
-                              _i: "77-" + $30
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.$handleViewEvent($event)
+                          _c(
+                            "v-uni-view",
+                            {
+                              staticClass: _vm._$g("74-" + $30, "sc"),
+                              attrs: { _i: "74-" + $30 },
+                              on: {
+                                click: function($event) {
+                                  return _vm.$handleViewEvent($event)
+                                }
                               }
-                            }
-                          }),
-                          _c("v-uni-text", { attrs: { _i: "78-" + $30 } }, [
-                            _vm._v("64242")
-                          ])
-                        ],
-                        1
-                      ),
-                      _c(
-                        "v-uni-view",
-                        {
-                          staticClass: _vm._$g("79-" + $30, "sc"),
-                          attrs: { _i: "79-" + $30 },
-                          on: {
-                            click: function($event) {
-                              return _vm.$handleViewEvent($event)
-                            }
-                          }
-                        },
-                        [
-                          _c("v-uni-image", {
-                            attrs: {
-                              src: _vm._$g("80-" + $30, "a-src"),
-                              mode: "aspectFit",
-                              _i: "80-" + $30
-                            }
-                          })
+                            },
+                            [
+                              _c("v-uni-image", {
+                                attrs: {
+                                  src: _vm._$g("75-" + $30, "a-src"),
+                                  mode: "scaleToFill",
+                                  _i: "75-" + $30
+                                }
+                              }),
+                              _c("v-uni-text", { attrs: { _i: "76-" + $30 } }, [
+                                _vm._v("66546")
+                              ])
+                            ],
+                            1
+                          ),
+                          _c(
+                            "v-uni-view",
+                            {
+                              staticClass: _vm._$g("77-" + $30, "sc"),
+                              attrs: { _i: "77-" + $30 }
+                            },
+                            [
+                              _c("v-uni-image", {
+                                attrs: {
+                                  src: _vm._$g("78-" + $30, "a-src"),
+                                  mode: "aspectFit",
+                                  _i: "78-" + $30
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.$handleViewEvent($event)
+                                  }
+                                }
+                              }),
+                              _c("v-uni-text", { attrs: { _i: "79-" + $30 } }, [
+                                _vm._v("64242")
+                              ])
+                            ],
+                            1
+                          ),
+                          _c(
+                            "v-uni-view",
+                            {
+                              staticClass: _vm._$g("80-" + $30, "sc"),
+                              attrs: { _i: "80-" + $30 },
+                              on: {
+                                click: function($event) {
+                                  return _vm.$handleViewEvent($event)
+                                }
+                              }
+                            },
+                            [
+                              _c("v-uni-image", {
+                                attrs: {
+                                  src: _vm._$g("81-" + $30, "a-src"),
+                                  mode: "aspectFit",
+                                  _i: "81-" + $30
+                                }
+                              })
+                            ],
+                            1
+                          )
                         ],
                         1
                       )
@@ -1010,10 +1058,10 @@ var render = function() {
                 ],
                 1
               )
-            ],
+            }),
             1
           )
-        }),
+        ],
         1
       )
     ],
@@ -1108,7 +1156,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../1 JS/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.status_bar{\n}\n.status_bar_left{\n}\n.status_bar_center{\n}\n.status_bar_right{\n}\n.container {\r\n\tpadding: 30rpx 20rpx;\n}\n.list{\r\n\tmargin-bottom: 25rpx;\r\n\tborder: 1rpx solid rgba(200,200,200,0.5);\r\n\tbox-shadow: 0rpx 1rpx 1px rgba(200,200,200,0.5);\r\n\tborder-radius: 10rpx;\n}\n.list_padding{\r\n\tpadding: 35rpx;\r\n\tpadding-bottom: 20rpx;\n}\r\n/* 顶部栏 */\n.list_top{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-bottom: 20rpx;\n}\n.list_top_avatar {\r\n\tpadding-right: 20rpx;\n}\n.list_top_avatar uni-image {\r\n\twidth: 100rpx;\r\n\theight: 100rpx;\r\n\tborder-radius: 50rpx;\n}\n.list_top_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\theight: 90rpx;\n}\n.list_top_right_nickname{\r\n\tfont-size: 16px;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\n}\n.list_top_right_date{\r\n\tfont-size: 12px;\r\n\tcolor: #969696;\n}\r\n/* 文案 */\n.list_msg{\n}\r\n/* 图片 */\n.list_image{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 100%;\r\n\tpadding-top: 20rpx;\n}\r\n/* 一张图 */\n.list_image_1,\r\n.list_image_first,\r\n.list_image_first uni-image{\r\n\twidth: 350rpx;\r\n\theight: 350rpx;\n}\r\n/* 两张图 */\n.list_image_2{\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\twidth: 640rpx;\r\n\theight: 318rpx\n}\n.list_image_second{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 640rpx;\r\n\theight: 319rpx\n}\n.list_image_second uni-image{\r\n\twidth: 319rpx;\r\n\theight: 319rpx;\n}\r\n/* 三张图 */\n.list_image_3{\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_sixth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\r\n/* 左大图 */\n.list_image_third_left,\r\n.list_image_third_left_img,\r\n.list_image_third_left_img uni-image{\r\n\twidth: 426rpx;\r\n\theight: 425rpx;\n}\r\n/* 右两小图 */\n.list_image_third_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 212rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_right_top,\r\n.list_image_third_right_top uni-image,\r\n.list_image_third_right_bottom,\r\n.list_image_third_right_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 211rpx;\n}\r\n/* 四张图 */\n.list_image_4{\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth_item{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 249rpx;\n}\n.list_image_forth_item uni-image{\r\n\twidth: 249rpx;\r\n\theight: 249rpx;\n}\r\n/* 五张图 */\n.list_image_5{\r\n\theight: 535rpx;\r\n\twidth: 640rpx;\n}\r\n/* 六张图 */\n.list_image_6{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\r\n/* 七张图 */\n.list_image_7{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_seventh,\r\n.list_image_seventh uni-image{\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\r\n/* 八张图 */\n.list_image_8{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_eighth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\n.list_image_eighth uni-image{\r\n\twidth: 319rpx;\r\n\theight: 212rpx;\n}\r\n/* 九张图 */\n.list_image_9{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_ninth,\r\n\r\n\r\n\r\n\t\r\n.list_image_center,\r\n\r\n\r\n\r\n\t\r\n.list_image_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\theight: 212rpx;\n}\n.list_image_ninth uni-image,\r\n.list_image_center uni-image,\r\n.list_image_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 212rpx;\n}\r\n/* 来源 */\n.list_from{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_from uni-text{\r\n\ttext-align: center;\r\n\tfont-size: 14px;\r\n\tpadding: 5rpx 40rpx;\r\n\tborder-radius: 50rpx;\r\n\tbackground-color: #efefef;\r\n\tcolor: #7f7f7f;\n}\r\n/* 底部按钮 */\n.list_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: end;\r\n\t-webkit-justify-content: flex-end;\r\n\t        justify-content: flex-end;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_bottom_comment,\r\n.list_bottom_like,\r\n.list_bottom_save{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-left: 40rpx;\n}\n.list_bottom uni-text{\r\n\tfont-size: 15px;\r\n\tcolor: #969696;\n}\n.list_bottom uni-image{\r\n\twidth: 60rpx;\r\n\theight: 60rpx;\r\n\tmargin: 0 10rpx;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.status_bar{\n}\n.status_bar_left{\n}\n.status_bar_center{\n}\n.status_bar_right{\n}\r\n/* 深夜模式 */\n.all_dark,\r\n.list_top_avatar_dark,\r\n.list_image_dark {\r\n\t-webkit-filter: invert(100%);\r\n\t        filter: invert(100%);\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.all {\r\n\tbackground-color: #FFFFFF;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.container_all{\r\n\tbackground-color: #FFFFFF;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.container {\r\n\tpadding: 30rpx 20rpx;\n}\n.list{\r\n\tmargin-bottom: 25rpx;\r\n\tborder: 1rpx solid rgba(200,200,200,0.5);\r\n\tbox-shadow: 0rpx 1rpx 1px rgba(200,200,200,0.5);\r\n\tborder-radius: 10rpx;\n}\n.list_padding{\r\n\tpadding: 35rpx;\r\n\tpadding-bottom: 20rpx;\n}\r\n/* 顶部栏 */\n.list_top{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-bottom: 20rpx;\n}\n.list_top_avatar {\r\n\tpadding-right: 20rpx;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.list_top_avatar uni-image {\r\n\twidth: 100rpx;\r\n\theight: 100rpx;\r\n\tborder-radius: 50rpx;\n}\n.list_top_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\theight: 90rpx;\n}\n.list_top_right_nickname{\r\n\tfont-size: 16px;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\n}\n.list_top_right_date{\r\n\tfont-size: 12px;\r\n\tcolor: #969696;\n}\r\n/* 文案 */\n.list_msg{\n}\r\n/* 图片 */\n.list_image{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 100%;\r\n\tpadding-top: 20rpx;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\r\n/* 一张图 */\n.list_image_1,\r\n.list_image_first,\r\n.list_image_first uni-image{\r\n\twidth: 350rpx;\r\n\theight: 350rpx;\n}\r\n/* 两张图 */\n.list_image_2{\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\twidth: 640rpx;\r\n\theight: 318rpx\n}\n.list_image_second{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 640rpx;\r\n\theight: 319rpx\n}\n.list_image_second uni-image{\r\n\twidth: 319rpx;\r\n\theight: 319rpx;\n}\r\n/* 三张图 */\n.list_image_3{\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_sixth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\r\n/* 左大图 */\n.list_image_third_left,\r\n.list_image_third_left_img,\r\n.list_image_third_left_img uni-image{\r\n\twidth: 426rpx;\r\n\theight: 425rpx;\n}\r\n/* 右两小图 */\n.list_image_third_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 212rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_right_top,\r\n.list_image_third_right_top uni-image,\r\n.list_image_third_right_bottom,\r\n.list_image_third_right_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 211rpx;\n}\r\n/* 四张图 */\n.list_image_4{\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth_item{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 249rpx;\n}\n.list_image_forth_item uni-image{\r\n\twidth: 249rpx;\r\n\theight: 249rpx;\n}\r\n/* 五张图 */\n.list_image_5{\r\n\theight: 535rpx;\r\n\twidth: 640rpx;\n}\r\n/* 六张图 */\n.list_image_6{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\r\n/* 七张图 */\n.list_image_7{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_seventh,\r\n.list_image_seventh uni-image{\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\r\n/* 八张图 */\n.list_image_8{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_eighth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\n.list_image_eighth uni-image{\r\n\twidth: 319rpx;\r\n\theight: 212rpx;\n}\r\n/* 九张图 */\n.list_image_9{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_ninth,\r\n\r\n\r\n\r\n\t\r\n.list_image_center,\r\n\r\n\r\n\r\n\t\r\n.list_image_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\theight: 212rpx;\n}\n.list_image_ninth uni-image,\r\n.list_image_center uni-image,\r\n.list_image_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 212rpx;\n}\r\n/* 来源 */\n.list_from{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_from uni-text{\r\n\ttext-align: center;\r\n\tfont-size: 14px;\r\n\tpadding: 5rpx 40rpx;\r\n\tborder-radius: 50rpx;\r\n\tbackground-color: #efefef;\r\n\tcolor: #7f7f7f;\n}\r\n/* 底部按钮 */\n.list_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: end;\r\n\t-webkit-justify-content: flex-end;\r\n\t        justify-content: flex-end;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_bottom_comment,\r\n.list_bottom_like,\r\n.list_bottom_save{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-left: 40rpx;\n}\n.list_bottom uni-text{\r\n\tfont-size: 15px;\r\n\tcolor: #969696;\n}\n.list_bottom uni-image{\r\n\twidth: 60rpx;\r\n\theight: 60rpx;\r\n\tmargin: 0 10rpx;\n}\r\n\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -4562,7 +4610,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../1 JS/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.status_bar{\n}\n.status_bar_left{\n}\n.status_bar_center{\n}\n.status_bar_right{\n}\n.container {\r\n\tpadding: 30rpx 20rpx;\n}\n.list{\r\n\tmargin-bottom: 25rpx;\r\n\tborder: 1rpx solid rgba(200,200,200,0.5);\r\n\tbox-shadow: 0rpx 1rpx 1px rgba(200,200,200,0.5);\r\n\tborder-radius: 10rpx;\n}\n.list_padding{\r\n\tpadding: 35rpx;\r\n\tpadding-bottom: 20rpx;\n}\r\n/* 顶部栏 */\n.list_top{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-bottom: 20rpx;\n}\n.list_top_avatar {\r\n\tpadding-right: 20rpx;\n}\n.list_top_avatar uni-image {\r\n\twidth: 100rpx;\r\n\theight: 100rpx;\r\n\tborder-radius: 50rpx;\n}\n.list_top_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\theight: 90rpx;\n}\n.list_top_right_nickname{\r\n\tfont-size: 16px;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\n}\n.list_top_right_date{\r\n\tfont-size: 12px;\r\n\tcolor: #969696;\n}\r\n/* 文案 */\n.list_msg{\n}\r\n/* 图片 */\n.list_image{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 100%;\r\n\tpadding-top: 20rpx;\n}\r\n/* 一张图 */\n.list_image_1,\r\n.list_image_first,\r\n.list_image_first uni-image{\r\n\twidth: 350rpx;\r\n\theight: 350rpx;\n}\r\n/* 两张图 */\n.list_image_2{\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\twidth: 640rpx;\r\n\theight: 318rpx\n}\n.list_image_second{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 640rpx;\r\n\theight: 319rpx\n}\n.list_image_second uni-image{\r\n\twidth: 319rpx;\r\n\theight: 319rpx;\n}\r\n/* 三张图 */\n.list_image_3{\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_sixth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\r\n/* 左大图 */\n.list_image_third_left,\r\n.list_image_third_left_img,\r\n.list_image_third_left_img uni-image{\r\n\twidth: 426rpx;\r\n\theight: 425rpx;\n}\r\n/* 右两小图 */\n.list_image_third_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 212rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_right_top,\r\n.list_image_third_right_top uni-image,\r\n.list_image_third_right_bottom,\r\n.list_image_third_right_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 211rpx;\n}\r\n/* 四张图 */\n.list_image_4{\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth_item{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 249rpx;\n}\n.list_image_forth_item uni-image{\r\n\twidth: 249rpx;\r\n\theight: 249rpx;\n}\r\n/* 五张图 */\n.list_image_5{\r\n\theight: 535rpx;\r\n\twidth: 640rpx;\n}\r\n/* 六张图 */\n.list_image_6{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\r\n/* 七张图 */\n.list_image_7{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_seventh,\r\n.list_image_seventh uni-image{\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\r\n/* 八张图 */\n.list_image_8{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_eighth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\n.list_image_eighth uni-image{\r\n\twidth: 319rpx;\r\n\theight: 212rpx;\n}\r\n/* 九张图 */\n.list_image_9{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_ninth,\r\n\r\n\r\n\r\n\t\r\n.list_image_center,\r\n\r\n\r\n\r\n\t\r\n.list_image_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\theight: 212rpx;\n}\n.list_image_ninth uni-image,\r\n.list_image_center uni-image,\r\n.list_image_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 212rpx;\n}\r\n/* 来源 */\n.list_from{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_from uni-text{\r\n\ttext-align: center;\r\n\tfont-size: 14px;\r\n\tpadding: 5rpx 40rpx;\r\n\tborder-radius: 50rpx;\r\n\tbackground-color: #efefef;\r\n\tcolor: #7f7f7f;\n}\r\n/* 底部按钮 */\n.list_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: end;\r\n\t-webkit-justify-content: flex-end;\r\n\t        justify-content: flex-end;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_bottom_comment,\r\n.list_bottom_like,\r\n.list_bottom_save{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-left: 40rpx;\n}\n.list_bottom uni-text{\r\n\tfont-size: 15px;\r\n\tcolor: #969696;\n}\n.list_bottom uni-image{\r\n\twidth: 60rpx;\r\n\theight: 60rpx;\r\n\tmargin: 0 10rpx;\n}\n.all{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\n}\n.status{\r\n\tposition: fixed;\r\n\ttop: 0;\r\n\twidth:100%;\r\n\tz-index: 99;\n}\n.status_bar_top {\r\n\theight: var(--status-bar-height);\r\n\twidth: 100%;\r\n\tbackground-color: #F7F7F7;\n}\r\n/* 背景图 */\n.background{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack:start;\r\n\t-webkit-justify-content:flex-start;\r\n\t        justify-content:flex-start;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\t/* 按照16:9进行计算 */\r\n\theight: 422rpx;\n}\n.background uni-image{\r\n\t-webkit-align-self: baseline;\r\n\t        align-self: baseline;\r\n\twidth: 100%;\n}\r\n/* 设置按钮 */\n.setting{\r\n\tposition: absolute;\r\n\ttop: calc( var(--status-bar-height) + 20rpx);\r\n\tright: 20rpx;\n}\n.setting uni-image{\r\n\twidth: 50rpx;\r\n\theight: 50rpx;\n}\r\n/* 个人信息栏 */\n.personalInfo{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\twidth: 100%;\r\n\theight: 100rpx;\r\n\tpadding-bottom: 50rpx;\n}\n.personalInfo_avatar{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\r\n\tposition: relative;\r\n\ttop: -25rpx;\r\n\twidth: 150rpx;\r\n\theight: 150rpx;\r\n\tborder-radius: 50%;\r\n\tbackground-color: #FFF;\n}\n.personalInfo_avatar uni-image{\r\n\twidth: 150rpx;\r\n\theight: 150rpx;\r\n\tborder-radius: 50%;\n}\n.personalInfo_introduce{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\theight: 100rpx;\r\n\t-webkit-box-flex: 0.7;\r\n\t-webkit-flex-grow: 0.7;\r\n\t        flex-grow: 0.7;\n}\n.personalInfo_introduce_nickname{\r\n\tfont-size: 16px;\r\n\tpadding-top: 10rpx;\r\n\theight: 60%;\n}\n.personalInfo_introduce_sign{\r\n\tfont-size: 14px;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\r\n\tcolor: #9f9f9f;\n}\n.personalInfo_edit{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\theight: 60rpx;\r\n\tborder-radius: 20rpx;\n}\n.personalInfo_edit uni-button{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tbackground-color:  none;\r\n\tfont-size: 14px;\t\r\n\tborder-radius: 20rpx;\r\n\tborder: #9F9F9F solid 1px;\n}\n.personalInfo_edit uni-button::after{\r\n\tborder: none;\n}\r\n/* 数据显示 */\n.situation{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-justify-content: space-around;\r\n\t        justify-content: space-around;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\tpadding-bottom: 30rpx;\n}\n.situation_follow,\r\n.situation_fans,\r\n.situation_integral{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\twidth: 200rpx;\r\n\theight: 100%;\n}\n.situation_follow uni-label,\r\n.situation_fans uni-label,\r\n.situation_integral uni-label{\r\n\tfont-size: 15px;\r\n\tcolor: #888888;\n}\r\n/* 滑块导航栏 */\n.swiper_title{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 100%;\r\n\tbackground-color: #FFFFFF;\r\n\tpadding: 15rpx 0;\r\n\theight: 60rpx;\n}\n.swiper_title_EDiary,\r\n.swiper_title_Record{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tletter-spacing: 5rpx;\r\n\tfont-size: 18px;\r\n\tcolor: #888;\n}\n.swiper_title_choose{\r\n\tfont-weight: 600;\r\n\tcolor: #555;\r\n\tpadding: 5rpx 0;\n}\n.swiper_title_choose_border{\r\n\twidth: 70%;\r\n\tborder-bottom: 1px solid #555555;\n}\r\n/* 滑块内容 */\n.swiper{\r\n\twidth: 100%;\r\n\t/* App TabBar均为100rpx */\r\n\theight: calc(100vh - var(--status-bar-height) - 100rpx );\n}\n.swiper uni-scroll-view{\r\n\twidth: 100%;\r\n\theight: calc(100vh - var(--status-bar-height) - 100rpx );\n}\r\n/* 记本 */\n.swiper_item_EDiary{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\t-webkit-flex-wrap: wrap;\r\n\t        flex-wrap: wrap;\r\n\theight: 95%;\r\n\tpadding: 5rpx 15rpx;\n}\n.swiper_item_EDiary_block{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\theight: 250rpx;\r\n\tmax-width: 240rpx;\r\n\tmargin: 15rpx 0;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\n}\n.swiper_item_EDiary_block uni-image{\r\n\theight: 200rpx;\r\n\twidth: 200rpx;\r\n\tborder-radius: 20rpx;\n}\n.swiper_item_EDiarym_block uni-text{\r\n\tfont-size: 15px;\r\n\tcolor: #666;\r\n\tpadding-top: 5rpx;\n}\r\n/* 记录 */\n.record {\r\n\tpadding: 20rpx 0rpx;\r\n\tbackground-color: rgba(240, 240, 240, 0.7);\n}\n.list{\r\n\tmargin-bottom: 20rpx;\r\n\tborder: 1rpx solid rgba(200,200,200,0.5);\r\n\tbox-shadow: 0rpx 1rpx 1px rgba(200,200,200,0.5);\r\n\tborder-radius: 10rpx;\r\n\tbackground-color: #FFFFFF;\r\n\t/* padding: 0 20rpx; */\n}\n.list_padding{\r\n\tpadding: 35rpx;\r\n\tpadding-bottom: 20rpx;\n}\r\n/* 两张图 */\n.list_image_2{\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\twidth: 680rpx;\r\n\theight: 338rpx\n}\n.list_image_second{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 680rpx;\r\n\theight: 339rpx\n}\n.list_image_second uni-image{\r\n\twidth: 339rpx;\r\n\theight: 339rpx;\n}\r\n/* 三张图 */\n.list_image_3{\r\n\twidth: 680rpx;\r\n\theight: 450rpx;\n}\n.list_image_third_sixth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 680rpx;\r\n\theight: 450rpx;\n}\r\n/* 左大图 */\n.list_image_third_left,\r\n.list_image_third_left_img,\r\n.list_image_third_left_img uni-image{\r\n\twidth: 452rpx;\r\n\theight: 450rpx;\n}\r\n/* 右两小图 */\n.list_image_third_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 225rpx;\r\n\theight: 450rpx;\n}\n.list_image_third_right_top,\r\n.list_image_third_right_top uni-image,\r\n.list_image_third_right_bottom,\r\n.list_image_third_right_bottom uni-image{\r\n\twidth: 225rpx;\r\n\theight: 224rpx;\n}\r\n/* 四张图 */\n.list_image_4{\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\twidth: 540rpx;\r\n\theight: 540rpx;\n}\n.list_image_forth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 540rpx;\r\n\theight: 540rpx;\n}\n.list_image_forth_item{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 540rpx;\r\n\theight: 269rpx;\n}\n.list_image_forth_item uni-image{\r\n\twidth: 269rpx;\r\n\theight: 269rpx;\n}\r\n/* 五张图 */\n.list_image_5{\r\n\theight: 565rpx;\r\n\twidth: 680rpx;\n}\r\n/* 六张图 */\n.list_image_6{\r\n\twidth: 680rpx;\r\n\theight: 680rpx;\n}\r\n/* 七张图 */\n.list_image_7{\r\n\twidth: 680rpx;\r\n\theight: 685rpx;\n}\n.list_image_seventh,\r\n.list_image_seventh uni-image{\r\n\twidth: 680rpx;\r\n\theight: 232rpx;\n}\r\n/* 八张图 */\n.list_image_8{\r\n\twidth: 680rpx;\r\n\theight: 680rpx;\n}\n.list_image_eighth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 680rpx;\r\n\theight: 225rpx;\n}\n.list_image_eighth uni-image{\r\n\twidth: 339rpx;\r\n\theight: 225rpx;\n}\r\n/* 九张图 */\n.list_image_9{\r\n\twidth: 680rpx;\r\n\theight: 680rpx;\n}\n.list_image_ninth,\r\n\r\n\t\r\n.list_image_center,\r\n\r\n\t\r\n.list_image_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\theight: 225rpx;\n}\n.list_image_ninth uni-image,\r\n.list_image_center uni-image,\r\n.list_image_bottom uni-image{\r\n\twidth: 225rpx;\r\n\theight: 225rpx;\n}\n.add_EDiary,\r\n.add_EDiary uni-image{\r\n\tposition: fixed;\r\n\twidth: 120rpx;\r\n\theight: 120rpx;\r\n\tbottom: 20rpx;\r\n\tright: 20rpx;\n}", ""]);
+exports.push([module.i, "\n.status_bar{\n}\n.status_bar_left{\n}\n.status_bar_center{\n}\n.status_bar_right{\n}\r\n/* 深夜模式 */\n.all_dark,\r\n.list_top_avatar_dark,\r\n.list_image_dark {\r\n\t-webkit-filter: invert(100%);\r\n\t        filter: invert(100%);\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.all {\r\n\tbackground-color: #FFFFFF;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.container_all{\r\n\tbackground-color: #FFFFFF;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.container {\r\n\tpadding: 30rpx 20rpx;\n}\n.list{\r\n\tmargin-bottom: 25rpx;\r\n\tborder: 1rpx solid rgba(200,200,200,0.5);\r\n\tbox-shadow: 0rpx 1rpx 1px rgba(200,200,200,0.5);\r\n\tborder-radius: 10rpx;\n}\n.list_padding{\r\n\tpadding: 35rpx;\r\n\tpadding-bottom: 20rpx;\n}\r\n/* 顶部栏 */\n.list_top{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-bottom: 20rpx;\n}\n.list_top_avatar {\r\n\tpadding-right: 20rpx;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\n.list_top_avatar uni-image {\r\n\twidth: 100rpx;\r\n\theight: 100rpx;\r\n\tborder-radius: 50rpx;\n}\n.list_top_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\theight: 90rpx;\n}\n.list_top_right_nickname{\r\n\tfont-size: 16px;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\n}\n.list_top_right_date{\r\n\tfont-size: 12px;\r\n\tcolor: #969696;\n}\r\n/* 文案 */\n.list_msg{\n}\r\n/* 图片 */\n.list_image{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 100%;\r\n\tpadding-top: 20rpx;\r\n\t-webkit-transition-duration:2s;\r\n\t        transition-duration:2s;\n}\r\n/* 一张图 */\n.list_image_1,\r\n.list_image_first,\r\n.list_image_first uni-image{\r\n\twidth: 350rpx;\r\n\theight: 350rpx;\n}\r\n/* 两张图 */\n.list_image_2{\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\twidth: 640rpx;\r\n\theight: 318rpx\n}\n.list_image_second{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 640rpx;\r\n\theight: 319rpx\n}\n.list_image_second uni-image{\r\n\twidth: 319rpx;\r\n\theight: 319rpx;\n}\r\n/* 三张图 */\n.list_image_3{\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_sixth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 425rpx;\n}\r\n/* 左大图 */\n.list_image_third_left,\r\n.list_image_third_left_img,\r\n.list_image_third_left_img uni-image{\r\n\twidth: 426rpx;\r\n\theight: 425rpx;\n}\r\n/* 右两小图 */\n.list_image_third_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 212rpx;\r\n\theight: 425rpx;\n}\n.list_image_third_right_top,\r\n.list_image_third_right_top uni-image,\r\n.list_image_third_right_bottom,\r\n.list_image_third_right_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 211rpx;\n}\r\n/* 四张图 */\n.list_image_4{\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 500rpx;\n}\n.list_image_forth_item{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 500rpx;\r\n\theight: 249rpx;\n}\n.list_image_forth_item uni-image{\r\n\twidth: 249rpx;\r\n\theight: 249rpx;\n}\r\n/* 五张图 */\n.list_image_5{\r\n\theight: 535rpx;\r\n\twidth: 640rpx;\n}\r\n/* 六张图 */\n.list_image_6{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\r\n/* 七张图 */\n.list_image_7{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_seventh,\r\n.list_image_seventh uni-image{\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\r\n/* 八张图 */\n.list_image_8{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_eighth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 640rpx;\r\n\theight: 212rpx;\n}\n.list_image_eighth uni-image{\r\n\twidth: 319rpx;\r\n\theight: 212rpx;\n}\r\n/* 九张图 */\n.list_image_9{\r\n\twidth: 640rpx;\r\n\theight: 640rpx;\n}\n.list_image_ninth,\r\n\r\n\r\n\r\n\t\r\n.list_image_center,\r\n\r\n\r\n\r\n\t\r\n.list_image_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\theight: 212rpx;\n}\n.list_image_ninth uni-image,\r\n.list_image_center uni-image,\r\n.list_image_bottom uni-image{\r\n\twidth: 212rpx;\r\n\theight: 212rpx;\n}\r\n/* 来源 */\n.list_from{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_from uni-text{\r\n\ttext-align: center;\r\n\tfont-size: 14px;\r\n\tpadding: 5rpx 40rpx;\r\n\tborder-radius: 50rpx;\r\n\tbackground-color: #efefef;\r\n\tcolor: #7f7f7f;\n}\r\n/* 底部按钮 */\n.list_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: end;\r\n\t-webkit-justify-content: flex-end;\r\n\t        justify-content: flex-end;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-top: 20rpx;\n}\n.list_bottom_comment,\r\n.list_bottom_like,\r\n.list_bottom_save{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tpadding-left: 40rpx;\n}\n.list_bottom uni-text{\r\n\tfont-size: 15px;\r\n\tcolor: #969696;\n}\n.list_bottom uni-image{\r\n\twidth: 60rpx;\r\n\theight: 60rpx;\r\n\tmargin: 0 10rpx;\n}\n.all{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\n}\n.status{\r\n\tposition: fixed;\r\n\ttop: 0;\r\n\twidth:100%;\r\n\tz-index: 99;\n}\n.status_bar_top {\r\n\theight: var(--status-bar-height);\r\n\twidth: 100%;\r\n\tbackground-color: #F7F7F7;\n}\r\n/* 背景图 */\n.background{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack:start;\r\n\t-webkit-justify-content:flex-start;\r\n\t        justify-content:flex-start;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\t/* 按照16:9进行计算 */\r\n\theight: 422rpx;\n}\n.background uni-image{\r\n\t-webkit-align-self: baseline;\r\n\t        align-self: baseline;\r\n\twidth: 100%;\n}\r\n/* 设置按钮 */\n.setting{\r\n\tposition: absolute;\r\n\ttop: calc( var(--status-bar-height) + 20rpx);\r\n\tright: 20rpx;\n}\n.setting uni-image{\r\n\twidth: 50rpx;\r\n\theight: 50rpx;\n}\r\n/* 个人信息栏 */\n.personalInfo{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\twidth: 100%;\r\n\theight: 100rpx;\r\n\tpadding-bottom: 50rpx;\n}\n.personalInfo_avatar{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\r\n\tposition: relative;\r\n\ttop: -25rpx;\r\n\twidth: 150rpx;\r\n\theight: 150rpx;\r\n\tborder-radius: 50%;\r\n\tbackground-color: #FFF;\n}\n.personalInfo_avatar uni-image{\r\n\twidth: 150rpx;\r\n\theight: 150rpx;\r\n\tborder-radius: 50%;\n}\n.personalInfo_introduce{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\theight: 100rpx;\r\n\t-webkit-box-flex: 0.7;\r\n\t-webkit-flex-grow: 0.7;\r\n\t        flex-grow: 0.7;\n}\n.personalInfo_introduce_nickname{\r\n\tfont-size: 16px;\r\n\tpadding-top: 10rpx;\r\n\theight: 60%;\n}\n.personalInfo_introduce_sign{\r\n\tfont-size: 14px;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\r\n\tcolor: #9f9f9f;\n}\n.personalInfo_edit{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\theight: 60rpx;\r\n\tborder-radius: 20rpx;\n}\n.personalInfo_edit uni-button{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tbackground-color:  none;\r\n\tfont-size: 14px;\t\r\n\tborder-radius: 20rpx;\r\n\tborder: #9F9F9F solid 1px;\n}\n.personalInfo_edit uni-button::after{\r\n\tborder: none;\n}\r\n/* 数据显示 */\n.situation{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-justify-content: space-around;\r\n\t        justify-content: space-around;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\tpadding-bottom: 30rpx;\n}\n.situation_follow,\r\n.situation_fans,\r\n.situation_integral{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-pack: center;\r\n\t-webkit-justify-content: center;\r\n\t        justify-content: center;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\twidth: 200rpx;\r\n\theight: 100%;\n}\n.situation_follow uni-label,\r\n.situation_fans uni-label,\r\n.situation_integral uni-label{\r\n\tfont-size: 15px;\r\n\tcolor: #888888;\n}\r\n/* 滑块导航栏 */\n.swiper_title{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 100%;\r\n\tbackground-color: #FFFFFF;\r\n\tpadding: 15rpx 0;\r\n\theight: 60rpx;\n}\n.swiper_title_EDiary,\r\n.swiper_title_Record{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\tletter-spacing: 5rpx;\r\n\tfont-size: 18px;\r\n\tcolor: #888;\n}\n.swiper_title_choose{\r\n\tfont-weight: 600;\r\n\tcolor: #555;\r\n\tpadding: 5rpx 0;\n}\n.swiper_title_choose_border{\r\n\twidth: 70%;\r\n\tborder-bottom: 1px solid #555555;\n}\r\n/* 滑块内容 */\n.swiper{\r\n\twidth: 100%;\r\n\t/* App TabBar均为100rpx */\r\n\theight: calc(100vh - var(--status-bar-height) - 100rpx );\n}\n.swiper uni-scroll-view{\r\n\twidth: 100%;\r\n\theight: calc(100vh - var(--status-bar-height) - 100rpx );\n}\r\n/* 记本 */\n.swiper_item_EDiary{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\t-webkit-flex-wrap: wrap;\r\n\t        flex-wrap: wrap;\r\n\theight: 95%;\r\n\tpadding: 5rpx 15rpx;\n}\n.swiper_item_EDiary_block{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: space-evenly;\r\n\t-webkit-justify-content: space-evenly;\r\n\t        justify-content: space-evenly;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\theight: 250rpx;\r\n\tmax-width: 240rpx;\r\n\tmargin: 15rpx 0;\r\n\t-webkit-box-flex: 1;\r\n\t-webkit-flex-grow: 1;\r\n\t        flex-grow: 1;\n}\n.swiper_item_EDiary_block uni-image{\r\n\theight: 200rpx;\r\n\twidth: 200rpx;\r\n\tborder-radius: 20rpx;\n}\n.swiper_item_EDiarym_block uni-text{\r\n\tfont-size: 15px;\r\n\tcolor: #666;\r\n\tpadding-top: 5rpx;\n}\r\n/* 记录 */\n.record {\r\n\tpadding: 20rpx 0rpx;\r\n\tbackground-color: rgba(240, 240, 240, 0.7);\n}\n.list{\r\n\tmargin-bottom: 20rpx;\r\n\tborder: 1rpx solid rgba(200,200,200,0.5);\r\n\tbox-shadow: 0rpx 1rpx 1px rgba(200,200,200,0.5);\r\n\tborder-radius: 10rpx;\r\n\tbackground-color: #FFFFFF;\r\n\t/* padding: 0 20rpx; */\n}\n.list_padding{\r\n\tpadding: 35rpx;\r\n\tpadding-bottom: 20rpx;\n}\r\n/* 两张图 */\n.list_image_2{\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\twidth: 680rpx;\r\n\theight: 338rpx\n}\n.list_image_second{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: center;\r\n\t-webkit-align-items: center;\r\n\t        align-items: center;\r\n\twidth: 680rpx;\r\n\theight: 339rpx\n}\n.list_image_second uni-image{\r\n\twidth: 339rpx;\r\n\theight: 339rpx;\n}\r\n/* 三张图 */\n.list_image_3{\r\n\twidth: 680rpx;\r\n\theight: 450rpx;\n}\n.list_image_third_sixth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 680rpx;\r\n\theight: 450rpx;\n}\r\n/* 左大图 */\n.list_image_third_left,\r\n.list_image_third_left_img,\r\n.list_image_third_left_img uni-image{\r\n\twidth: 452rpx;\r\n\theight: 450rpx;\n}\r\n/* 右两小图 */\n.list_image_third_right{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 225rpx;\r\n\theight: 450rpx;\n}\n.list_image_third_right_top,\r\n.list_image_third_right_top uni-image,\r\n.list_image_third_right_bottom,\r\n.list_image_third_right_bottom uni-image{\r\n\twidth: 225rpx;\r\n\theight: 224rpx;\n}\r\n/* 四张图 */\n.list_image_4{\r\n\t-webkit-box-pack: start;\r\n\t-webkit-justify-content: flex-start;\r\n\t        justify-content: flex-start;\r\n\twidth: 540rpx;\r\n\theight: 540rpx;\n}\n.list_image_forth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: vertical;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: column;\r\n\t        flex-direction: column;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 540rpx;\r\n\theight: 540rpx;\n}\n.list_image_forth_item{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 540rpx;\r\n\theight: 269rpx;\n}\n.list_image_forth_item uni-image{\r\n\twidth: 269rpx;\r\n\theight: 269rpx;\n}\r\n/* 五张图 */\n.list_image_5{\r\n\theight: 565rpx;\r\n\twidth: 680rpx;\n}\r\n/* 六张图 */\n.list_image_6{\r\n\twidth: 680rpx;\r\n\theight: 680rpx;\n}\r\n/* 七张图 */\n.list_image_7{\r\n\twidth: 680rpx;\r\n\theight: 685rpx;\n}\n.list_image_seventh,\r\n.list_image_seventh uni-image{\r\n\twidth: 680rpx;\r\n\theight: 232rpx;\n}\r\n/* 八张图 */\n.list_image_8{\r\n\twidth: 680rpx;\r\n\theight: 680rpx;\n}\n.list_image_eighth{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\twidth: 680rpx;\r\n\theight: 225rpx;\n}\n.list_image_eighth uni-image{\r\n\twidth: 339rpx;\r\n\theight: 225rpx;\n}\r\n/* 九张图 */\n.list_image_9{\r\n\twidth: 680rpx;\r\n\theight: 680rpx;\n}\n.list_image_ninth,\r\n\r\n\t\r\n.list_image_center,\r\n\r\n\t\r\n.list_image_bottom{\r\n\tdisplay: -webkit-box;\r\n\tdisplay: -webkit-flex;\r\n\tdisplay: flex;\r\n\t-webkit-box-orient: horizontal;\r\n\t-webkit-box-direction: normal;\r\n\t-webkit-flex-direction: row;\r\n\t        flex-direction: row;\r\n\t-webkit-box-pack: justify;\r\n\t-webkit-justify-content: space-between;\r\n\t        justify-content: space-between;\r\n\t-webkit-box-align: start;\r\n\t-webkit-align-items: flex-start;\r\n\t        align-items: flex-start;\r\n\twidth: 100%;\r\n\theight: 225rpx;\n}\n.list_image_ninth uni-image,\r\n.list_image_center uni-image,\r\n.list_image_bottom uni-image{\r\n\twidth: 225rpx;\r\n\theight: 225rpx;\n}\n.add_EDiary,\r\n.add_EDiary uni-image{\r\n\tposition: fixed;\r\n\twidth: 120rpx;\r\n\theight: 120rpx;\r\n\tbottom: 20rpx;\r\n\tright: 20rpx;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -6319,7 +6367,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../1 JS/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*每个页面公共css */\n.status_toppadding{\n\theight: calc(var(--status-bar-height) + 80rpx);\n}\n.status{\n\tposition: fixed;\n\ttop: 0;\n\twidth:100%;\n\tz-index: 99;\n}\n.status_bar_top {\n\theight: var(--status-bar-height);\n\twidth: 100%;\n\tbackground-color: #F7F7F7;\n}\n.status_bar {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\tmin-height: 80rpx;\n\tmax-height: 80rpx;\n\twidth: 100%;\n\tbackground-color: #F7F7F7;\n\tpadding-top: 10rpx;\n}\n.status_bar uni-image{\n\theight: 50rpx;\n\twidth: 50rpx;\n\tpadding: 15rpx;\n}\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*每个页面公共css */\n.status_toppadding{\n\theight: calc(var(--status-bar-height) + 80rpx);\n\t-webkit-transition-duration:2s;\n\t        transition-duration:2s;\n}\n.status{\n\tposition: fixed;\n\ttop: 0;\n\twidth:100%;\n\tz-index: 99;\n\t-webkit-transition-duration:2s;\n\t        transition-duration:2s;\n}\n.status_bar_top {\n\theight: var(--status-bar-height);\n\twidth: 100%;\n\tbackground-color: #F7F7F7;\n\t-webkit-transition-duration:2s;\n\t        transition-duration:2s;\n}\n.status_bar {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\t-webkit-box-pack: justify;\n\t-webkit-justify-content: space-between;\n\t        justify-content: space-between;\n\tmin-height: 80rpx;\n\tmax-height: 80rpx;\n\twidth: 100%;\n\tbackground-color: #F7F7F7;\n\tpadding-top: 10rpx;\n}\n.status_bar uni-image{\n\theight: 50rpx;\n\twidth: 50rpx;\n\tpadding: 15rpx;\n}\n\n\n\n", ""]);
 // Exports
 module.exports = exports;
 

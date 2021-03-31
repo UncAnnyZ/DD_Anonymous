@@ -29,17 +29,20 @@
 	/* #ifndef APP-PLUS-NVUE */
 	.status_toppadding{
 		height: calc(var(--status-bar-height) + 80rpx);
+		transition-duration:2s;
 	}
 	.status{
 		position: fixed;
 		top: 0;
 		width:100%;
 		z-index: 99;
+		transition-duration:2s;
 	}
 	.status_bar_top {
 		height: var(--status-bar-height);
 		width: 100%;
 		background-color: #F7F7F7;
+		transition-duration:2s;
 	}
 	.status_bar {
 		display: flex;

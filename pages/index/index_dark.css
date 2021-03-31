@@ -1,34 +1,21 @@
 
 .status_bar{
-	
+	/* filter: invert(100%)hue-rotate(180deg); */
 }
 .status_bar_left{
-	
+	/* filter: invert(100%)hue-rotate(180deg); */
 }
 .status_bar_center{
-	
+	/* filter: invert(100%)hue-rotate(180deg); */
 }
 .status_bar_right{
-	
+	/* filter: invert(100%)hue-rotate(180deg); */
 }
-
-/* 深夜模式 */
-.all_dark,
-.list_top_avatar_dark,
-.list_image_dark {
+.all{
+	background-color: #FFFFFF;
 	filter: invert(100%);
-	transition-duration:2s;
 }
 
-.all {
-	background-color: #FFFFFF;
-	transition-duration:2s;
-}
-
-.container_all{
-	background-color: #FFFFFF;
-	transition-duration:2s;
-}
 .container {
 	padding: 30rpx 20rpx;
 }
@@ -38,6 +25,7 @@
 	box-shadow: 0rpx 1rpx 1px rgba(200,200,200,0.5);
 	border-radius: 10rpx;
 }
+
 .list_padding{
 	padding: 35rpx;
 	padding-bottom: 20rpx;
@@ -52,7 +40,7 @@
 }
 .list_top_avatar {
 	padding-right: 20rpx;
-	transition-duration:2s;
+	filter: invert(100%);
 }
 .list_top_avatar image {
 	width: 100rpx;
@@ -87,7 +75,7 @@
 	align-items: center;
 	width: 100%;
 	padding-top: 20rpx;
-	transition-duration:2s;
+	filter: invert(100%);
 }
 
 /* 一张图 */
@@ -256,7 +244,8 @@
 	padding: 5rpx 40rpx;
 	border-radius: 50rpx;
 	background-color: #efefef;
-	color: #7f7f7f;
+	color: #808080;
+	color: rgb(127,127,127);
 }
 
 /* 底部按钮 */

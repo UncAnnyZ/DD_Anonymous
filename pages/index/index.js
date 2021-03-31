@@ -2,6 +2,7 @@ const api = getApp().globalData.api
 export default {
 	data() {
 		return {
+			mode:"light",
 			src:{
 				like:"../../static/icon/btn_icon_like.png",
 				liked:"../../static/icon/btn_icon_liked.png"
@@ -12,6 +13,8 @@ export default {
 			},
 			list:[{
 					userinfo:{
+						uid:"",
+						uid:"",
 						avatar:"",
 						nickname:"昵称1"
 					},
@@ -25,6 +28,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称2"
 					},
@@ -39,6 +43,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称3"
 					},
@@ -54,6 +59,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称4"
 					},
@@ -70,6 +76,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称5"
 					},
@@ -87,6 +94,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称6"
 					},
@@ -105,6 +113,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称7"
 					},
@@ -124,6 +133,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称8"
 					},
@@ -144,6 +154,7 @@ export default {
 					liked_status:true	// true 时可发送更新数据，防止连续触发
 				},{
 					userinfo:{
+						uid:"",
 						avatar:"",
 						nickname:"昵称9"
 					},
@@ -179,11 +190,57 @@ export default {
 			let css = getApp().globalData.css
 			console.log(css)
 			if(css == 'light'){
+				// 全局模式
 				getApp().globalData.css = 'dark'
+				// 当前模式
+				this.mode = 'dark'
+				// 更改模式 显示的图标
 				this.status_bar.left_img = "../../static/icon/css_icon_light.png"
+				// 更改导航栏颜色
+				// 关于导航栏的深色模式修改
+				    // uni.setTabBarStyle({
+				    //      color: '#B6B6B6',
+				    //      selectedColor: '#EA8C1B',
+				    //      backgroundColor: '#1F1F1F',
+				    //      borderStyle: 'black'
+				    // })
+					
+					
+				uni.setNavigationBarColor({
+					frontColor: '#ffffff',
+					backgroundColor: '#1f1f1f',
+					animation: {
+						duration: 2000,
+						timingFunc: 'linear'
+					}
+				})
+				// 更改状态栏颜色
+				uni.setTabBarStyle({
+					 color: '#B6B6B6',
+					 backgroundColor: '#1F1F1F',
+					 borderStyle: 'white'
+				})
+				
 			} else if(css == 'dark'){
 				getApp().globalData.css = 'light'
+				this.mode = 'light'
 				this.status_bar.left_img = "../../static/icon/css_icon_dark.png"
+
+				// 更改导航栏颜色
+				uni.setNavigationBarColor({
+					frontColor: '#000000',
+					backgroundColor: '#e0e0e0',
+					animation: {
+						duration: 2000,
+						timingFunc: 'linear'
+					}
+				})
+				// 更改状态栏颜色
+				uni.setTabBarStyle({
+					 color: '#494949',
+					 backgroundColor: '#ffffff',
+					 borderStyle: 'black'
+				})
 			}
 		},
 		

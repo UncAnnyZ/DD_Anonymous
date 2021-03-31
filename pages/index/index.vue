@@ -1,8 +1,8 @@
 <template>
 	<view class="all">
 		
-		<view class="status_toppadding"></view>
-		<view class="status">
+		<view class="status_toppadding" v-bind:class="mode=='dark'?'all_dark':''"></view>
+		<view class="status" v-bind:class="mode=='dark'?'all_dark':''">
 			<view class="status_bar_top"></view>
 			<view class="status_bar">
 				<view class="status_bar_left">
@@ -20,6 +20,8 @@
 			</view>
 		</view>
 		
+		<view class="container_all" v-bind:class="mode=='dark'?'all_dark':''">
+
 		<view class="container">
 			<view v-for="(item,index) in list" :key="index" class="list">
 				<!-- 不知名的填充物 -->
@@ -27,7 +29,7 @@
 					
 					<!-- 首栏信息栏 -->
 					<view class="list_top">
-						<view class="list_top_avatar">
+						<view class="list_top_avatar" v-bind:class="mode=='dark'?'list_top_avatar_dark':''">
 							<image src="../../static/picture/logo.png" mode="center"></image>
 						</view>
 						<view class="list_top_right">
@@ -46,7 +48,7 @@
 					</view>
 					
 					<!-- 图片 -->
-					<view class="list_image" v-bind:class="'list_image_' + item.image.length">
+					<view class="list_image" v-bind:class="['list_image_' + item.image.length ,mode == 'dark'? 'list_image_dark' : '']">
 						
 						<view class="list_image_first" v-if="item.image.length == 1">
 							<image :src="item.image[0]" mode="center" @click="previewImage({index,current:0})"></image>
@@ -147,9 +149,10 @@
 				</view>
 			</view>
 		</view>
-		
+		</view>
 		<!-- <navigator url="../test/test">go to test</navigator> -->
 	</view>
+
 </template>
 
 
